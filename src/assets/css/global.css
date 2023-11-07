@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+
+/**********************************************
+Fonts
+**********************************************/
+
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.ttf") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoMono Regular";
+  src: url("../fonts/RobotoMono-Regular.woff") format("woff"), url("../fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoMono Medium";
+  src: url("../fonts/RobotoMono-Medium.woff") format("woff"), url("../fonts/RobotoMono-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RobotoMono Light";
+  src: url("../fonts/RobotoMono-Light.ttf") format("woff"), url("../fonts/RobotoMono-Light.ttf") format("truetype");
+}
+
+/**********************************************
+Global
+**********************************************/
+
+.disable {
+  @apply opacity-40 cursor-not-allowed pointer-events-none;
+}
+
+.debug {
+  @apply border border-red-300 border-dashed;
+}
+
+.size-full {
+  @apply w-full h-full;
+}
+
+.flex-row-standard {
+  @apply flex flex-row justify-center items-center;
+}
+
+.flex-col-standard {
+  @apply flex flex-col justify-center items-center;
+}
+
+* {
+  text-transform: none !important;
+}
+
+html {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+body {
+  margin: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-family: "Roboto Regular";
+}
+
+/**********************************************
+Scrollbars
+**********************************************/
+
+html {
+  --smoke: rgba(128, 128, 128, 0.5);
+}
+/* Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--smoke) transparent;
+}
+
+/* Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--smoke);
+  border-radius: 3px;
+}
+
+@tailwind utilities;
