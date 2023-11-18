@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-red-600 font-bold text-3xl">Hello, World!</h1>
+  <div class="w-full h-screen flex-row-standard">
+    <h1 class="text-custom-red font-normal font-blackout_two_am text-8xl">david glassman</h1>
+  </div>
 </template>
 
 <script setup>

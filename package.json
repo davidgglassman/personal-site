@@ -1,8 +1,8 @@
 {
-  "name": "vue-project",
+  "name": "personal-landing-page",
   "version": "1.0.0",
-  "description": "Vue Project",
-  "productName": "Vue Project",
+  "description": "Personal Landing Page",
+  "productName": "Personal Landing Page",
   "author": "David Glassman <davidglassman@fastmail.com>",
   "private": true,
   "nodeVersion": "18.17.1",

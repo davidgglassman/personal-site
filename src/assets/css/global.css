@@ -6,33 +6,28 @@ Fonts
 **********************************************/
 
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Rubik";
+  src: url("../fonts/rubik.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto Medium";
-  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-family: "Rubik Italic";
+  src: url("../fonts/rubik_italic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto Light";
-  src: url("../fonts/Roboto-Light.ttf") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-family: "Blackout Midnight";
+  src: url("../fonts/blackout_midnight.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "RobotoMono Regular";
-  src: url("../fonts/RobotoMono-Regular.woff") format("woff"), url("../fonts/RobotoMono-Regular.ttf") format("truetype");
+  font-family: "Blackout Sunrise";
+  src: url("../fonts/blackout_sunrise.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "RobotoMono Medium";
-  src: url("../fonts/RobotoMono-Medium.woff") format("woff"), url("../fonts/RobotoMono-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "RobotoMono Light";
-  src: url("../fonts/RobotoMono-Light.ttf") format("woff"), url("../fonts/RobotoMono-Light.ttf") format("truetype");
+  font-family: "Blackout Two AM";
+  src: url("../fonts/blackout_two_am.ttf") format("truetype");
 }
 
 /**********************************************
@@ -72,7 +67,7 @@ body {
   margin: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  font-family: "Roboto Regular";
+  font-family: "Rubik";
 }
 
 /**********************************************
