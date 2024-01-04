@@ -1,7 +1,5 @@
 <template>
-  <div id="app" class="w-full h-screen bg-gray-50">
-    <router-view></router-view>
-  </div>
+  <div id="app" class="w-full h-screen bg-gray-50"></div>
 </template>
 
 <script setup>
@@ -11,23 +9,17 @@
 
 // -------- Vue
 
-import { onMounted } from "vue";
-
 // -------- Event Bus
 
 // -------- Store
 
 // -------- Router
 
-import { useRouter } from "vue-router";
-
 // -------- External
 
 // ------------------------ Props
 
 // ------------------------ Variables
-
-const router = useRouter();
 
 // ------------------------ Computed
 
@@ -36,10 +28,6 @@ const router = useRouter();
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-onMounted(() => {
-  router.push("/");
-});
 
 // -------- Event Bus
 
