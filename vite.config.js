@@ -13,6 +13,7 @@ export default defineConfig({
   },
   build: {
     outDir: "docs",
+    emptyOutDir: false,
   },
   server: {
     port: 8090,
