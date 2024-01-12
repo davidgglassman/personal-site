@@ -1,35 +1,35 @@
 <template>
-  <div class="w-auto h-auto my-6">
-    <div class="tile w-full h-auto border border-gray-400">
-      <div class="relative">
-        <carousel ref="myCarousel" :items-to-show="1" :wrapAround="true" :autoplay="5000" :pauseAutoplayOnHover="true">
-          <slide v-for="slide in 10" :key="slide" @click="onClick(slide)">
-            <img :src="image" alt="Some picture" class="image w-full border-b border-b-gray-400 object-cover m-0 p-0" />
-          </slide>
+  <div class="tile-outer">
+    <div class="tile">
+      <div class="carousel">
+        <Carousel ref="myCarousel" :items-to-show="1" :wrapAround="true" :autoplay="5000" :pauseAutoplayOnHover="true">
+          <Slide v-for="slide in 10" :key="slide" @click="onClick(slide)">
+            <img class="carousel-image" :src="image" alt="Some picture" />
+          </Slide>
 
           <template #addons>
-            <navigation />
-            <pagination />
+            <Navigation />
+            <Pagination />
           </template>
-        </carousel>
+        </Carousel>
       </div>
 
-      <div class="content w-full p-8 pt-4 pb-0 relative">
-        <button class="w-10 h-10 rounded-full absolute top-0 right-0 m-8 mt-5 flex-row-standard bg-green-400 text-white" :class="[{ 'opacity-0': showInfo }, { 'opacity-100': !showInfo }]" @click="showInfo = !showInfo">
-          <Icon :name="'plus'" :class="'w-6 h-6'" />
+      <div class="content">
+        <button class="show-hide-btn show-btn" :class="[{ 'opacity-0': showInfo }, { 'opacity-100': !showInfo }]" @click="showInfo = !showInfo">
+          <Icon :name="'plus'" :class="'show-hide-btn-icon'" />
         </button>
 
-        <button class="w-10 h-10 rounded-full absolute top-0 right-0 m-8 mt-5 flex-row-standard bg-red-400 text-white" :class="[{ 'opacity-0': !showInfo }, { 'opacity-100': showInfo }]" @click="showInfo = !showInfo">
-          <Icon :name="'minus'" :class="'w-6 h-6'" />
+        <button class="show-hide-btn hide-btn" :class="[{ 'opacity-0': !showInfo }, { 'opacity-100': showInfo }]" @click="showInfo = !showInfo">
+          <Icon :name="'minus'" :class="'show-hide-btn-icon'" />
         </button>
 
-        <div class="header mb-8">
-          <h3 class="text-xl font-bold tracking-tight">{{ name }}</h3>
-          <h4 class="text-sm text-gray-600">{{ info }}</h4>
+        <div class="header">
+          <h3 class="header-name">{{ name }}</h3>
+          <h4 class="header-info">{{ info }}</h4>
         </div>
 
-        <div class="info-wrapper" :class="{ 'is-open pb-8': showInfo }">
-          <div class="text-base md:text-lg leading-snug tracking-tight text-justify overflow-hidden">{{ content }}</div>
+        <div class="info" :class="{ 'is-open': showInfo }">
+          <div class="info-content">{{ content }}</div>
         </div>
       </div>
     </div>
@@ -43,9 +43,6 @@
 
 import Icon from "./Icon.vue";
 
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-
 // -------- Vue
 
 import { ref } from "vue";
@@ -57,6 +54,9 @@ import { ref } from "vue";
 // -------- Router
 
 // -------- External
+
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 // ------------------------ Props
 
@@ -70,14 +70,12 @@ const props = defineProps({
 // ------------------------ Variables
 
 let showInfo = ref(false);
-let showFullscreen = ref(false);
 const myCarousel = ref(null);
 
 // ------------------------ Computed
 
 // ------------------------ Functions
 
-const onClick = (slide) => {};
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
@@ -88,19 +86,122 @@ const onClick = (slide) => {};
 </script>
 
 <style scoped>
+.tile-outer {
+  margin-bottom: 2em;
+}
 .tile {
   min-width: 300px;
   max-width: 800px;
+  border: 1px solid rgb(156, 163, 175);
 }
 
-.info-wrapper {
+.carousel {
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(156, 163, 175);
+  object-fit: cover;
+  margin: 0px;
+  padding: 0px;
+}
+
+.content {
+  width: full;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding-top: 0.5rem;
+  }
+}
+
+.show-hide-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 9999px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+  .show-hide-btn {
+    margin-top: 1.5rem;
+  }
+}
+
+.show-btn {
+  border-color: rgb(74, 222, 128);
+  background-color: rgb(74, 222, 128);
+}
+
+.hide-btn {
+  border-color: rgb(248, 113, 113));
+  background-color: rgb(248, 113, 113);
+}
+
+.show-hide-btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header-name {
+  font-size: 1.25rem;
+  line-height: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.header-info {
+  font-size: 0.875rem;
+  line-height: 0.5rem;
+  color: rgb(75 85 99);
+}
+
+.info {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease-out;
 }
 
-.info-wrapper.is-open {
+.info.is-open {
   grid-template-rows: 1fr;
+  padding-bottom: 2rem;
+}
+
+.info-content {
+  width: full;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.025em;
+  text-align: justify;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .info-content {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .rotate-0 {
