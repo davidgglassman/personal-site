@@ -2,6 +2,7 @@
 
 - Vite
 - Vue 3 (using Composition API)
+- Tailwind CSS
 
 # Node Version
 
