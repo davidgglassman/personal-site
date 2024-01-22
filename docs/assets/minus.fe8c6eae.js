@@ -1,0 +1,1 @@
+import{o as e,c as o,a as t}from"./index.cbdfaa94.js";const s={fill:"currentColor",viewBox:"0 0 128 128",xmlns:"http://www.w3.org/2000/svg"},n=t("path",{d:"M27.727 55.938h72.547v16.121H27.727z"},null,-1),r=[n];function c(a,l){return e(),o("svg",s,[...r])}const i={render:c};export{i as default,c as render};

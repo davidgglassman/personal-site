@@ -3,7 +3,7 @@
     <div class="tile w-full h-auto border border-gray-400">
       <div class="relative">
         <carousel ref="myCarousel" :items-to-show="1" :wrapAround="true" :autoplay="5000" :pauseAutoplayOnHover="true">
-          <slide v-for="slide in 10" :key="slide" @click="onClick(slide)">
+          <slide v-for="image in data.images" :key="image" @click="onClick(image)">
             <img :src="image" alt="Some picture" class="image w-full border-b border-b-gray-400 object-cover m-0 p-0" />
           </slide>
 
@@ -24,12 +24,12 @@
         </button>
 
         <div class="header mb-8">
-          <h3 class="text-xl font-bold tracking-tight">{{ name }}</h3>
-          <h4 class="text-sm text-gray-600">{{ info }}</h4>
+          <h3 class="text-xl font-bold tracking-tight">{{ data.name }}</h3>
+          <h4 class="text-sm text-gray-600">{{ data.info }}</h4>
         </div>
 
         <div class="info-wrapper" :class="{ 'is-open pb-8': showInfo }">
-          <div class="text-base md:text-lg leading-snug tracking-tight text-justify overflow-hidden">{{ content }}</div>
+          <div class="text-base md:text-lg leading-snug tracking-tight text-justify overflow-hidden">{{ data.content }}</div>
         </div>
       </div>
     </div>
@@ -61,10 +61,7 @@ import { ref } from "vue";
 // ------------------------ Props
 
 const props = defineProps({
-  image: String,
-  name: String,
-  info: String,
-  content: String,
+  data: Object,
 });
 
 // ------------------------ Variables
@@ -91,6 +88,12 @@ const onClick = (slide) => {};
 .tile {
   min-width: 300px;
   max-width: 800px;
+}
+
+@media (min-width: 768px) {
+  .tile {
+    min-width: 800px;
+  }
 }
 
 .info-wrapper {
