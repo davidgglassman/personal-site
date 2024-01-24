@@ -1,7 +1,7 @@
 <template>
   <div class="header w-full bg-gray-50 h-auto flex-col-standard justify-center p-4 mb-4">
     <h1 class="name font-blackout_sunrise text-gray-700 my-6">David Glassman</h1>
-    <img class="object-cover object-center w-auto rounded-3xl" :src="'../src/assets/img/portraits/9.png'" alt="Some picture" />
+    <img class="object-cover object-center w-auto rounded-3xl" :src="image" alt="Some picture" />
   </div>
 </template>
 
@@ -19,6 +19,8 @@
 // -------- Router
 
 // -------- External
+
+import image from "../assets/img/portraits/9.png";
 
 // ------------------------ Props
 
