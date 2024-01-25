@@ -30,6 +30,16 @@ Fonts
   src: url("../fonts/blackout_two_am.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("../fonts/Inter-Bold.ttf") format("truetype");
+}
+
 /**********************************************
 Global
 **********************************************/
