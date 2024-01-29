@@ -1,6 +1,6 @@
 <template>
-  <div class="section mb-40">
-    <Button label="Drop Me A Line" />
+  <div class="size-full mb-4 min-h-[4em] rounded-xl border border-grey-500 bg-grey-700">
+    <slot />
   </div>
 </template>
 
@@ -10,8 +10,6 @@
 // -------- Components
 
 // -------- Vue
-
-import Button from "../atomic/Button.vue";
 
 // -------- Store
 

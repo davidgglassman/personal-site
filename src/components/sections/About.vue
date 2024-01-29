@@ -1,8 +1,9 @@
 <template>
   <div class="section">
-    <h3>About</h3>
-    <p>Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.</p>
-    <p>Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.</p>
+    <SectionLabel label="About" />
+
+    <p class="text-justify text-lg leading-snug tracking-tight text-grey-300">Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.</p>
+    <p class="mt-4 text-justify text-lg leading-snug tracking-tight text-grey-300">Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.</p>
   </div>
 </template>
 
@@ -13,11 +14,9 @@
 
 // -------- Vue
 
-// -------- Event Bus
+import SectionLabel from "../atomic/SectionLabel.vue";
 
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -32,8 +31,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

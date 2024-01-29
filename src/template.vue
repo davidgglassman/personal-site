@@ -9,11 +9,7 @@
 
 // -------- Vue
 
-// -------- Event Bus
-
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -28,8 +24,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

@@ -1,6 +1,7 @@
 <template>
   <div class="section">
-    <h3>Skills</h3>
+    <SectionLabel label="Skills" />
+
     <div class="h-72 w-full border border-grey-300">Chart</div>
   </div>
 </template>
@@ -12,11 +13,9 @@
 
 // -------- Vue
 
-// -------- Event Bus
+import SectionLabel from "../atomic/SectionLabel.vue";
 
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -31,8 +30,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

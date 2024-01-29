@@ -29,11 +29,7 @@ import Faq from "../components/sections/Faq.vue";
 import Trivia from "../components/sections/Trivia.vue";
 import Footer from "../components/sections/Footer.vue";
 
-// -------- Event Bus
-
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -48,8 +44,6 @@ import Footer from "../components/sections/Footer.vue";
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

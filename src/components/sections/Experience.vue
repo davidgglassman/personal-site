@@ -1,8 +1,9 @@
 <template>
   <div class="section">
-    <h3>Experience</h3>
-    <div class="h-72 w-full border border-grey-300">Card</div>
-    <button>See Full Resume</button>
+    <SectionLabel label="Experience" />
+
+    <Card></Card>
+    <Button label="See Full Resume" />
   </div>
 </template>
 
@@ -13,11 +14,11 @@
 
 // -------- Vue
 
-// -------- Event Bus
+import SectionLabel from "../atomic/SectionLabel.vue";
+import Card from "../atomic/Card.vue";
+import Button from "../atomic/Button.vue";
 
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -32,8 +33,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

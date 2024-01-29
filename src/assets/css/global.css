@@ -38,7 +38,7 @@ Layer Additions
 
 @layer components {
   .section {
-    @apply debug mb-20 h-auto w-full;
+    @apply mb-20 h-auto w-full;
   }
 }
 

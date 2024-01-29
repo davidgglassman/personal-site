@@ -1,10 +1,8 @@
 <template>
   <div class="section">
-    <h3>Trivia</h3>
-    <div class="mb-4 h-16 w-full border border-grey-300">Item</div>
-    <div class="mb-4 h-16 w-full border border-grey-300">Item</div>
-    <div class="mb-4 h-16 w-full border border-grey-300">Item</div>
-    <div class="mb-4 h-16 w-full border border-grey-300">Item</div>
+    <SectionLabel label="Trivia" />
+
+    <Card v-for="i in 4" key="i"></Card>
   </div>
 </template>
 
@@ -15,11 +13,10 @@
 
 // -------- Vue
 
-// -------- Event Bus
+import SectionLabel from "../atomic/SectionLabel.vue";
+import Card from "../atomic/Card.vue";
 
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -34,8 +31,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>

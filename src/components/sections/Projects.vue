@@ -1,8 +1,8 @@
 <template>
   <div class="section">
-    <h3>Projects</h3>
-    <div class="mb-4 h-72 w-full border border-grey-300">Card</div>
-    <div class="h-72 w-full border border-grey-300">Card</div>
+    <SectionLabel label="Projects" />
+
+    <Card v-for="i in 2" key="i"></Card>
   </div>
 </template>
 
@@ -13,11 +13,10 @@
 
 // -------- Vue
 
-// -------- Event Bus
+import SectionLabel from "../atomic/SectionLabel.vue";
+import Card from "../atomic/Card.vue";
 
 // -------- Store
-
-// -------- Router
 
 // -------- External
 
@@ -32,8 +31,6 @@
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
-
-// -------- Event Bus
 
 // -------- Watch
 </script>
