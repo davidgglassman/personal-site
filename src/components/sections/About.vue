@@ -12,9 +12,9 @@
 
 // -------- Components
 
-// -------- Vue
-
 import SectionLabel from "../atomic/SectionLabel.vue";
+
+// -------- Vue
 
 // -------- Store
 

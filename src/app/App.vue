@@ -18,8 +18,6 @@
 
 // -------- Components
 
-// -------- Vue
-
 import Header from "../components/sections/Header.vue";
 import About from "../components/sections/About.vue";
 import Experience from "../components/sections/Experience.vue";
@@ -28,6 +26,8 @@ import Projects from "../components/sections/Projects.vue";
 import Faq from "../components/sections/Faq.vue";
 import Trivia from "../components/sections/Trivia.vue";
 import Footer from "../components/sections/Footer.vue";
+
+// -------- Vue
 
 // -------- Store
 

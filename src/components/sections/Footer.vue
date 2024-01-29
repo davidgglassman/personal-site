@@ -9,9 +9,9 @@
 
 // -------- Components
 
-// -------- Vue
-
 import Button from "../atomic/Button.vue";
+
+// -------- Vue
 
 // -------- Store
 

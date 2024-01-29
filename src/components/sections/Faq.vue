@@ -11,10 +11,10 @@
 
 // -------- Components
 
-// -------- Vue
-
 import SectionLabel from "../atomic/SectionLabel.vue";
 import Card from "../atomic/Card.vue";
+
+// -------- Vue
 
 // -------- Store
 
