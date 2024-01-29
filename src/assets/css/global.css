@@ -1,71 +1,39 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 /**********************************************
 Fonts
 **********************************************/
 
 @font-face {
-  font-family: "Rubik";
-  src: url("../fonts/rubik.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Rubik Italic";
-  src: url("../fonts/rubik_italic.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Blackout Midnight";
-  src: url("../fonts/blackout_midnight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Blackout Sunrise";
-  src: url("../fonts/blackout_sunrise.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Blackout Two AM";
-  src: url("../fonts/blackout_two_am.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter Bold";
-  src: url("../fonts/Inter-Bold.ttf") format("truetype");
+  src: url("../fonts/inter_variable.ttf") format("truetype");
 }
 
 /**********************************************
-Global
+Utility Additions
 **********************************************/
 
-.disable {
-  @apply opacity-40 cursor-not-allowed pointer-events-none;
-}
-
-.debug {
-  @apply border border-red-300 border-dashed;
-}
-
-.size-full {
-  @apply w-full h-full;
-}
-
-.flex-row-standard {
-  @apply flex flex-row justify-center items-center;
-}
-
-.flex-col-standard {
-  @apply flex flex-col justify-center items-center;
-}
-
-* {
-  text-transform: none !important;
+@layer utilities {
+  .flex-standard {
+    @apply flex items-center justify-center;
+  }
+  .flex-row-standard {
+    @apply flex-standard flex-row;
+  }
+  .flex-col-standard {
+    @apply flex-standard flex-col;
+  }
+  .size-full {
+    @apply h-full w-full;
+  }
+  .debug {
+    @apply border border-dashed border-red-300;
+  }
+  .disable {
+    @apply pointer-events-none cursor-not-allowed opacity-40;
+  }
 }
 
 /**********************************************
@@ -93,5 +61,3 @@ html {
   background-color: var(--smoke);
   border-radius: 3px;
 }
-
-@tailwind utilities;
