@@ -1,5 +1,5 @@
 <template>
-  <div class="section mb-0">
+  <div class="section mb-12">
     <button>Drop Me A Line</button>
   </div>
 </template>

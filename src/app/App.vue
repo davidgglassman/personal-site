@@ -1,13 +1,15 @@
 <template>
-  <div id="app" class="size-full flex-col overflow-hidden bg-grey-900 px-4 py-20 font-inter text-grey-100 selection:bg-accent-1 selection:text-grey-900">
-    <Header />
-    <About />
-    <Experience />
-    <Skills />
-    <Projects />
-    <Faq />
-    <Trivia />
-    <Footer />
+  <div id="app" class="h-screen w-full flex-col overflow-hidden bg-grey-900 p-4 font-inter text-grey-100 selection:bg-accent-1 selection:text-grey-900">
+    <div class="content h-screen w-full overflow-scroll">
+      <Header />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Faq />
+      <Trivia />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -52,4 +54,8 @@ import Footer from "../components/sections/Footer.vue";
 // -------- Watch
 </script>
 
-<style scoped></style>
+<style scoped>
+.content {
+  overscroll-behavior: none !important;
+}
+</style>
