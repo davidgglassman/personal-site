@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="size-full flex-col bg-grey-900 px-4 py-20 font-inter text-grey-100 selection:bg-accent-1 selection:text-grey-900">
+  <div id="app" class="size-full flex-col overscroll-none bg-grey-900 px-4 py-20 font-inter text-grey-100 selection:bg-accent-1 selection:text-grey-900">
     <Header />
     <About />
     <Experience />
