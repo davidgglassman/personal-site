@@ -2,7 +2,9 @@
   <div class="section">
     <SectionLabel label="Projects" />
 
-    <Card v-for="i in 2" key="i"></Card>
+    <Card v-for="(item, i) in data.items" :key="i" class="px-0 pt-0">
+      <ProjectCard :data="item" />
+    </Card>
   </div>
 </template>
 
@@ -13,12 +15,15 @@
 
 import SectionLabel from "../atomic/SectionLabel.vue";
 import Card from "../atomic/Card.vue";
+import ProjectCard from "../complex/ProjectCard.vue";
 
 // -------- Vue
 
 // -------- Store
 
 // -------- External
+
+import data from "../../data/projects.yml";
 
 // ------------------------ Props
 
