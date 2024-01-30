@@ -1,10 +1,6 @@
 <template>
-  <div class="section">
-    <SectionLabel label="Trivia" />
-
-    <Card v-for="(item, i) in data.items" :key="i">
-      <TriviaCard :data="item" />
-    </Card>
+  <div class="size-full">
+    <p class="text-justify text-lg leading-snug tracking-tight text-grey-300">{{ data }}</p>
   </div>
 </template>
 
@@ -13,19 +9,17 @@
 
 // -------- Components
 
-import SectionLabel from "../atomic/SectionLabel.vue";
-import Card from "../atomic/Card.vue";
-import TriviaCard from "../complex/TriviaCard.vue";
-
 // -------- Vue
 
 // -------- Store
 
 // -------- External
 
-import data from "../../data/trivia.yml";
-
 // ------------------------ Props
+
+const props = defineProps({
+  data: String,
+});
 
 // ------------------------ Variables
 

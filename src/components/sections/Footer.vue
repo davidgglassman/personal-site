@@ -1,6 +1,10 @@
 <template>
-  <div class="section mb-40">
-    <Button label="Drop Me A Line" />
+  <div class="section">
+    <Button class="h-16 w-full">
+      <div class="flex-row-standard h-16">
+        <p class="text-lg font-semibold text-primary-2">DROP ME A LINE</p>
+      </div>
+    </Button>
   </div>
 </template>
 

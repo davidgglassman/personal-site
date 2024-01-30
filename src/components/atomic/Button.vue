@@ -1,5 +1,7 @@
 <template>
-  <button class="h-16 w-full rounded-full border-2 border-primary-2 text-lg font-semibold text-primary-2 hover:bg-primary-2 hover:text-grey-900">{{ label.toUpperCase() }}</button>
+  <button class="rounded-full border-2 border-primary-2">
+    <slot />
+  </button>
 </template>
 
 <script setup>
@@ -14,10 +16,6 @@
 // -------- External
 
 // ------------------------ Props
-
-const props = defineProps({
-  label: String,
-});
 
 // ------------------------ Variables
 

@@ -6,7 +6,11 @@
       <ExperienceCard :data="data" />
     </Card>
 
-    <Button label="See Full Resume" />
+    <Button class="h-16 w-full">
+      <div class="flex-row-standard">
+        <p class="text-lg font-semibold text-primary-2">SEE FULL RESUME</p>
+      </div>
+    </Button>
   </div>
 </template>
 
@@ -26,7 +30,7 @@ import ExperienceCard from "../complex/ExperienceCard.vue";
 
 // -------- External
 
-import data from "../../data/experience/experience.yml";
+import data from "../../data/experience.yml";
 
 // ------------------------ Props
 
