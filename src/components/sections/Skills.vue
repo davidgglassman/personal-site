@@ -3,7 +3,7 @@
     <SectionLabel label="Skills" />
 
     <div class="flex-col-standard">
-      <img src="../../assets/img/Chart.svg" alt="Chart Background" class="size-full" />
+      <img :src="chart" alt="Chart" class="size-full" />
 
       <div class="mt-10 flex h-8 w-fit items-center justify-around rounded-full border border-grey-500 bg-grey-700 p-6">
         <div class="flex-row-standard mx-4 gap-2">
@@ -25,13 +25,14 @@
 // -------- Components
 
 import SectionLabel from "../atomic/SectionLabel.vue";
-import Card from "../atomic/Card.vue";
 
 // -------- Vue
 
 // -------- Store
 
 // -------- External
+
+import chart from "../../assets/img/Chart.svg?url";
 
 // ------------------------ Props
 
