@@ -6,9 +6,9 @@
       <ExperienceCard :data="data" />
     </Card>
 
-    <Button class="h-16 w-full">
+    <Button class="mt-8 h-16 w-full">
       <div class="flex-row-standard">
-        <p class="text-lg font-semibold text-primary-2">SEE FULL RESUME</p>
+        <p class="text-base font-semibold text-primary-2">SEE FULL RESUME</p>
       </div>
     </Button>
   </div>

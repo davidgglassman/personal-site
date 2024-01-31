@@ -12,7 +12,7 @@
 
     <div v-show="expanded">
       <hr class="my-5 h-px border-0 bg-grey-500" />
-      <p class="mt-5 px-5 text-justify text-lg leading-snug tracking-tight text-grey-300">{{ data.answer }}</p>
+      <p class="mt-5 px-5 text-grey-300">{{ data.answer }}</p>
     </div>
   </div>
 </template>

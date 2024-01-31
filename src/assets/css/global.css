@@ -38,7 +38,7 @@ Layer Additions
 
 @layer components {
   .section {
-    @apply mb-20 h-auto w-full;
+    @apply mb-20 h-auto w-full min-w-[328px];
   }
 }
 

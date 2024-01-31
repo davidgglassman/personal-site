@@ -1,10 +1,10 @@
 <template>
   <header class="section">
-    <div class="text-3xl font-extrabold"><span class="text-primary-2">Hey!</span> I'm David.</div>
+    <div class="text-2xl font-extrabold"><span class="text-primary-2">Hey!</span> I'm David.</div>
 
     <div class="mt-4">
-      <div class="text-lg text-grey-300">I'm a <span class="font-semibold text-grey-100 underline decoration-accent-1 decoration-dashed underline-offset-4">software developer</span> who</div>
-      <div class="text-lg font-semibold underline decoration-accent-1 decoration-dashed underline-offset-4">something something something.</div>
+      <div class="text-base text-grey-300">I'm a <span class="font-semibold text-grey-100 underline decoration-accent-1 decoration-dashed underline-offset-4">software developer</span> who</div>
+      <div class="text-base font-semibold underline decoration-accent-1 decoration-dashed underline-offset-4">something something something.</div>
     </div>
   </header>
 </template>

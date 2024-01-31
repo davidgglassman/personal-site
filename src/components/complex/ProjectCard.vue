@@ -11,9 +11,9 @@
     <hr class="mb-5 h-px border-0 bg-grey-500" />
 
     <div class="flex h-auto w-full flex-row items-center justify-between px-5">
-      <div class="flex-col-standard">
-        <p class="text-lg font-bold text-grey-100">{{ data.name }}</p>
-        <p class="text-base font-semibold text-accent-1">{{ data.info }}</p>
+      <div class="flex flex-col">
+        <p class="text-base font-bold text-grey-100">{{ data.name }}</p>
+        <p class="font-semibold text-accent-1">{{ data.info }}</p>
       </div>
 
       <Button class="h-9 w-9" @click="OnShowHideClick()">
@@ -25,7 +25,7 @@
 
     <div v-show="expanded">
       <hr class="my-5 h-px border-0 bg-grey-500" />
-      <p class="mt-5 px-5 text-justify text-lg leading-snug tracking-tight text-grey-300">{{ data.content }}</p>
+      <p class="mt-5 px-5 text-grey-300">{{ data.content }}</p>
     </div>
   </div>
 </template>

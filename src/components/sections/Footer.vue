@@ -2,7 +2,7 @@
   <div class="section">
     <Button class="h-16 w-full">
       <div class="flex-row-standard h-16">
-        <p class="text-lg font-semibold text-primary-2">DROP ME A LINE</p>
+        <p class="text-base font-semibold text-primary-2">DROP ME A LINE</p>
       </div>
     </Button>
   </div>
