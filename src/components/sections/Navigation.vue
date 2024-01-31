@@ -1,5 +1,5 @@
 <template>
-  <div v-for="(item, i) in items" :key="i" class="mb-3 text-sm font-bold">{{ item.toUpperCase() }}</div>
+  <div v-for="(item, i) in items" :key="i" class="mb-3 text-sm font-bold xl:text-base">{{ item.toUpperCase() }}</div>
 </template>
 
 <script setup>

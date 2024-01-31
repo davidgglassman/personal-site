@@ -3,10 +3,12 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js}"],
   theme: {
     screens: {
-      sm: "480px",
+      xs: "440px",
+      sm: "620px",
       md: "768px",
       lg: "1024px",
       xl: "1440px",
+      xl2: "1660px",
     },
     extend: {
       colors: {

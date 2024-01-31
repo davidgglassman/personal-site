@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="h-screen w-full flex-col overflow-hidden bg-grey-900 text-left font-inter text-sm leading-normal tracking-widest text-grey-100 selection:bg-accent-1 selection:text-grey-900">
+  <div id="app" class="xs:text-base h-screen w-full flex-col overflow-hidden bg-grey-900 text-left font-inter text-sm leading-relaxed tracking-wide text-grey-100 selection:bg-accent-1 selection:text-grey-900 sm:text-lg md:text-xl lg:text-lg xl:text-xl">
     <template v-if="isMobile">
-      <div class="content h-screen w-full overflow-scroll p-4 py-20 sm:p-10 sm:py-20 md:p-16 md:py-20">
+      <div class="content xs:p-10 xs:py-20 h-screen w-full overflow-scroll p-4 py-20 sm:p-14 sm:py-20 md:p-20 md:py-20">
         <Header />
         <About />
         <Experience />
@@ -15,12 +15,12 @@
 
     <template v-else>
       <div class="flex-col-standard h-screen w-full">
-        <div class="flex-row-standard h-full gap-24">
-          <div class="h-full w-[26rem] p-4 pt-28">
+        <div class="flex-row-standard xl2:gap-48 h-full gap-14 xl:gap-28">
+          <div class="h-full w-[25rem] p-4 pt-28 xl:w-[28rem]">
             <Header />
             <Navigation />
           </div>
-          <div class="h-full w-[36rem] overflow-auto p-4 pt-28">
+          <div class="h-full w-[30rem] overflow-auto p-4 pt-28 xl:w-[42rem]">
             <About />
             <Experience />
             <Skills />

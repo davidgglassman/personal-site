@@ -8,7 +8,7 @@
 
     <Button class="mt-8 h-16 w-full">
       <div class="flex-row-standard">
-        <p class="text-base font-semibold text-primary-2">SEE FULL RESUME</p>
+        <p class="text-base font-semibold text-primary-2 sm:text-lg md:text-xl lg:text-lg xl:text-xl">SEE FULL RESUME</p>
       </div>
     </Button>
   </div>
