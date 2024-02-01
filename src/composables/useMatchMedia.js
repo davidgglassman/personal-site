@@ -7,7 +7,5 @@ export function useMatchMedia(query) {
 
   match.addEventListener("change", (e) => (isMatching.value = e.matches));
 
-  onUnmounted(() => window.removeEventListener("change"));
-
   return isMatching;
 }

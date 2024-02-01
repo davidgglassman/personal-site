@@ -1,5 +1,5 @@
 <template>
-  <header class="section">
+  <header class="mb-20 xl:mb-32">
     <div class="text-4xl font-extrabold md:text-5xl"><span class="text-primary-2">Hey!</span> I'm David.</div>
 
     <div class="mt-4">

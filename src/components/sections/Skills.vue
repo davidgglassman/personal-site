@@ -1,7 +1,5 @@
 <template>
-  <div class="section">
-    <SectionLabel label="Skills" />
-
+  <Section name="Skills">
     <div class="flex-col-standard">
       <img :src="chart" alt="Chart" class="size-full" />
 
@@ -16,7 +14,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </Section>
 </template>
 
 <script setup>
@@ -24,7 +22,7 @@
 
 // -------- Components
 
-import SectionLabel from "../atomic/SectionLabel.vue";
+import Section from "../atomic/Section.vue";
 
 // -------- Vue
 

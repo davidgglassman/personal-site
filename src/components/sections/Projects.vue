@@ -1,11 +1,9 @@
 <template>
-  <div class="section">
-    <SectionLabel label="Projects" />
-
+  <Section name="Projects">
     <Card v-for="(item, i) in data.items" :key="i" class="mb-8 px-0 pt-0">
       <ProjectCard :data="item" />
     </Card>
-  </div>
+  </Section>
 </template>
 
 <script setup>
@@ -13,7 +11,7 @@
 
 // -------- Components
 
-import SectionLabel from "../atomic/SectionLabel.vue";
+import Section from "../atomic/Section.vue";
 import Card from "../atomic/Card.vue";
 import ProjectCard from "../complex/ProjectCard.vue";
 

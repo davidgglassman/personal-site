@@ -1,7 +1,5 @@
 <template>
-  <div class="section">
-    <SectionLabel label="Experience" />
-
+  <Section name="Experience">
     <Card>
       <ExperienceCard :data="data" />
     </Card>
@@ -11,7 +9,7 @@
         <p class="text-lg font-bold tracking-wider text-primary-2">SEE FULL RESUME</p>
       </div>
     </Button>
-  </div>
+  </Section>
 </template>
 
 <script setup>
@@ -19,7 +17,7 @@
 
 // -------- Components
 
-import SectionLabel from "../atomic/SectionLabel.vue";
+import Section from "../atomic/Section.vue";
 import Card from "../atomic/Card.vue";
 import Button from "../atomic/Button.vue";
 import ExperienceCard from "../complex/ExperienceCard.vue";

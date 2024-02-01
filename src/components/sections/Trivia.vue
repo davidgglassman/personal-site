@@ -1,11 +1,9 @@
 <template>
-  <div class="section">
-    <SectionLabel label="Trivia" />
-
+  <Section name="Trivia">
     <Card v-for="(item, i) in data.items" :key="i">
       <TriviaCard :data="item" />
     </Card>
-  </div>
+  </Section>
 </template>
 
 <script setup>
@@ -13,7 +11,7 @@
 
 // -------- Components
 
-import SectionLabel from "../atomic/SectionLabel.vue";
+import Section from "../atomic/Section.vue";
 import Card from "../atomic/Card.vue";
 import TriviaCard from "../complex/TriviaCard.vue";
 

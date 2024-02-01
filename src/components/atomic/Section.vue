@@ -1,9 +1,8 @@
 <template>
-  <Section name="FAQ">
-    <Card v-for="(item, i) in data.items" :key="i" class="px-0">
-      <FaqCard :data="item" />
-    </Card>
-  </Section>
+  <div class="mb-20 h-auto w-full min-w-[328px] xl:mb-32">
+    <SectionLabel :label="props.name" />
+    <slot />
+  </div>
 </template>
 
 <script setup>
@@ -11,9 +10,7 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
-import Card from "../atomic/Card.vue";
-import FaqCard from "../complex/FaqCard.vue";
+import SectionLabel from "./SectionLabel.vue";
 
 // -------- Vue
 
@@ -21,9 +18,11 @@ import FaqCard from "../complex/FaqCard.vue";
 
 // -------- External
 
-import data from "../../data/faq.yml";
-
 // ------------------------ Props
+
+const props = defineProps({
+  name: String,
+});
 
 // ------------------------ Variables
 
