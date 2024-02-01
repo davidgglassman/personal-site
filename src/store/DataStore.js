@@ -5,6 +5,7 @@ export const useDataStore = defineStore("data", {
     nav_items: [],
     visible_nav_items: [],
     current_nav_item: null,
+    last_selected_nav_item: null,
   }),
   getters: {
     getNavItems() {
@@ -44,6 +45,9 @@ export const useDataStore = defineStore("data", {
           }
         }
       }
+    },
+    setLastSelectedNavItem(item) {
+      this.last_selected_nav_item = item;
     },
   },
 });

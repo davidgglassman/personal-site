@@ -3,7 +3,7 @@
     <div class="flex h-auto w-full flex-row items-center justify-between px-5">
       <p class="text-base font-semibold tracking-wide text-grey-100">{{ data.question }}</p>
 
-      <Button class="h-9 w-9 border-none" @click="OnShowHideClick()">
+      <Button class="h-9 w-9 border-none" @click="showHide">
         <div class="flex-row-standard text-grey-400">
           <Icon v-show="expanded" name="chevron_up" class="h-6 w-6" />
           <Icon v-show="!expanded" name="chevron_down" class="h-6 w-6" />
@@ -48,7 +48,7 @@ const expanded = ref(false);
 
 // ------------------------ Functions
 
-const OnShowHideClick = () => {
+const showHide = () => {
   expanded.value = !expanded.value;
 };
 

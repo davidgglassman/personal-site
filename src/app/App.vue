@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="h-screen w-full flex-col overflow-hidden bg-grey-900 text-left font-inter text-base leading-relaxed tracking-normal text-grey-100 selection:bg-accent-1 selection:text-grey-900">
     <template v-if="isMobile">
-      <div class="content h-screen w-full overflow-scroll p-6 sm:p-8 md:p-12 lg:p-20">
+      <div class="content h-screen w-full overflow-scroll p-6 pb-20 sm:p-8 md:p-12 lg:p-20">
         <Header />
         <About />
         <Experience />
@@ -21,7 +21,7 @@
             <Navigation />
           </div>
         </div>
-        <div class="absolute left-1/2 flex h-full w-1/2 flex-col items-start justify-start overflow-y-scroll py-20" ref="rightColumn">
+        <div class="absolute left-1/2 flex h-full w-1/2 scroll-pt-24 flex-col items-start justify-start overflow-y-scroll py-20" ref="rightColumn">
           <div class="w-[28rem] xl2:w-[32rem]">
             <About />
             <Experience />

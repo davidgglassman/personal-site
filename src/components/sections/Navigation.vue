@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(item, i) in items" :key="i" class="mb-2 text-sm font-bold tracking-widest" :class="{ 'text-primary-2': item === currentItem }">{{ `${item === currentItem ? "..." : ""}${item.toUpperCase()}` }}</div>
+    <div v-for="(item, i) in items" :key="i" @click="selectItem(item)" class="mb-2 cursor-pointer text-sm font-bold tracking-widest" :class="{ 'text-primary-2': item === currentItem }">{{ `${item === currentItem ? "..." : ""}${item.toUpperCase()}` }}</div>
   </div>
 </template>
 
@@ -32,6 +32,10 @@ const dataStore = useDataStore();
 
 // ------------------------ Functions
 
+const selectItem = (item) => {
+  dataStore.setLastSelectedNavItem(item);
+};
+
 // ------------------------ Events
 
 // -------- Lifecycle Hooks
@@ -53,7 +57,6 @@ watch(
   () => dataStore.current_nav_item,
   () => {
     currentItem.value = dataStore.getCurrentNavItem;
-    console.log(currentItem.value);
   },
 );
 </script>
