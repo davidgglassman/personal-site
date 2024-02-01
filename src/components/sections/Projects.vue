@@ -2,7 +2,7 @@
   <div class="section">
     <SectionLabel label="Projects" />
 
-    <Card v-for="(item, i) in data.items" :key="i" class="px-0 pt-0">
+    <Card v-for="(item, i) in data.items" :key="i" class="mb-8 px-0 pt-0">
       <ProjectCard :data="item" />
     </Card>
   </div>

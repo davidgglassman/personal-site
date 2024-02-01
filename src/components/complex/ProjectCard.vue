@@ -12,8 +12,8 @@
 
     <div class="flex h-auto w-full flex-row items-center justify-between px-5">
       <div class="flex flex-col">
-        <p class="xs:text-lg text-base font-bold text-grey-100 sm:text-xl">{{ data.name }}</p>
-        <p class="xs:text-base font-semibold text-accent-1">{{ data.info }}</p>
+        <p class="text-base font-semibold tracking-wide text-grey-100">{{ data.name }}</p>
+        <p class="text-base font-medium text-accent-1">{{ data.info }}</p>
       </div>
 
       <Button class="h-9 w-9" @click="OnShowHideClick()">

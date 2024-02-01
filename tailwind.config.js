@@ -3,12 +3,11 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js}"],
   theme: {
     screens: {
-      xs: "440px",
-      sm: "620px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1440px",
-      xl2: "1660px",
+      sm: "440px",
+      md: "620px",
+      lg: "768px",
+      xl: "1024px",
+      xl2: "1200px",
     },
     extend: {
       colors: {
@@ -16,11 +15,11 @@ module.exports = {
         "primary-2": "#FE4C59",
         "primary-3": "#B2353F",
         "accent-1": "#73DFE5",
-        "grey-100": "#F0F1F6",
-        "grey-300": "#8B8C8F",
-        "grey-500": "#48484A",
-        "grey-700": "#19191A",
-        "grey-900": "#121212",
+        "grey-100": "#f0f2f9",
+        "grey-300": "#cbd3d8",
+        "grey-500": "#333342",
+        "grey-700": "#1c2121",
+        "grey-900": "#171c1c",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

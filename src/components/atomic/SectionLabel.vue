@@ -1,7 +1,7 @@
 <template>
-  <div class="relative mb-9 inline-flex w-full items-center justify-center">
+  <div class="relative mb-11 inline-flex w-full items-center justify-center">
     <hr class="h-px w-full border-0 bg-grey-100" />
-    <span class="absolute left-1/2 -translate-x-1/2 bg-grey-900 px-3 font-semibold text-grey-100 sm:text-lg md:text-xl lg:text-base xl:text-lg">{{ label.toUpperCase() }}</span>
+    <span class="absolute left-1/2 -translate-x-1/2 bg-grey-900 px-3 text-sm font-bold tracking-widest text-grey-100">{{ label.toUpperCase() }}</span>
   </div>
 </template>
 

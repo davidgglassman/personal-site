@@ -1,7 +1,7 @@
 <template>
   <div class="size-full">
     <div class="flex h-auto w-full flex-row items-center justify-between px-5">
-      <p>{{ data.question }}</p>
+      <p class="text-base font-semibold tracking-wide text-grey-100">{{ data.question }}</p>
 
       <Button class="h-9 w-9" @click="OnShowHideClick()">
         <div class="flex-row-standard">
