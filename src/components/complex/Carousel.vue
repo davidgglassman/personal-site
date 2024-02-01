@@ -4,15 +4,15 @@
 
     <div v-if="navigation === undefined ? true : navigation" class="size-full absolute flex items-center justify-center px-4 py-0 text-black">
       <div class="flex flex-1">
-        <i class="fa-solid fa-chevron-left fa-xs cursor-pointer text-grey-500" @click="prevSlide"></i>
+        <Icon name="chevron_left" class="text-grey-400 h-5 w-5 cursor-pointer" @click="prevSlide" />
       </div>
       <div class="flex flex-1 justify-end">
-        <i class="fa-solid fa-chevron-right fa-xs cursor-pointer text-grey-500" @click="nextSlide"></i>
+        <Icon name="chevron_right" class="text-grey-400 h-5 w-5 cursor-pointer" @click="nextSlide" />
       </div>
     </div>
 
-    <div v-if="pagination === undefined ? true : pagination" class="absolute bottom-3 flex w-full items-center justify-center gap-2">
-      <span v-for="(_, i) in count" :key="i" :class="{ active: i + 1 === currentSlide }" class="h-2 w-2 cursor-pointer rounded-full bg-grey-500 shadow-md" @click="goToSlide(i)" />
+    <div v-if="pagination === undefined ? true : pagination" class="absolute bottom-3 flex w-full items-center justify-center gap-3">
+      <span v-for="(_, i) in count" :key="i" :class="{ active: i + 1 === currentSlide }" class="bg-grey-400 h-1 w-5 cursor-pointer rounded-full shadow-md" @click="goToSlide(i)" />
     </div>
   </div>
 </template>
@@ -21,6 +21,8 @@
 // ------------------------ Imports
 
 // -------- Components
+
+import Icon from "../../components/atomic/Icon.vue";
 
 // -------- Vue
 
