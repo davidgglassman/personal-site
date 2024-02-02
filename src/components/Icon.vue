@@ -1,9 +1,5 @@
 <template>
-  <Section name="FAQ">
-    <Card v-for="(item, i) in data.items" :key="i" class="px-0">
-      <FaqCard :data="item" />
-    </Card>
-  </Section>
+  <component :is="icon" :class="class" />
 </template>
 
 <script setup>
@@ -11,21 +7,24 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
-import Card from "../atomic/Card.vue";
-import FaqCard from "../complex/FaqCard.vue";
-
 // -------- Vue
+
+import { defineAsyncComponent } from "vue";
 
 // -------- Store
 
 // -------- External
 
-import data from "../../data/faq.yml";
-
 // ------------------------ Props
 
+const props = defineProps({
+  name: String,
+  class: String,
+});
+
 // ------------------------ Variables
+
+const icon = defineAsyncComponent(() => import(`../assets/icons/${props.name}.svg`));
 
 // ------------------------ Computed
 

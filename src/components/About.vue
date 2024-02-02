@@ -10,7 +10,7 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
+import Section from "./Section.vue";
 
 // -------- Vue
 

@@ -17,7 +17,7 @@ import { vIntersectionObserver } from "@vueuse/components";
 
 // -------- Store
 
-import { useDataStore } from "../../store/DataStore";
+import { useDataStore } from "../store/DataStore";
 
 // -------- External
 

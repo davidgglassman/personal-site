@@ -42,15 +42,15 @@
 
 // -------- Components
 
-import Header from "../components/sections/Header.vue";
-import Navigation from "../components/sections/Navigation.vue";
-import About from "../components/sections/About.vue";
-import Experience from "../components/sections/Experience.vue";
-import Skills from "../components/sections/Skills.vue";
-import Projects from "../components/sections/Projects.vue";
-import Faq from "../components/sections/Faq.vue";
-import Trivia from "../components/sections/Trivia.vue";
-import Footer from "../components/sections/Footer.vue";
+import Header from "../components/Header.vue";
+import Navigation from "../components/Navigation.vue";
+import About from "../components/About.vue";
+import Experience from "../components/Experience.vue";
+import Skills from "../components/Skills.vue";
+import Projects from "../components/Projects.vue";
+import Faq from "../components/Faq.vue";
+import Trivia from "../components/Trivia.vue";
+import Footer from "../components/Footer.vue";
 
 // -------- Vue
 

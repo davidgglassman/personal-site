@@ -1,5 +1,9 @@
 <template>
-  <component :is="icon" :class="class" />
+  <Section name="Trivia">
+    <Card v-for="(item, i) in data.items" :key="i">
+      <TriviaCard :data="item" />
+    </Card>
+  </Section>
 </template>
 
 <script setup>
@@ -7,24 +11,21 @@
 
 // -------- Components
 
-// -------- Vue
+import Section from "./Section.vue";
+import Card from "./Card.vue";
+import TriviaCard from "./TriviaCard.vue";
 
-import { defineAsyncComponent } from "vue";
+// -------- Vue
 
 // -------- Store
 
 // -------- External
 
+import data from "../data/trivia.yml";
+
 // ------------------------ Props
 
-const props = defineProps({
-  name: String,
-  class: String,
-});
-
 // ------------------------ Variables
-
-const icon = defineAsyncComponent(() => import(`../../assets/icons/${props.name}.svg`));
 
 // ------------------------ Computed
 

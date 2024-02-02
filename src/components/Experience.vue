@@ -17,10 +17,10 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
-import Card from "../atomic/Card.vue";
-import Button from "../atomic/Button.vue";
-import ExperienceCard from "../complex/ExperienceCard.vue";
+import Section from "./Section.vue";
+import Card from "./Card.vue";
+import Button from "./Button.vue";
+import ExperienceCard from "./ExperienceCard.vue";
 
 // -------- Vue
 
@@ -28,7 +28,7 @@ import ExperienceCard from "../complex/ExperienceCard.vue";
 
 // -------- External
 
-import data from "../../data/experience.yml";
+import data from "../data/experience.yml";
 
 // ------------------------ Props
 

@@ -22,7 +22,7 @@
 
 // -------- Components
 
-import Icon from "../../components/atomic/Icon.vue";
+import Icon from "./Icon.vue";
 
 // -------- Vue
 
@@ -32,7 +32,7 @@ import { ref } from "vue";
 
 // -------- External
 
-import { DebounceTimer } from "../../classes/DebounceTimer";
+import { DebounceTimer } from "../classes/DebounceTimer";
 
 // ------------------------ Props
 

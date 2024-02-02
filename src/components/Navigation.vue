@@ -17,11 +17,11 @@ import { ref, onMounted, watch } from "vue";
 
 // -------- Store
 
-import { useDataStore } from "../../store/DataStore";
+import { useDataStore } from "../store/DataStore";
 
 // -------- External
 
-import { DebounceTimer } from "../../classes/DebounceTimer";
+import { DebounceTimer } from "../classes/DebounceTimer";
 
 // ------------------------ Props
 

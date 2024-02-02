@@ -1,7 +1,7 @@
 <template>
-  <Section name="Trivia">
-    <Card v-for="(item, i) in data.items" :key="i">
-      <TriviaCard :data="item" />
+  <Section name="Projects">
+    <Card v-for="(item, i) in data.items" :key="i" class="mb-8 px-0 pt-0">
+      <ProjectCard :data="item" />
     </Card>
   </Section>
 </template>
@@ -11,9 +11,9 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
-import Card from "../atomic/Card.vue";
-import TriviaCard from "../complex/TriviaCard.vue";
+import Section from "./Section.vue";
+import Card from "./Card.vue";
+import ProjectCard from "./ProjectCard.vue";
 
 // -------- Vue
 
@@ -21,7 +21,7 @@ import TriviaCard from "../complex/TriviaCard.vue";
 
 // -------- External
 
-import data from "../../data/trivia.yml";
+import data from "../data/projects.yml";
 
 // ------------------------ Props
 

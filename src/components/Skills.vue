@@ -22,7 +22,7 @@
 
 // -------- Components
 
-import Section from "../atomic/Section.vue";
+import Section from "./Section.vue";
 
 // -------- Vue
 
@@ -30,7 +30,7 @@ import Section from "../atomic/Section.vue";
 
 // -------- External
 
-import chart from "../../assets/img/Chart.svg?url";
+import chart from "../assets/img/Chart.svg?url";
 
 // ------------------------ Props
 

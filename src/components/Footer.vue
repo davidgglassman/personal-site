@@ -1,9 +1,11 @@
 <template>
-  <header class="mb-20 min-w-[360px] xl:mb-32">
-    <div class="text-4xl font-extrabold md:text-5xl"><span class="text-primary-2">Hey!</span> I'm <GlitchText text="David" />.</div>
-
-    <Tagline />
-  </header>
+  <div class="pb-[8.25rem]">
+    <Button class="h-16 w-64">
+      <div class="flex-row-standard h-16">
+        <p class="text-lg font-bold tracking-wider text-primary-2">DROP ME A LINE</p>
+      </div>
+    </Button>
+  </div>
 </template>
 
 <script setup>
@@ -11,8 +13,7 @@
 
 // -------- Components
 
-import GlitchText from "../atomic/GlitchText.vue";
-import Tagline from "./Tagline.vue";
+import Button from "./Button.vue";
 
 // -------- Vue
 
