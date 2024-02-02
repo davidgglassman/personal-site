@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="h-screen w-full flex-col overflow-hidden bg-grey-900 text-left font-inter text-base leading-relaxed tracking-normal text-grey-100 selection:bg-accent-1 selection:text-grey-900">
+  <div id="app" class="h-screen w-full cursor-default flex-col overflow-hidden bg-grey-900 text-left font-inter text-base leading-relaxed tracking-normal text-grey-100 selection:bg-accent-1 selection:text-grey-900">
     <template v-if="isMobile">
       <div class="content h-screen w-full overflow-scroll p-6 pb-20 sm:p-8 md:p-12 lg:p-20">
         <Header />
