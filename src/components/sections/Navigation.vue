@@ -19,12 +19,16 @@ import { useDataStore } from "../../store/DataStore";
 
 // -------- External
 
+import { DebounceTimer } from "../../classes/DebounceTimer";
+
 // ------------------------ Props
 
 // ------------------------ Variables
 
 const items = ref([]);
 const currentItem = ref(null);
+
+let lastItem = null;
 
 const dataStore = useDataStore();
 
@@ -35,6 +39,12 @@ const dataStore = useDataStore();
 const selectItem = (item) => {
   dataStore.setLastSelectedNavItem(item);
 };
+
+const onTimerExpired = () => {
+  currentItem.value = lastItem;
+};
+
+const timer = new DebounceTimer(onTimerExpired, 350);
 
 // ------------------------ Events
 
@@ -56,7 +66,8 @@ watch(
 watch(
   () => dataStore.current_nav_item,
   () => {
-    currentItem.value = dataStore.getCurrentNavItem;
+    lastItem = dataStore.getCurrentNavItem;
+    timer.restart();
   },
 );
 </script>

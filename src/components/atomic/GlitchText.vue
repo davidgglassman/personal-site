@@ -47,11 +47,11 @@ function setValues(redOffsetX, redOffsetY, greenOffsetX, greenOffsetY, blueOffse
 }
 
 function getRandom() {
-  return (Math.random() * 0.1 - 0.05) * 1.5;
+  return (Math.random() * 0.1 - 0.05) * 1.75;
 }
 
 function changeValues() {
-  var allowChange = Math.random() > 0.5 && isHovering;
+  var allowChange = Math.random() > 0.75 && isHovering;
   var redOffsetX = getRandom();
   var redOffsetY = getRandom();
   var greenOffsetX = getRandom();
