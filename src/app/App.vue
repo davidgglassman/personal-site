@@ -80,9 +80,11 @@ const rightColumn = ref(null);
 // -------- Lifecycle Hooks
 
 onMounted(() => {
-  leftColumn.value.addEventListener("wheel", (event) => {
-    rightColumn.value.scrollBy(0, event.deltaY);
-  });
+  if (leftColumn.value && rightColumn.value) {
+    leftColumn.value.addEventListener("wheel", (event) => {
+      rightColumn.value.scrollBy(0, event.deltaY);
+    });
+  }
 });
 
 // -------- Watch
