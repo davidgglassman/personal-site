@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode"],
   app: {
     head: {
       title: "David Glassman",
@@ -17,5 +17,8 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [svgLoader(), ViteYaml()],
+  },
+  colorMode: {
+    classSuffix: "",
   },
 });

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(item, i) in items" :key="i" @click="selectItem(item)" class="mb-2 cursor-pointer text-sm font-bold tracking-widest" :class="{ 'text-primary-2': item === currentItem }">
+    <div v-for="(item, i) in items" :key="i" @click="selectItem(item)" class="mb-2 cursor-pointer text-sm font-bold tracking-wide" :class="{ 'text-primary-2': item === currentItem }">
       <span v-show="item === currentItem"><hr class="border-1 inline-block w-3 border-primary-2" /></span>{{ item.toUpperCase() }}
     </div>
   </div>

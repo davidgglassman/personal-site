@@ -1,6 +1,6 @@
 <template>
   <div class="size-full">
-    <p class="text-grey-300">{{ data }}</p>
+    <p class="text-grey-500 dark:text-grey-300">{{ data }}</p>
   </div>
 </template>
 

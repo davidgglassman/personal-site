@@ -1,13 +1,13 @@
 <template>
   <div class="mt-4 min-w-[360px]">
     <div class="flex flex-row">
-      <span class="mr-2 text-lg text-grey-300">I'm a</span>
-      <div id="functions" ref="functions" class="relative h-8 w-48 overflow-hidden border-b-2 border-dashed border-b-accent-1 text-lg font-semibold" />
-      <span class="ml-2 text-lg text-grey-300">who</span>
+      <span class="mr-2 text-lg text-grey-500 dark:text-grey-300">I'm a</span>
+      <div id="functions" ref="functions" class="relative h-8 w-48 overflow-hidden border-b-2 border-dashed border-b-primary-2 text-lg font-semibold dark:border-b-accent-1" />
+      <span class="ml-2 text-lg text-grey-500 dark:text-grey-300">who</span>
     </div>
 
     <div class="mt-2 flex flex-row">
-      <div id="actions" ref="actions" class="relative h-8 w-80 overflow-hidden border-b-2 border-dashed border-b-accent-1 text-lg font-semibold" />
+      <div id="actions" ref="actions" class="relative h-8 w-80 overflow-hidden border-b-2 border-dashed border-b-primary-2 text-lg font-semibold dark:border-b-accent-1" />
     </div>
   </div>
 </template>

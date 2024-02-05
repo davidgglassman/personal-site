@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: [],
   theme: {
     screens: {
@@ -16,6 +17,7 @@ export default {
         "primary-3": "#B2353F",
         "accent-1": "#73DFE5",
         "grey-100": "#f0f2f9",
+        "grey-200": "#eaecf1",
         "grey-300": "#cbd3d8",
         "grey-400": "#677178",
         "grey-500": "#333342",

@@ -92,6 +92,6 @@ if (props.autoPlay === undefined || props.autoPlay) {
 
 <style scoped>
 .active {
-  @apply bg-accent-1;
+  @apply bg-primary-2 dark:bg-accent-1;
 }
 </style>

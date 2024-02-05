@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-3 size-full min-h-[4em] rounded-xl border border-grey-500 bg-grey-700 p-5">
+  <div class="bg-grey-200 mb-3 size-full min-h-[4em] rounded-xl border border-grey-300 p-5 dark:border-grey-500 dark:bg-grey-700">
     <slot />
   </div>
 </template>

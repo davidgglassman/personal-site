@@ -8,12 +8,12 @@
       </CarouselSlide>
     </Carousel>
 
-    <hr class="mb-5 h-px border-0 bg-grey-500" />
+    <hr class="mb-5 h-px border-0 bg-grey-400 dark:bg-grey-500" />
 
     <div class="flex h-auto w-full flex-row items-center justify-between px-5">
       <div class="flex flex-col">
-        <p class="text-base font-semibold tracking-wide text-grey-100">{{ data.name }}</p>
-        <p class="text-base font-medium text-accent-1">{{ data.info }}</p>
+        <p class="text-base font-semibold tracking-wide text-grey-500 dark:text-grey-100">{{ data.name }}</p>
+        <p class="text-base font-medium text-primary-2 dark:text-accent-1">{{ data.info }}</p>
       </div>
 
       <Button class="h-9 w-9 border-none" @click="showHide">
@@ -26,7 +26,7 @@
 
     <div v-show="expanded">
       <hr class="my-5 h-px border-0 bg-grey-500" />
-      <p class="mt-5 px-5 text-grey-300">{{ data.content }}</p>
+      <p class="mt-5 px-5 text-grey-400 dark:text-grey-300">{{ data.content }}</p>
     </div>
   </div>
 </template>
