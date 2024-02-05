@@ -1,6 +1,6 @@
-module.exports = {
-  darkMode: "class",
-  content: ["./index.html", "./src/**/*.{vue,js}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [],
   theme: {
     screens: {
       sm: "440px",
@@ -27,6 +27,5 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [],
 };

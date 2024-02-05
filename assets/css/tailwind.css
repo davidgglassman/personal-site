@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**********************************************
+Layer Additions
+**********************************************/
+
+@layer utilities {
+  .flex-standard {
+    @apply flex items-center justify-center;
+  }
+  .flex-row-standard {
+    @apply flex-standard flex-row;
+  }
+  .flex-col-standard {
+    @apply flex-standard flex-col;
+  }
+  .size-full {
+    @apply h-full w-full;
+  }
+  .debug {
+    @apply border border-dashed border-red-300;
+  }
+  .disable {
+    @apply pointer-events-none cursor-not-allowed opacity-40;
+  }
+}
+
+/**********************************************
+Scrollbars
+**********************************************/
+
+html {
+  --smoke: rgba(128, 128, 128, 0.5);
+}
+/* Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--smoke) transparent;
+}
+
+/* Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--smoke);
+  border-radius: 3px;
+}
