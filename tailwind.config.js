@@ -23,9 +23,10 @@ export default {
         "grey-400": "#d1d1d1",
         "grey-500": "#b6b6b6",
         "grey-600": "#919191",
-        "grey-700": "#686868",
-        "grey-800": "#515151",
-        "grey-900": "#353535",
+        "grey-700": "#404040",
+        "grey-800": "#262626",
+        "grey-900": "#1f1f1f",
+        "grey-950": "#1a1a1a",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

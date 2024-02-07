@@ -15,8 +15,8 @@
     <!-- Subscribe / Contact Buttons -->
 
     <div class="flex-col-standard mb-32 h-auto w-full gap-12">
-      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold">Subscribe</button>
-      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold">Hit Me Up</button>
+      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">Subscribe</button>
+      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">Hit Me Up</button>
     </div>
   </div>
 </template>

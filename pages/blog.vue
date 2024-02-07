@@ -11,7 +11,7 @@
     <!-- Tags -->
 
     <div class="my-32 grid grid-cols-4 gap-4">
-      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center font-semibold">Tag</button>
+      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center font-semibold dark:border-grey-700">Tag</button>
     </div>
   </div>
 </template>

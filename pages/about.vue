@@ -22,11 +22,11 @@
           </ul>
 
           <div class="flex w-full flex-wrap">
-            <div v-for="(item, i) in experience.skills" :key="i" class="flex-row-standard mb-2 mr-2 inline-block rounded-full bg-grey-300 px-4 py-1 text-justify text-xs font-semibold last:mr-0">{{ item }}</div>
+            <div v-for="(item, i) in experience.skills" :key="i" class="flex-row-standard mb-2 mr-2 inline-block rounded-full bg-grey-300 px-4 py-1 text-justify text-xs font-semibold last:mr-0 dark:bg-grey-800">{{ item }}</div>
           </div>
         </div>
 
-        <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold">See Full Resume</button>
+        <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">See Full Resume</button>
       </div>
     </Section>
 
@@ -74,7 +74,7 @@
 
     <Section label="Trivia">
       <div class="flex-col-standard">
-        <div v-for="(item, i) in trivia.items" :key="i" class="card mb-1">{{ item }}</div>
+        <div v-for="(item, i) in trivia.items" :key="i" class="card mb-2">{{ item }}</div>
       </div>
     </Section>
   </div>

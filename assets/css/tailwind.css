@@ -43,7 +43,7 @@ Layer Additions
 
 @layer components {
   .card {
-    @apply size-full rounded-xl border border-grey-400 bg-grey-200 p-6;
+    @apply size-full rounded-xl border border-grey-400 bg-grey-200 p-6 dark:border-grey-700 dark:bg-grey-900;
   }
 }
 
