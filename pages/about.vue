@@ -72,8 +72,6 @@
 
     <!-- Trivia Section -->
 
-    <!-- Experience Section -->
-
     <Section label="Trivia">
       <div class="flex-col-standard">
         <div v-for="(item, i) in trivia.items" :key="i" class="card mb-1">{{ item }}</div>
