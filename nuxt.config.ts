@@ -1,5 +1,6 @@
 import svgLoader from "vite-svg-loader";
 import ViteYaml from "@modyfi/vite-plugin-yaml";
+import pkg from "./package.json";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

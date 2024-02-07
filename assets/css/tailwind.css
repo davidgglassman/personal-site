@@ -7,6 +7,11 @@
   src: url("~/assets/fonts/Inter_Variable.ttf") format("truetype");
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /**********************************************
 Layer Additions
 **********************************************/
@@ -29,6 +34,16 @@ Layer Additions
   }
   .disable {
     @apply pointer-events-none cursor-not-allowed opacity-40;
+  }
+}
+
+/**********************************************
+Layer Additions
+**********************************************/
+
+@layer components {
+  .card {
+    @apply size-full rounded-xl border border-grey-400 bg-grey-200 p-6;
   }
 }
 
