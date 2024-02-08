@@ -10,7 +10,7 @@
     </div>
 
     <div v-show="expanded">
-      <p class="w-full rounded-b-xl bg-grey-100 px-6 py-4 dark:bg-grey-800">{{ data.answer }}</p>
+      <p class="w-full rounded-b-xl bg-grey-100 px-6 py-4 text-grey-700 dark:bg-grey-800">{{ data.answer }}</p>
     </div>
   </div>
 </template>

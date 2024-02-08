@@ -1,7 +1,7 @@
 <template>
-  <button class="mb-4 flex h-auto w-full justify-between align-middle text-lg sm:mb-2 lg:text-xl">
-    <p class="text-sm font-medium sm:text-base lg:font-semibold">{{ data.title }}</p>
-    <p class="hidden text-sm font-medium lg:inline lg:text-base">{{ data.date }}</p>
+  <button class="flex h-10 w-full items-center justify-between text-lg hover:border-2 hover:border-dashed hover:border-grey-400 hover:px-2 hover:dark:border-grey-700 lg:text-xl">
+    <p class="text-sm font-medium decoration-grey-500 sm:text-base lg:font-semibold">{{ data.title }}</p>
+    <p class="hidden text-xs font-medium text-grey-600 lg:inline lg:text-sm">{{ data.date }}</p>
   </button>
 </template>
 

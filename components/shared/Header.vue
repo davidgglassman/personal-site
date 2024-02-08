@@ -62,6 +62,6 @@ const items = [
 
 <style scoped>
 .router-link-exact-active {
-  @apply bg-grey-300 dark:bg-grey-700;
+  @apply bg-grey-200 dark:bg-grey-700;
 }
 </style>

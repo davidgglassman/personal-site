@@ -45,8 +45,11 @@ Component Additions
   .card {
     @apply size-full rounded-xl border border-grey-400 bg-grey-200 p-6 dark:border-grey-700 dark:bg-grey-900;
   }
+  .btn {
+    @apply w-auto rounded-xl border border-grey-400 px-4 text-center text-sm font-medium hover:bg-grey-200 dark:border-grey-700 hover:dark:bg-grey-800;
+  }
   .btn-large {
-    @apply h-12 w-auto min-w-36 rounded-xl border border-grey-400 p-3 text-center text-sm font-medium dark:border-grey-700 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold;
+    @apply btn h-12 min-w-36 p-3 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold;
   }
 }
 
