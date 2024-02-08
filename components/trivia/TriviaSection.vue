@@ -1,6 +1,6 @@
 <template>
   <Section label="Trivia">
-    <TriviaCard v-for="(item, i) in trivia.items" :key="i" :data="item" />
+    <TriviaCard v-for="(item, i) in data" :key="i" :data="item" />
   </Section>
 </template>
 
@@ -9,8 +9,6 @@
 
 // -------- Internal
 
-import trivia from "~/data/trivia.yml";
-
 // -------- Node
 
 // -------- Store
@@ -18,6 +16,13 @@ import trivia from "~/data/trivia.yml";
 // ------------------------ Props
 
 // ------------------------ Variables
+
+const data = [
+  "Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.",
+  "Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.",
+  "Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.",
+  "Lorem ipsum dolor sit amet consectetur. Orci sit pretium lacus in ultrices a. Tincidunt varius vestibulum semper neque. Euismod pretium dapibus donec dictumst ipsum purus morbi vitae cursus. Vitae nec.",
+];
 
 // ------------------------ Computed
 

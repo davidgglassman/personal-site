@@ -1,6 +1,6 @@
 <template>
   <Section label="FAQ">
-    <FaqCard v-for="(item, i) in faq.items" :key="i" :data="item" />
+    <FaqCard v-for="(item, i) in data" :key="i" :data="item" />
   </Section>
 </template>
 
@@ -9,8 +9,6 @@
 
 // -------- Internal
 
-import faq from "~/data/faq.yml";
-
 // -------- Node
 
 // -------- Store
@@ -18,6 +16,25 @@ import faq from "~/data/faq.yml";
 // ------------------------ Props
 
 // ------------------------ Variables
+
+const data = [
+  {
+    question: "Some Question 1",
+    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 1",
+  },
+  {
+    question: "Some Question 2",
+    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 2",
+  },
+  {
+    question: "Some Question 3",
+    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 3",
+  },
+  {
+    question: "Some Question 4",
+    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 4",
+  },
+];
 
 // ------------------------ Computed
 
