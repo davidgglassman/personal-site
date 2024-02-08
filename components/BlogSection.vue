@@ -1,6 +1,6 @@
 <template>
-  <div class="mb-16">
-    <div class="mb-4 text-3xl font-bold">{{ year }}</div>
+  <div class="mb-12 lg:mb-16">
+    <div class="mb-4 text-xl font-bold lg:text-3xl">{{ year }}</div>
     <slot />
   </div>
 </template>

@@ -3,7 +3,7 @@
     <!-- Hero Section -->
 
     <Section label="Hey! I'm David">
-      <p class="text-justify font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
+      <p class="font-medium lg:font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
     </Section>
 
     <!-- Latest Posts Section -->
@@ -14,9 +14,9 @@
 
     <!-- Subscribe / Contact Buttons -->
 
-    <div class="flex-col-standard mb-32 h-auto w-full gap-12">
-      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">Subscribe</button>
-      <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">Hit Me Up</button>
+    <div class="flex-col-standard mb-16 h-auto w-full gap-8 sm:mb-24 lg:mb-32 lg:gap-12">
+      <button class="h-12 w-auto min-w-36 rounded-xl border border-grey-400 p-3 text-center text-sm font-medium dark:border-grey-700 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold">Subscribe</button>
+      <button class="h-12 w-auto min-w-36 rounded-xl border border-grey-400 p-3 text-center text-sm font-medium dark:border-grey-700 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold">Hit Me Up</button>
     </div>
   </div>
 </template>

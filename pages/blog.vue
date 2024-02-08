@@ -10,8 +10,8 @@
 
     <!-- Tags -->
 
-    <div class="my-32 grid grid-cols-4 gap-4">
-      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center font-semibold dark:border-grey-700">Tag</button>
+    <div class="my-16 grid grid-cols-2 gap-3 sm:my-24 sm:grid-cols-4 lg:my-32 lg:gap-4">
+      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center text-sm font-medium dark:border-grey-700 lg:text-base lg:font-semibold">Tag</button>
     </div>
   </div>
 </template>

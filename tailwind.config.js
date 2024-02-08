@@ -5,10 +5,8 @@ export default {
   theme: {
     screens: {
       sm: "440px",
-      md: "620px",
-      lg: "768px",
-      xl: "1024px",
-      xl2: "1200px",
+      md: "580px",
+      lg: "700px",
     },
     extend: {
       colors: {

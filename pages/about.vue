@@ -3,19 +3,19 @@
     <!-- Hero Section -->
 
     <Section label="About Me">
-      <p class="mb-6 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusd mque corrupti! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
-      <p class="mb-6 text-justify">Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
-      <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum fugit veniam expedita aliquam alias ab quasi ea et perspiciatis eius.</p>
+      <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusd mque corrupti! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
+      <p class="mb-6">Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum fugit veniam expedita aliquam alias ab quasi ea et perspiciatis eius.</p>
     </Section>
 
     <!-- Experience Section -->
 
     <Section label="Experience">
       <div class="flex-col-standard">
-        <div class="card mb-12">
-          <div class="mb-3 text-sm font-semibold">{{ experience.years }}</div>
-          <div class="text-2xl font-bold tracking-wide">{{ experience.title }}</div>
-          <div class="text-lg font-semibold">{{ experience.company }}</div>
+        <div class="card mb-8 lg:mb-12">
+          <div class="mb-3 text-xs font-semibold sm:text-sm">{{ experience.years }}</div>
+          <div class="text-base font-bold tracking-wide sm:text-lg lg:text-2xl">{{ experience.title }}</div>
+          <div class="text-sm font-semibold sm:text-base lg:text-lg">{{ experience.company }}</div>
 
           <ul class="my-5 ml-4 list-outside list-disc">
             <li v-for="(item, i) in experience.items" :key="i" class="mb-4">{{ item }}</li>
@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <button class="h-16 w-auto min-w-56 rounded-xl border border-grey-400 p-4 text-center text-lg font-semibold dark:border-grey-700">See Full Resume</button>
+        <button class="h-12 w-auto min-w-36 rounded-xl border border-grey-400 p-3 text-center text-sm font-medium dark:border-grey-700 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold">See Full Resume</button>
       </div>
     </Section>
 
@@ -35,28 +35,28 @@
     <Section label="Tech Stack">
       <div class="flex-col-standard card">
         <div class="mb-12">
-          <div class="mb-4 text-2xl font-bold">Programming Languages</div>
+          <div class="mb-4 text-base font-bold sm:text-lg lg:text-2xl">Programming Languages</div>
           <div class="flex-col-standard">
             <LanguageSummary v-for="(item, i) in 3" :key="i" :label="'XYZ Name'" :icon="'placeholder'" :content="'Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?'" />
 
             <div class="card p-4">
-              <div v-for="(item, i) in 4" :key="i" class="mb-1 flex w-full items-center justify-start gap-3">
-                <div class="h-3 w-3 rounded-full bg-grey-500"></div>
-                <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, architecto?</p>
+              <div v-for="(item, i) in 4" :key="i" class="mb-1 flex w-full items-start justify-start gap-3">
+                <div class="mt-1 h-2 w-2 min-w-2 rounded-full bg-grey-500 sm:h-3 sm:w-3"></div>
+                <p class="grow text-xs leading-normal sm:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, architecto?</p>
               </div>
             </div>
           </div>
         </div>
 
         <div>
-          <div class="mb-4 text-2xl font-bold tracking-wide">Tools I Use</div>
+          <div class="mb-4 text-base font-bold sm:text-lg lg:text-2xl">Tools I Use</div>
           <div class="flex-col-standard">
             <LanguageSummary v-for="(item, i) in 3" :key="i" :label="'XYZ Name'" :icon="'placeholder'" :content="'Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?'" />
 
             <div class="card p-4">
-              <div v-for="(item, i) in 4" :key="i" class="mb-1 flex w-full items-center justify-start gap-3">
-                <div class="h-3 w-3 rounded-full bg-grey-500"></div>
-                <p class="text-sm leading-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, architecto?</p>
+              <div v-for="(item, i) in 4" :key="i" class="mb-1 flex w-full items-start justify-start gap-3">
+                <div class="mt-1 h-2 w-2 min-w-2 rounded-full bg-grey-500 sm:h-3 sm:w-3"></div>
+                <p class="grow text-xs leading-normal sm:text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, architecto?</p>
               </div>
             </div>
           </div>

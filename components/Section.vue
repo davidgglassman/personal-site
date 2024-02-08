@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-32">
+  <div class="mb-16 sm:mb-24 lg:mb-32">
     <SectionHeader :label="label" :buttonLabel="buttonLabel" :clickAction="clickAction" />
     <slot />
   </div>
