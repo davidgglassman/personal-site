@@ -1,7 +1,7 @@
 <template>
   <button class="mb-4 flex h-auto w-full justify-between align-middle text-lg sm:mb-2 lg:text-xl">
-    <p class="text-sm font-medium sm:text-base lg:font-semibold">{{ post.title }}</p>
-    <p class="hidden text-sm font-medium lg:inline lg:text-base">{{ post.date }}</p>
+    <p class="text-sm font-medium sm:text-base lg:font-semibold">{{ data.title }}</p>
+    <p class="hidden text-sm font-medium lg:inline lg:text-base">{{ data.date }}</p>
   </button>
 </template>
 
@@ -17,7 +17,7 @@
 // ------------------------ Props
 
 const props = defineProps({
-  post: Object,
+  data: Object,
 });
 // ------------------------ Variables
 

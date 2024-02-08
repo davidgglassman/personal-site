@@ -1,9 +1,6 @@
 <template>
   <SectionHeader label="Posts" />
-
-  <PostsGroup v-for="i in 3" :key="i" :year="`${2027 - i}`">
-    <PostSummary v-for="(item, i) in posts" :key="i" :post="item" />
-  </PostsGroup>
+  <PostsGroup v-for="i in 3" :key="i" :year="`${2027 - i}`" :items="data" />
 </template>
 
 <script setup>
@@ -21,7 +18,7 @@
 
 // fixed for layout purposes. this data will eventually be driven by Markdown files & from Nuxt Content.
 
-const posts = [
+const data = [
   {
     title: "My First Post",
     date: "Jan 2024",

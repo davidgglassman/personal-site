@@ -8,8 +8,10 @@
       <li v-for="(item, i) in data.items" :key="i" class="mb-4">{{ item }}</li>
     </ul>
 
-    <div class="flex w-full flex-wrap">
-      <div v-for="(item, i) in data.skills" :key="i" class="flex-row-standard mb-2 mr-2 inline-block rounded-full bg-grey-300 px-4 py-1 text-justify text-xs font-semibold last:mr-0 dark:bg-grey-800">{{ item }}</div>
+    <div class="ml-4 flex w-full flex-wrap gap-4 sm:gap-6">
+      <a v-for="(item, i) in data.skills" :key="i" :href="item.url" target="_blank">
+        <Icon :name="item.icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+      </a>
     </div>
   </div>
 </template>

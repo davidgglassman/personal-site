@@ -1,6 +1,6 @@
 <template>
   <Section label="Latest Posts" buttonLabel="All Posts" :clickAction="showAllPosts">
-    <PostSummary v-for="(item, i) in posts" :key="i" :post="item" />
+    <PostSummary v-for="(item, i) in data" :key="i" :data="item" />
   </Section>
 </template>
 
@@ -19,7 +19,7 @@
 
 // fixed for layout purposes. this data will eventually be driven by Markdown files & from Nuxt Content.
 
-const posts = [
+const data = [
   {
     title: "My First Post",
     date: "Jan 2024",
