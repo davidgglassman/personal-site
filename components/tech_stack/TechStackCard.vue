@@ -2,7 +2,7 @@
   <div class="card mb-2 p-4 pl-0 pt-0">
     <div class="flex size-full justify-between">
       <div class="flex flex-col justify-start align-top">
-        <Icon :name="icon" class="h-12 w-12 lg:h-16 lg:w-16" />
+        <Icon :name="icon" class="h-12 w-12 p-3 lg:h-16 lg:w-16 lg:p-4" />
       </div>
       <div class="flex-col-standard pt-2">
         <div class="flex w-full items-center justify-between">
@@ -32,6 +32,7 @@ const props = defineProps({
   level: Number,
   content: String,
 });
+
 // ------------------------ Variables
 
 // ------------------------ Computed

@@ -1,5 +1,5 @@
 <template>
-  <ProjectsSection />
+  <div class="card mb-2">{{ data }}</div>
 </template>
 
 <script setup>
@@ -13,9 +13,11 @@
 
 // ------------------------ Props
 
-// ------------------------ Variables
+const props = defineProps({
+  data: String,
+});
 
-// ------------------------ Composables
+// ------------------------ Variables
 
 // ------------------------ Computed
 

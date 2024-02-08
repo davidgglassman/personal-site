@@ -21,4 +21,10 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
 });

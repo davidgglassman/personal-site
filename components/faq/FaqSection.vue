@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <PostsAll />
-
-    <div class="my-16 grid grid-cols-2 gap-3 sm:my-24 sm:grid-cols-4 lg:my-32 lg:gap-4">
-      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center text-sm font-medium dark:border-grey-700 lg:text-base lg:font-semibold">Tag</button>
-    </div>
-  </div>
+  <Section label="FAQ">
+    <FaqCard v-for="(item, i) in faq.items" :key="i" :data="item" />
+  </Section>
 </template>
 
 <script setup>
 // ------------------------ Imports
 
 // -------- Internal
+
+import faq from "~/data/faq.yml";
 
 // -------- Node
 
@@ -20,8 +18,6 @@
 // ------------------------ Props
 
 // ------------------------ Variables
-
-// ------------------------ Composables
 
 // ------------------------ Computed
 

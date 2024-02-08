@@ -1,11 +1,7 @@
 <template>
-  <div>
-    <PostsAll />
-
-    <div class="my-16 grid grid-cols-2 gap-3 sm:my-24 sm:grid-cols-4 lg:my-32 lg:gap-4">
-      <button v-for="i in 10" :key="i" class="h-8 w-auto rounded-xl border border-grey-400 text-center text-sm font-medium dark:border-grey-700 lg:text-base lg:font-semibold">Tag</button>
-    </div>
-  </div>
+  <Section label="Hey! I'm David">
+    <p class="font-medium lg:font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
+  </Section>
 </template>
 
 <script setup>
@@ -20,8 +16,6 @@
 // ------------------------ Props
 
 // ------------------------ Variables
-
-// ------------------------ Composables
 
 // ------------------------ Computed
 

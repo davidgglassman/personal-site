@@ -20,7 +20,7 @@ const props = defineProps({
 
 // ------------------------ Variables
 
-const icon = defineAsyncComponent(() => import(`~/assets/icons/${props.name}.svg`));
+const icon = defineAsyncComponent(() => import(`../../assets/icons/${props.name}.svg`));
 
 // ------------------------ Computed
 
