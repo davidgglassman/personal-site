@@ -3,7 +3,9 @@
     <div class="flex-col-standard">
       <ExperienceCard v-for="(item, i) in data" :key="i" :data="item" />
 
-      <button class="btn-large">See Full Resume</button>
+      <button class="btn-large">
+        <a href="resume.pdf" target="_blank">See Full Resume</a>
+      </button>
     </div>
   </Section>
 </template>
