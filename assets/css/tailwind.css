@@ -57,24 +57,24 @@ Component Additions
 Scrollbars
 **********************************************/
 
-html {
-  --smoke: rgba(128, 128, 128, 0.5);
-}
-/* Firefox-only */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--smoke) transparent;
-}
-
-/* Chrome/Edge/Safari */
 *::-webkit-scrollbar {
   width: 0.35rem;
-  height: 0.35rem;
 }
+
 *::-webkit-scrollbar-track {
-  background: transparent;
+  background: #fdfdfd;
 }
+
 *::-webkit-scrollbar-thumb {
-  background-color: var(--smoke);
-  border-radius: 3px;
+  background-color: #919191;
+  border-radius: 10px;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 10px;
 }
