@@ -19,12 +19,14 @@
 
 const { data } = await useAsyncData("latest-posts", () => queryContent("/blog").sort({ date: -1 }).limit(5).find());
 
+const router = useRouter();
+
 // ------------------------ Computed
 
 // ------------------------ Functions
 
 const showAllPosts = () => {
-  console.log("just confirming callback works");
+  router.push("/blog");
 };
 
 // ------------------------ Events
