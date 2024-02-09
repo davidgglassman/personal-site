@@ -28,7 +28,7 @@ h6 {
 }
 
 .dark p {
-  @apply text-grey-400;
+  @apply text-grey-500;
 }
 
 .dark a {
@@ -36,11 +36,11 @@ h6 {
 }
 
 .dark strong {
-  @apply text-grey-400;
+  @apply text-grey-500;
 }
 
 .dark li {
-  @apply text-grey-400;
+  @apply text-grey-500;
 }
 
 .dark hr {
@@ -51,8 +51,8 @@ h6 {
   @apply text-grey-400;
 }
 
-.dark {
-  @apply text-grey-400;
+.dark tr {
+  @apply text-grey-500;
 }
 
 /**********************************************

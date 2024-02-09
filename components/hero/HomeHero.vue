@@ -1,7 +1,10 @@
 <template>
   <div class="mb-16 sm:mb-24 lg:mb-32">
-    <h1 class="mb-6 text-2xl font-bold sm:text-3xl lg:text-5xl"><span class="text-grey-600">Hey!</span> I'm David</h1>
-    <p class="font-medium lg:font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt error aliquam inventore, architecto adipisci distinctio. Enim quod qui similique? Esse praesentium at exercitationem. Fugiat, animi! Rem.</p>
+    <h1 class="mb-6 text-2xl font-bold sm:text-3xl lg:text-5xl"><span class="text-primary-2">Hey there!</span> I'm Dave.</h1>
+
+    <p class="inline font-medium lg:font-semibold">I'm an art-loving, coffee-guzzling software developer from Brooklyn. Welcome to my little slice of the internet pie. Here, you can <NuxtLink to="/about" class="link">get to know me</NuxtLink> better</p>
+    <p class="inline font-medium lg:font-semibold" :class="{ hidden: !showBlog }">, check out some of the <NuxtLink to="/projects" class="link">software projects</NuxtLink> I've worked on, or read some of my <NuxtLink to="/blog" class="link">blog posts</NuxtLink>. I'm just getting started with writing, so there's not much content yet, but I'm working on it!</p>
+    <p class="inline font-medium lg:font-semibold" :class="{ hidden: showBlog }">&nbsp;or check out some of the <NuxtLink to="/projects" class="link">software projects</NuxtLink> I've worked on. I'm just getting started with writing, so I'll add a blog section as soon as I get some posts under my belt. Stay tuned!</p>
 
     <div class="mt-6 flex items-center justify-start gap-5 lg:gap-6">
       <a v-for="(item, i) in filteredItems" :key="i" :href="item.link" target="_blank" class="h-8">
@@ -67,4 +70,8 @@ const filteredItems = computed(() => {
 // -------- Watch
 </script>
 
-<style scoped></style>
+<style scoped>
+.link {
+  @apply underline decoration-primary-2  underline-offset-[6px] hover:text-primary-2;
+}
+</style>

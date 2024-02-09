@@ -1,9 +1,9 @@
 <template>
-  <SectionHeader label="Posts" />
+  <SectionHeader label="Posts" class="mb-4" />
   <PostsGroup v-for="(item, i) in groupedData" :key="i" :year="item.year.toString()" :items="item.items" :hideYear="groupedData.length <= 1" />
 
-  <SectionHeader label="Tags" class="mt-16 sm:mt-24 lg:mt-32" />
-  <div class="mb-16 flex flex-wrap items-center justify-start gap-3">
+  <SectionHeader label="Tags" class="mb-4 mt-16 sm:mt-24 lg:mt-32" />
+  <div class="mb-16 flex flex-wrap items-center justify-start gap-3 sm:mb-24 lg:mb-32">
     <button v-for="(item, i) in tags" :key="i" class="btn h-8">{{ item }}</button>
   </div>
 </template>
