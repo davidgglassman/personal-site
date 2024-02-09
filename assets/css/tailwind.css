@@ -13,6 +13,49 @@ html {
 }
 
 /**********************************************
+Global Dark Styles
+**********************************************/
+
+/* Have to apply these global styles in order for Dark Mode to work in Markdown files */
+
+.dark h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-grey-400;
+}
+
+.dark p {
+  @apply text-grey-400;
+}
+
+.dark a {
+  @apply text-grey-400;
+}
+
+.dark strong {
+  @apply text-grey-400;
+}
+
+.dark li {
+  @apply text-grey-400;
+}
+
+.dark hr {
+  @apply border-t-grey-700;
+}
+
+.dark th {
+  @apply text-grey-400;
+}
+
+.dark {
+  @apply text-grey-400;
+}
+
+/**********************************************
 Layer Additions
 **********************************************/
 

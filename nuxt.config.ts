@@ -1,6 +1,4 @@
 import svgLoader from "vite-svg-loader";
-import ViteYaml from "@modyfi/vite-plugin-yaml";
-import pkg from "./package.json";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -8,7 +6,13 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content"],
+  content: {
+    highlight: {
+      theme: "nord",
+      preload: ["ts", "js", "css", "java", "json", "bash", "python", "vue"],
+    },
+  },
   app: {
     head: {
       title: "David Glassman",
@@ -16,7 +20,7 @@ export default defineNuxtConfig({
     },
   },
   vite: {
-    plugins: [svgLoader(), ViteYaml()],
+    plugins: [svgLoader()],
   },
   colorMode: {
     classSuffix: "",

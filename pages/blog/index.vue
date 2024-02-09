@@ -1,7 +1,7 @@
 <template>
-  <Section label="Latest Posts" buttonLabel="All Posts" :clickAction="showAllPosts">
-    <PostSummary v-for="(item, i) in data" :key="i" :data="item" />
-  </Section>
+  <div>
+    <PostsAll />
+  </div>
 </template>
 
 <script setup>
@@ -17,15 +17,11 @@
 
 // ------------------------ Variables
 
-const { data } = await useAsyncData("latest-posts", () => queryContent("/blog").sort({ date: -1 }).limit(5).find());
+// ------------------------ Composables
 
 // ------------------------ Computed
 
 // ------------------------ Functions
-
-const showAllPosts = () => {
-  console.log("just confirming callback works");
-};
 
 // ------------------------ Events
 
