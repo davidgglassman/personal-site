@@ -129,3 +129,7 @@ H~2~O
 ### Superscript
 
 X^2^
+
+:::callout{title="My Callout"}
+This is a quick tip about something
+:::
