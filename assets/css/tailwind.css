@@ -10,8 +10,12 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-grey-100;
 }
 
+.dark {
+  @apply bg-grey-950;
+}
 /**********************************************
 Global Dark Styles
 **********************************************/
