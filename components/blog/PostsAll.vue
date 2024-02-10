@@ -1,7 +1,9 @@
 <template>
-  <SectionHeader label="Tags" />
-  <div class="mb-16 flex flex-wrap items-center justify-start gap-3 sm:mb-24 lg:mb-32">
-    <button v-for="(item, i) in tags" :key="i" class="btn h-8" :class="{ active: activeTags.tags.includes(item) }" @click="toggleActiveTag(item)">{{ item }}</button>
+  <div class="hidden">
+    <SectionHeader label="Tags" />
+    <div class="mb-16 flex flex-wrap items-center justify-start gap-3 sm:mb-24 lg:mb-32">
+      <button v-for="(item, i) in tags" :key="i" class="btn h-8" :class="{ active: activeTags.tags.includes(item) }" @click="toggleActiveTag(item)">{{ item }}</button>
+    </div>
   </div>
 
   <div class="mb-16 sm:mb-24 lg:mb-32">
