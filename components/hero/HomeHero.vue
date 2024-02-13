@@ -10,7 +10,14 @@
       <a v-for="(item, i) in filteredItems" :key="i" :href="item.link" target="_blank" class="h-8">
         <Icon :name="item.icon" class="h-5 w-5 lg:h-6 lg:w-6" />
       </a>
+
+      <!-- Setting this to always hide for now until I've worked out the subscription workflow -->
+      <button v-if="false" class="flex-row-standard h-8" @click="showSubscribe = !showSubscribe">
+        <Icon name="bell" class="mb-2 h-5 w-5 lg:h-6 lg:w-6" />
+      </button>
     </div>
+
+    <Subscribe v-show="showSubscribe" />
   </div>
 </template>
 
@@ -27,16 +34,14 @@
 
 const { showBlog } = await useShowBlog();
 
+const showSubscribe = ref(false);
+
 // ------------------------ Variables
 
 const items = [
   {
     icon: "email",
     link: "mailto:davidglassman@fastmail.com",
-  },
-  {
-    icon: "bell",
-    link: "",
   },
   {
     icon: "linkedin",

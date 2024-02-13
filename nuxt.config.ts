@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content", "@nuxtjs/supabase"],
+  supabase: {
+    redirect: false,
+  },
   content: {
     highlight: {
       theme: "nord",
