@@ -75,8 +75,4 @@ const filteredItems = computed(() => {
 // -------- Watch
 </script>
 
-<style scoped>
-.link {
-  @apply underline decoration-primary-2  underline-offset-[6px] hover:text-primary-2;
-}
-</style>
+<style scoped></style>

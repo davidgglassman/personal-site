@@ -98,6 +98,9 @@ Component Additions
   .btn-large {
     @apply btn h-12 min-w-36 p-3 sm:h-14 sm:min-w-48 sm:text-base lg:h-16 lg:min-w-56 lg:p-4 lg:text-lg lg:font-semibold;
   }
+  .link {
+    @apply underline decoration-primary-2  underline-offset-[6px] hover:text-primary-2;
+  }
 }
 
 /**********************************************

@@ -1,18 +1,27 @@
 <template>
   <div class="card mb-8 lg:mb-12">
-    <div class="mb-3 text-xs font-semibold sm:text-sm">{{ data.years }}</div>
-    <div class="text-base font-bold tracking-wide sm:text-lg lg:text-2xl">{{ data.title }}</div>
-    <div class="text-sm font-semibold text-grey-700 dark:text-grey-600 sm:text-base lg:text-lg">{{ data.company }}</div>
+    <div class="mb-3 text-xs font-bold sm:text-sm">{{ data.years }}</div>
 
-    <ul class="my-5 ml-4 list-outside list-disc">
-      <li v-for="(item, i) in data.items" :key="i" class="mb-4">{{ item }}</li>
-    </ul>
-
-    <div class="ml-4 flex w-full flex-wrap gap-4 sm:gap-6">
-      <a v-for="(item, i) in data.skills" :key="i" :href="item.url" target="_blank">
-        <Icon :name="item.icon" class="h-5 w-5 sm:h-6 sm:w-6" />
-      </a>
+    <div class="flex items-center justify-between text-primary-2">
+      <div class="text-xs font-bold tracking-wide sm:text-base lg:text-lg">{{ data.roles.main.title }}</div>
+      <div class="text-xs font-bold sm:text-sm">{{ data.roles.main.years }}</div>
     </div>
+
+    <div v-for="(role, i) in data.roles.other" :key="i" class="flex items-center justify-between text-grey-800 dark:text-primary-1" :style="{ opacity: `${100 - (i + 1) * 30}%` }">
+      <div class="text-xs font-semibold tracking-wide sm:text-sm lg:text-base">{{ role.title }}</div>
+      <div class="text-xs font-semibold">{{ role.years }}</div>
+    </div>
+
+    <a :href="data.url" target="_blank" class="link mt-4 inline-block text-xs font-bold sm:text-sm lg:text-base">{{ data.company }}</a>
+
+    <ul class="ml-4 mt-5 list-outside list-disc text-xs sm:text-sm md:text-base">
+      <li v-for="(item, i) in data.items" :key="i" class="mt-3">
+        <div>{{ item.content }}</div>
+        <a v-if="item.link" :href="item.link.url" target="_blank"
+          ><span class="link font-semibold">{{ item.link.title }}</span></a
+        >
+      </li>
+    </ul>
   </div>
 </template>
 
