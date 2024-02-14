@@ -25,19 +25,19 @@
 
 const data = [
   {
-    years: "2013 - Present",
+    years: "2013 - Now",
     roles: {
       main: {
-        title: "Principle Software Developer",
-        years: "2023 - Present",
+        title: "Principle Developer",
+        years: "2023 - Now",
       },
       other: [
         {
-          title: "Senior Software Developer",
+          title: "Senior Developer",
           years: "2014 - 2022",
         },
         {
-          title: "Junior Software Developer",
+          title: "Junior Developer",
           years: "2013 - 2014",
         },
       ],
@@ -110,12 +110,12 @@ const data = [
     years: "2005 - 2012",
     roles: {
       main: {
-        title: "Sales Administration Supervisor",
+        title: "Sales Admin Supervisor",
         years: "2009 - 2012",
       },
       other: [
         {
-          title: "Sales Administrator",
+          title: "Sales Admin",
           years: "2005 - 2009",
         },
       ],
