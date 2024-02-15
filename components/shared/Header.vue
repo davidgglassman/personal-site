@@ -17,9 +17,9 @@
 
   <ul class="mb-8 mt-3 flex w-full flex-col border border-grey-400 dark:border-grey-700 sm:flex-row sm:gap-2 md:gap-1 lg:gap-2" :class="{ hidden: !menuActive }">
     <li v-for="(item, i) in filteredItems" :key="i">
-      <NuxtLink :to="item.path" @click="menuActive = false" class="flex h-10 w-full items-center justify-start gap-4 border border-grey-400 bg-grey-100 p-4 text-grey-900 dark:border-grey-700 dark:bg-grey-950 dark:text-grey-300 sm:h-6 sm:justify-center sm:gap-2 sm:rounded-xl md:h-8 md:w-auto lg:h-10">
+      <NuxtLink :to="item.path" @click="menuActive = false" class="flex h-12 w-full items-center justify-start gap-4 border border-grey-400 bg-grey-100 p-4 text-grey-900 dark:border-grey-700 dark:bg-grey-950 dark:text-grey-300 sm:h-6 sm:justify-center sm:gap-2 sm:rounded-xl md:h-8 md:w-auto lg:h-10">
         <Icon :name="item.icon" class="h-4 w-4" />
-        <p class="text-xs font-semibold lg:text-sm">{{ item.name }}</p>
+        <p class="font-semibold">{{ item.name }}</p>
       </NuxtLink>
     </li>
   </ul>

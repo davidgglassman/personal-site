@@ -1,15 +1,15 @@
 <template>
-  <div class="card mb-2 p-4 pl-0 pt-0">
+  <div class="card p-3">
     <div class="flex size-full justify-between">
       <div class="flex flex-col justify-start align-top">
-        <Icon :name="icon" class="h-12 w-12 p-3 lg:h-16 lg:w-16 lg:p-4" />
+        <Icon :name="icon" class="mr-3 h-5 w-5" />
       </div>
-      <div class="flex-col-standard pt-2">
+      <div class="flex w-full flex-col">
         <div class="flex w-full items-center justify-between">
-          <div class="mb-1 text-sm font-semibold sm:text-base lg:text-lg lg:font-bold">{{ label }}</div>
-          <div class="h-2 w-2 rounded-full bg-grey-500 sm:h-3 sm:w-3 lg:h-4 lg:w-4"></div>
+          <div class="mb-1 font-semibold lg:text-lg">{{ label }}</div>
+          <div class="-mt-2 h-[.35rem] w-[.35rem] rounded-full bg-grey-500 md:h-2 md:w-2"></div>
         </div>
-        <p class="leading-normal">{{ content }}</p>
+        <p class="text-left leading-normal">{{ content }}</p>
       </div>
     </div>
   </div>

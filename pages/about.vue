@@ -3,7 +3,7 @@
   <ExperienceSection />
   <TechStackSection />
   <FaqSection />
-  <TriviaSection />
+  <!-- <TriviaSection /> -->
 </template>
 
 <script setup>

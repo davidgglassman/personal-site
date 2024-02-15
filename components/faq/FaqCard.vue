@@ -1,16 +1,18 @@
 <template>
   <div class="card mb-2 size-full p-0">
-    <div class="flex h-auto w-full flex-row items-center justify-between px-6 py-4">
-      <p class="font-semibold tracking-wide">{{ data.question }}</p>
+    <div class="flex h-auto w-full flex-row items-center justify-between gap-2 px-6 py-1">
+      <p class="tracking-wide">{{ question }}</p>
 
       <button class="flex-row-standard h-9 w-9 border-none" @click="showHide">
-        <Icon v-show="expanded" name="chevron_up" class="h-6 w-6" />
-        <Icon v-show="!expanded" name="chevron_down" class="h-6 w-6" />
+        <Icon v-show="expanded" name="chevron_up" class="h-5 w-5" />
+        <Icon v-show="!expanded" name="chevron_down" class="h-5 w-5" />
       </button>
     </div>
 
     <div v-show="expanded">
-      <p class="w-full rounded-b-xl bg-grey-100 px-6 py-4 text-grey-700 dark:bg-grey-800">{{ data.answer }}</p>
+      <div class="w-full rounded-b-xl bg-grey-100 px-6 py-2 text-grey-700 dark:bg-grey-800">
+        <slot />
+      </div>
     </div>
   </div>
 </template>
@@ -27,7 +29,7 @@
 // ------------------------ Props
 
 const props = defineProps({
-  data: Object,
+  question: String,
 });
 
 // ------------------------ Variables

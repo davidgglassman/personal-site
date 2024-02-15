@@ -1,10 +1,8 @@
 <template>
   <SectionHeader label="Projects" />
 
-  <!-- Project Cards -->
-
   <div class="mb-16 sm:mb-24 lg:mb-32">
-    <ProjectCard v-for="(item, i) in data" :key="i" :data="item" class="mb-2" />
+    <ProjectCard v-for="(item, i) in data" :key="i" :data="item" class="mb-4 md:mb-6" />
   </div>
 </template>
 

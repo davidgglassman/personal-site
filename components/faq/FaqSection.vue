@@ -1,6 +1,36 @@
 <template>
   <Section label="FAQ">
-    <FaqCard v-for="(item, i) in data" :key="i" :data="item" />
+    <FaqCard question="How did you make this website?">
+      <p>This is some text</p>
+    </FaqCard>
+
+    <FaqCard question="How did you learn to code?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="What do you love most about programming?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="What do you listen to while coding?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="What are you working on now?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="Tabs or spaces?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="Have you always lived in Brooklyn?">
+      <!--  -->
+    </FaqCard>
+
+    <FaqCard question="Got any Top 5 lists?">
+      <!--  -->
+    </FaqCard>
   </Section>
 </template>
 
@@ -16,25 +46,6 @@
 // ------------------------ Props
 
 // ------------------------ Variables
-
-const data = [
-  {
-    question: "Some Question 1",
-    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 1",
-  },
-  {
-    question: "Some Question 2",
-    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 2",
-  },
-  {
-    question: "Some Question 3",
-    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 3",
-  },
-  {
-    question: "Some Question 4",
-    answer: "Lorem ipsum dolor sit amet sic mun consectetur. Orci sit pretium lacuser in ultrices. 4",
-  },
-];
 
 // ------------------------ Computed
 
