@@ -1,7 +1,8 @@
 <template>
   <Section label="FAQ">
     <FaqCard question="How did you make this website?">
-      <p>This is some text</p>
+      <p class="mb-4 text-grey-700 dark:text-grey-600">I started this as a regular Vue app since it's my favorite Javascript framework to work with (once you get the taste for a good framework, it's hard to go back to vanilla). Then, I decided partway through that I needed more flexibility since I wanted to add a blog section and more advanced functionality down the road. So, I upgraded to Nuxt. First time using the framework and I'm really enjoying it.</p>
+      <p class="text-grey-700 dark:text-grey-600">Can't forget Tailwind for styling (I'll never go back to vanilla CSS without kicking and screaming) and Netlify for deployment (since it's so simple to link to a Github repo and redeploy whenever new code is pushed).</p>
     </FaqCard>
 
     <FaqCard question="How did you learn to code?">
@@ -12,24 +13,25 @@
       <!--  -->
     </FaqCard>
 
-    <FaqCard question="What do you listen to while coding?">
-      <!--  -->
-    </FaqCard>
-
     <FaqCard question="What are you working on now?">
       <!--  -->
     </FaqCard>
 
     <FaqCard question="Tabs or spaces?">
-      <!--  -->
+      <p class="text-grey-700 dark:text-grey-600">Tabs, for sure. Spaces make my carpal tunnel flare up &#128514;</p>
     </FaqCard>
 
     <FaqCard question="Have you always lived in Brooklyn?">
-      <!--  -->
+      <p class="text-grey-700 dark:text-grey-600">No, originally from Long Island. But I've moved around a bunch in my life. I've lived in 17 houses/apartments in 13 towns/cities in 4 states. Been in NYC (cycling back and forth between Manhattan, Queens and Brooklyn) for about 20 years total though. Think I'm pretty close to hanging it up soon and moving out to somewhere with a little less hustle and bustle.</p>
     </FaqCard>
 
     <FaqCard question="Got any Top 5 lists?">
-      <!--  -->
+      <div v-for="(category, i) in topFive" :key="i" class="mb-4 last:mb-0">
+        <div class="text-primary-2">{{ category.title }}</div>
+        <ul v-for="(item, j) in category.items" :key="j" class="list-inside list-disc">
+          <li class="text-grey-700 dark:text-grey-600">{{ item }}</li>
+        </ul>
+      </div>
     </FaqCard>
   </Section>
 </template>
@@ -46,6 +48,29 @@
 // ------------------------ Props
 
 // ------------------------ Variables
+
+const topFive = [
+  {
+    title: "Artists",
+    items: ["Eric Fischl", "Francis Bacon", "Cy Twombly", "John Singer Sargent", "Paco Pomet"],
+  },
+  {
+    title: "Books",
+    items: ["Remembrance of Earth's Past Trilogy by Liu Cixin", "Freedom by Jonathan Franzen", "Knockemstiff by Donald Ray Pollock", "Tenth of December by George Saunders", "On Writing by Stephen King"],
+  },
+  {
+    title: "Albums",
+    items: ["Mezzanine by Massive Attack", "Lateralus by Tool", "Kid A by Radiohead", "Kind of Blue by Miles Davis", "Roseland NYC Live by Portishead"],
+  },
+  {
+    title: "Movies",
+    items: ["The Lord of The Rings Trilogy", "Pulp Fiction", "Boogie Nights", "The Departed", "Fight Club"],
+  },
+  {
+    title: "TV",
+    items: ["The Wire", "It's Always Sunny in Philadelphia", "Halt and Catch Fire", "Scrubs", "Silicon Valley"],
+  },
+];
 
 // ------------------------ Computed
 

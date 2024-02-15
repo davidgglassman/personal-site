@@ -10,7 +10,7 @@
     </div>
 
     <div v-show="expanded">
-      <div class="w-full rounded-b-xl bg-grey-100 px-6 py-2 text-grey-700 dark:bg-grey-800">
+      <div class="w-full rounded-b-xl bg-grey-100 px-6 py-4 text-grey-700 dark:bg-grey-800">
         <slot />
       </div>
     </div>
