@@ -11,6 +11,7 @@ export default {
       md: "580px",
       lg: "700px",
     },
+
     extend: {
       colors: {
         "primary-1": "#FFA6A6",
@@ -31,6 +32,9 @@ export default {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        md: ["1.075rem", "1.625rem"],
       },
     },
   },
