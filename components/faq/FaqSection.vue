@@ -11,11 +11,11 @@
 
     <FaqCard question="What are you working on now?">
       <div class="text-grey-700 dark:text-grey-600">
-        <p>Other than whatever day-to-day projects I'm working on for my actual job (probably too many to get into here), some things I'm actively into or ramping up to tackle this year:</p>
+        <p class="text-grey-700 dark:text-grey-600">Other than whatever day-to-day projects I'm working on for my actual job (probably too many to get into here), some things I'm actively into or ramping up to tackle this year:</p>
         <ul class="ml-4 mt-4 list-outside list-disc">
-          <li class="mb-3">Looking to start contributing to open-source projects this year (once I decide which one(s) I most want to get involved with). I think I've been too long in my own insulated bubble, and it's time to branch out and start collaborating with others on some cool projects.</li>
-          <li class="mb-3">I created this website, which I don't plan on keeping static for long. This is very much "version 1," and I'm sure there will be changes and updates over time as I think of them. Plus, I plan to start a blog section on the site, which will be up as soon as I think of some things to write about.</li>
-          <li>Hobby-wise, I'm looking for ways to rekindle the practice of regular art-making. I'm experimenting with AI image generation (mostly Stable Diffusion) and looking into methods for incorporating that workflow into a more traditional drawing/painting regimen.</li>
+          <li class="mb-3 text-grey-700 dark:text-grey-600">Looking to start contributing to open-source projects this year (once I decide which one(s) I most want to get involved with). I think I've been too long in my own insulated bubble, and it's time to branch out and start collaborating with others on some cool projects.</li>
+          <li class="mb-3 text-grey-700 dark:text-grey-600">I created this website, which I don't plan on keeping static for long. This is very much "version 1," and I'm sure there will be changes and updates over time as I think of them. Plus, I plan to start a blog section on the site, which will be up as soon as I think of some things to write about.</li>
+          <li class="text-grey-700 dark:text-grey-600">Hobby-wise, I'm looking for ways to rekindle the practice of regular art-making. I'm experimenting with AI image generation (mostly Stable Diffusion) and looking into methods for incorporating that workflow into a more traditional drawing/painting regimen.</li>
         </ul>
       </div>
     </FaqCard>
