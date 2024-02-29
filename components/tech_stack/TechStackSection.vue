@@ -72,42 +72,42 @@ const tools = [
   {
     label: "Firefox",
     icon: "firefox",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "Firefox is my go-to browser for daily use. It's not as flashy as Chrome, but the privacy benefits are worth it. I'll admit, Chrome's interface and usability are more my style, but I can't shake the feeling that Google's watching my every move. So, Firefox it is.",
   },
   {
     label: "Chrome",
     icon: "chrome",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "I keep Chrome installed only as a development browser. I'll admit, I struggle with Firefox's Dev Tools., so when I'm working on a project, Chrome takes the lead. Of course, when it's time to do any actual browsing, back to Firefox I go.",
   },
   {
     label: "VS Code",
     icon: "vscode",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "VS Code is a no-brainer for me when it comes to code editors. The vast array of extensions and customizability options keep me hooked.",
   },
   {
     label: "Git",
     icon: "git",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "I mean, let's be real, who doesn't use Git? It's the bread and butter of version control systems. Are there other version control systems around anymore? Is Subversion still a thing? Mercurial? I'm by no means a master, though. I do the same 10% of things 95% of the time and rarely touch the more advanced functionality. I rarely work on large software projects with multiple people simultaneously, so I haven't needed to get too deep with it. I know enough to be dangerous. ",
   },
   {
     label: "GitKraken",
     icon: "gitkraken",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "I know a lot of people who use Git are command-line purists. I'm not one of them. I like a little GUI with my Git, and this is the most polished of all the apps I've tried.",
   },
   {
     label: "Figma",
     icon: "figma",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "It's easy to see why Figma has become so popular. It's a game-changer for UI design. It's easy to learn and intuitive, even for non-designers like myself. I always sketch out wireframes and prototypes in Figma before moving on to the final product. Plus, it's great for sharing ideas with colleagues and clients.",
   },
   {
     label: "Electron",
     icon: "electron",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "Electron is a relatively new addition to my toolkit, but I'm liking what I see so far. I especially enjoyed being able to code the front end in Vue. I know the executable is enormous and can be a bit of a memory hog. Still, I can't bring myself to learn Flutter since I don't trust that Google won't kill it 5 minutes after I finish my first app, and learning React Native means I would have to write React code. I don't want to write React code if I can help it. Sure, there's .NET MAUI, but until Microsoft can code all their own apps using it, I'm not going to put any effort into learning it.",
   },
   {
     label: "Photoshop",
     icon: "photoshop",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse rerum accusamus dolorum quae libero illo quia nihil iusto repellat?",
+    content: "The old workhorse. I know enough Photoshop to get the job done, and I stick to my lane. Can I lay out a website with it? Probably not without a fight. Can I turn all my coworkers into Avengers? Well, that's a different story.",
   },
 ];
 
