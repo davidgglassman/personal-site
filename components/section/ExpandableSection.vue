@@ -1,6 +1,8 @@
 <template>
-  <div class="mb-4 text-base font-bold sm:text-lg lg:text-2xl">{{ label }}</div>
-  <TechStackCard v-for="(item, i) in items" :key="i" :id="id" :label="item.label" :icon="item.icon" :content="item.content" />
+  <div class="mb-16 sm:mb-24 lg:mb-32">
+    <ExpandableSectionHeader :id="id" :label="label" />
+    <slot />
+  </div>
 </template>
 
 <script setup>
@@ -17,10 +19,11 @@
 const props = defineProps({
   id: String,
   label: String,
-  items: Array,
 });
 
 // ------------------------ Variables
+
+// ------------------------ Composables
 
 // ------------------------ Computed
 

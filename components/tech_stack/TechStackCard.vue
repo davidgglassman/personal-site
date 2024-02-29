@@ -35,12 +35,15 @@
 // ------------------------ Props
 
 const props = defineProps({
+  id: String,
   icon: String,
   label: String,
   content: String,
 });
 
 // ------------------------ Variables
+
+const dataStore = useDataStore();
 
 const expanded = ref(false);
 
@@ -57,6 +60,13 @@ const showHide = () => {
 // -------- Lifecycle Hooks
 
 // -------- Watch
+
+watch(
+  () => dataStore.expanded[props.id],
+  (data) => {
+    expanded.value = data;
+  },
+);
 </script>
 
 <style scoped></style>

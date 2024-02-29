@@ -1,15 +1,15 @@
 <template>
-  <Section label="FAQ">
-    <FaqCard question="How did you make this website?">
+  <ExpandableSection id="faq" label="FAQ">
+    <FaqCard id="faq" question="How did you make this website?">
       <p class="mb-4 text-grey-700 dark:text-grey-600">I started this as a regular Vue app since it's my favorite Javascript framework to work with (once you get the taste for a good framework, it's hard to go back to vanilla). Then, I decided partway through that I needed more flexibility since I wanted to add a blog section and more advanced functionality down the road. So, I upgraded to Nuxt. First time using the framework and I'm really enjoying it.</p>
       <p class="text-grey-700 dark:text-grey-600">Can't forget Tailwind for styling (I'll never go back to vanilla CSS without kicking and screaming) and Netlify for deployment (since it's so simple to link to a Github repo and redeploy whenever new code is pushed).</p>
     </FaqCard>
 
-    <FaqCard question="How did you learn to code?">
+    <FaqCard id="faq" question="How did you learn to code?">
       <p class="text-grey-700 dark:text-grey-600">I didn't go to school for computer science or anything like that. In fact, I went to art school, where I majored in fine arts (drawing, painting, etc.). Any programming skills I have were hard won through on-the-job training and mentorship and countless nights and weekends spent studying and practicing. Little by little, improvements came. Now, I'm in a place where I'm confident about my abilities but also well aware that what I know is just a drop in the vast ocean of knowledge out there regarding this profession. But I keep plugging away at it. Learn a little more each day. That's all any of us can do, really.</p>
     </FaqCard>
 
-    <FaqCard question="What are you working on now?">
+    <FaqCard id="faq" question="What are you working on now?">
       <div class="text-grey-700 dark:text-grey-600">
         <p class="text-grey-700 dark:text-grey-600">Other than whatever day-to-day projects I'm working on for my actual job (probably too many to get into here), some things I'm actively into or ramping up to tackle this year:</p>
         <ul class="ml-4 mt-4 list-outside list-disc">
@@ -20,15 +20,15 @@
       </div>
     </FaqCard>
 
-    <FaqCard question="Tabs or spaces?">
+    <FaqCard id="faq" question="Tabs or spaces?">
       <p class="text-grey-700 dark:text-grey-600">Tabs, for sure. Spaces make my carpal tunnel flare up &#128514;</p>
     </FaqCard>
 
-    <FaqCard question="Have you always lived in Brooklyn?">
+    <FaqCard id="faq" question="Have you always lived in Brooklyn?">
       <p class="text-grey-700 dark:text-grey-600">No, originally from Long Island. But I've moved around a bunch in my life. I've lived in 17 houses/apartments in 13 towns/cities in 4 states. Been in NYC (cycling back and forth between Manhattan, Queens and Brooklyn) for about 20 years total though. Think I'm pretty close to hanging it up soon and moving out to somewhere with a little less hustle and bustle.</p>
     </FaqCard>
 
-    <FaqCard question="Got any Top 5 lists?">
+    <FaqCard id="faq" question="Got any Top 5 lists?">
       <div v-for="(category, i) in topFive" :key="i" class="mb-4 last:mb-0">
         <div class="text-primary-2">{{ category.title }}</div>
         <ul v-for="(item, j) in category.items" :key="j" class="list-inside list-disc">
@@ -36,7 +36,7 @@
         </ul>
       </div>
     </FaqCard>
-  </Section>
+  </ExpandableSection>
 </template>
 
 <script setup>
@@ -55,7 +55,7 @@
 const topFive = [
   {
     title: "Artists",
-    items: ["Eric Fischl", "Francis Bacon", "Cy Twombly", "John Singer Sargent", "Paco Pomet"],
+    items: ["Eric Fischl", "Francis Bacon", "Cy Twombly", "John Singer Sargent", "Caravaggio"],
   },
   {
     title: "Books",
