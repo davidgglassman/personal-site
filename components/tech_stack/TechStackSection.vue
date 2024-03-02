@@ -29,7 +29,7 @@ const languages = [
   {
     label: "Python",
     icon: "python",
-    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever little opportunities I can to write with it. It has such a good blend of simplicity and power. There really is little it can't do. And that standard library? Chef's kiss. If given a choice (and I don't need much or any user interface), I choose Python.",
+    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever little opportunities I can to write with it. It has such a nice blend of simplicity and power. There really is little it can't do. And that standard library? Chef's kiss. If given a choice (and if I don't need much or any user interface), I choose Python.",
   },
   {
     label: "C#",
@@ -87,7 +87,7 @@ const tools = [
   {
     label: "Git",
     icon: "git",
-    content: "I mean, let's be real, who doesn't use Git? It's the bread and butter of version control systems. Are there other version control systems around anymore? Is Subversion still a thing? Mercurial? I'm by no means a master, though. I do the same 10% of things 95% of the time and rarely touch the more advanced functionality. I rarely work on large software projects with multiple people simultaneously, so I haven't needed to get too deep with it. I know enough to be dangerous. ",
+    content: "I mean, who doesn't use Git these days? It's pretty much the de facto version control system now. Is Subversion still a thing? Mercurial? I'm by no means a master, though. I do the same 10% of things 95% of the time and rarely touch the more advanced functionality. I rarely work on large software projects with multiple people simultaneously, so I haven't needed to get too deep with it. I know enough to be dangerous. ",
   },
   {
     label: "GitKraken",
@@ -97,7 +97,7 @@ const tools = [
   {
     label: "Figma",
     icon: "figma",
-    content: "It's easy to see why Figma has become so popular. It's a game-changer for UI design. It's easy to learn and intuitive, even for non-designers like myself. I always sketch out wireframes and prototypes in Figma before moving on to the final product. Plus, it's great for sharing ideas with colleagues and clients.",
+    content: "It's easy to see why Figma has become so popular. It's a game-changer for UI design. It's simple enought to learn (the basics) and intuitive, even for non-designers like myself. I always sketch out wireframes and prototypes in Figma before moving on to the final product. Plus, it's great for sharing ideas with colleagues and clients.",
   },
   {
     label: "Electron",

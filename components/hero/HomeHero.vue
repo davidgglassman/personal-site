@@ -1,6 +1,6 @@
 <template>
   <div class="mb-16 sm:mb-24 lg:mb-32">
-    <h1 class="mb-6 text-2xl font-bold sm:text-3xl lg:text-5xl"><span class="text-primary-2">Hey there!</span> I'm Dave.</h1>
+    <h1 class="mb-6 text-2xl font-bold sm:text-3xl lg:text-5xl"><span class="text-primary-2">Hey there!</span> I'm David.</h1>
 
     <p class="inline text-base font-semibold tracking-wide md:text-lg lg:text-xl lg:font-semibold">I'm an art-loving, coffee-guzzling software developer from Brooklyn. Welcome to my little slice of the internet pie. Here, you can <NuxtLink to="/about" class="link">get to know me</NuxtLink> better</p>
     <p class="inline text-base font-semibold md:text-lg lg:text-xl lg:font-semibold" :class="{ hidden: !showBlog }">, check out some of the <NuxtLink to="/projects" class="link">software projects</NuxtLink> I've worked on, or read some of my <NuxtLink to="/blog" class="link">blog posts</NuxtLink>. I'm just getting started with writing, so there's not much content yet, but I'm working on it!</p>

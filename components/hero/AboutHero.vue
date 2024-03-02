@@ -4,7 +4,7 @@
     <p class="mb-6">These days, I'm far less about controlling rooms and much more about developing tools to help other programmers in my industry. Whether it's a module to speed up integration or a web app to simplify a challenging workflow, I love making complex things simple.</p>
     <p class="mb-6">I'm definitely a jack-of-all-trades when it comes to programming. In my position, I have to be. One week, I might be working on a Python module or learning to cope with Lua's lack of traditional regular expressions. The following week, I'm doing a refresher on YAML and starting a Windows desktop app or prototyping a new web app in Vue. I'm not an expert in any single technology, but I'm solid and well-versed in a variety of different ones. I can pick up new languages quickly and easily jump into new and unfamiliar tech.</p>
     <p class="mb-6">When I'm not coding, I love to read sci-fi, mess around with Stable Diffusion, take long sweaty walks around the neighborhood, or try to rekindle my wavering passion for oil painting.</p>
-    <p>But enough about me! If you want to reach out and say hi, shoot me an email.</p>
+    <p>But enough about me! If you want to reach out and say hi, <a href="mailto:davidglassman@fastmail.com" class="link">shoot me an email</a>.</p>
   </Section>
 </template>
 

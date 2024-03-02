@@ -17,7 +17,7 @@
 
     <div v-show="expanded">
       <div class="w-full rounded-b-xl bg-grey-100 px-6 py-4 text-grey-700 dark:bg-grey-800">
-        <p>{{ content }}</p>
+        <p class="text-gray-900">{{ content }}</p>
       </div>
     </div>
   </div>

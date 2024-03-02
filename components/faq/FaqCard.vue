@@ -1,7 +1,7 @@
 <template>
   <div class="card mb-2 size-full cursor-pointer p-0" @click="showHide">
     <div class="flex h-auto w-full flex-row items-center justify-between gap-2 px-6 py-1">
-      <p class="tracking-wide">{{ question }}</p>
+      <p class="tracking-wide text-gray-950 dark:text-gray-200">{{ question }}</p>
 
       <button class="flex-row-standard h-9 w-9 border-none">
         <Icon v-show="expanded" name="chevron_up" class="h-5 w-5" />
