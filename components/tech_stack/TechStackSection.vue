@@ -1,5 +1,5 @@
 <template>
-  <ExpandableSection id="tech" label="Tech Stack">
+  <Section id="tech" label="Tech Stack">
     <div class="flex-col-standard">
       <div class="mb-12 w-full">
         <TechStackGroup id="tech" label="Languages & Frameworks" :items="languages" />
@@ -9,7 +9,7 @@
         <TechStackGroup id="tech" label="Tools I Use" :items="tools" />
       </div>
     </div>
-  </ExpandableSection>
+  </Section>
 </template>
 
 <script setup>

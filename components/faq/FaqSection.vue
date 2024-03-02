@@ -1,5 +1,5 @@
 <template>
-  <ExpandableSection id="faq" label="FAQ">
+  <Section id="faq" label="FAQ">
     <FaqCard id="faq" question="How did you make this website?">
       <p class="mb-4 text-grey-900">I started this as a regular Vue app since it's my favorite Javascript framework to work with (once you get the taste for a good framework, it's hard to go back to vanilla). Then, I decided partway through that I needed more flexibility since I wanted to add a blog section and more advanced functionality down the road. So, I upgraded to Nuxt. First time using the framework and I'm really enjoying it.</p>
       <p class="text-grey-900">Can't forget Tailwind for styling (I'll never go back to vanilla CSS without kicking and screaming) and Netlify for deployment (since it's so simple to link to a Github repo and redeploy whenever new code is pushed).</p>
@@ -36,7 +36,7 @@
         </ul>
       </div>
     </FaqCard>
-  </ExpandableSection>
+  </Section>
 </template>
 
 <script setup>
