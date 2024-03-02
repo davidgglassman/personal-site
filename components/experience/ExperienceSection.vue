@@ -63,10 +63,7 @@ const data = [
       },
       {
         content: "Primary developer of web app to allow for quickly generating the XML config file needed for Crestron Home extension drivers.",
-        link: {
-          title: "CCI Crestron Home UI Builder",
-          url: "",
-        },
+        link: null,
       },
       {
         content: "Sole developer of complete module suite (including dozens of components) to allow for linking together crestron home and Crestron Simpl Windows.",
@@ -77,17 +74,11 @@ const data = [
       },
       {
         content: "Sole developer of internal cross-platform Electron application to simplify and speed up the generation of cost/effort assessments for new projects.",
-        link: {
-          title: "CCI Assessment Buddy",
-          url: "",
-        },
+        link: null,
       },
       {
         content: "Sole developer of an internally-used Python tool to automate common tasks such as new project generation, module packaging, text/file replacement and more.",
-        link: {
-          title: "CCI Tool",
-          url: "",
-        },
+        link: null,
       },
       {
         content: "Developer for numerous large-scale AV integration projects, including the sole developer on the largest single project in company history. Responsibilities include project management, custom touchpanel design, control system programming, commissioning support, detailed control specifications/UI wireframes at project start and step-by-step user manuals at project end.",

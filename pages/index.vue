@@ -1,5 +1,9 @@
 <template>
   <HomeHero />
+  <AboutHero />
+  <ExperienceSection />
+  <TechStackSection />
+  <FaqSection />
   <PostsLatest v-if="showBlog" />
 </template>
 
