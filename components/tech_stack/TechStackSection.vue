@@ -37,9 +37,9 @@ const languages = [
     content: "This is probably the language I code most with in my day-to-day professional life. I'm generally more partial to dynamically typed languages, but this is my favorite of the statically typed languages I've worked with. What can I say about C#? It's not flashy, but it gets the job done. A real blue-collar language.",
   },
   {
-    label: "Javascript",
+    label: "JavaScript",
     icon: "javascript",
-    content: "In this day and age, you just have to know some Javascript. It's everywhere. Javascript is fun and a breeze to write with, but I always feel like I must be doing something wrong, even when I'm not. It gets better with every version, but it still feels a little too relaxed to me. Probably time to learn some Typescript.",
+    content: "In this day and age, you just have to know some JavaScript. It's everywhere. JavaScript is fun and a breeze to write with, but I always feel like I must be doing something wrong, even when I'm not. Probably because of how relaxed the language is overall. But that's what we have TypeScript for!",
   },
   {
     label: "Lua",
@@ -102,7 +102,7 @@ const tools = [
   {
     label: "Electron",
     icon: "electron",
-    content: "Electron is a relatively new addition to my toolkit, but I'm liking what I see so far. I especially enjoyed being able to code the front end in Vue. I know the executable is enormous and can be a bit of a memory hog. Still, I can't bring myself to learn Flutter since I don't trust that Google won't kill it 5 minutes after I finish my first app, and learning React Native means I would have to write React code. I don't want to write React code if I can help it. Sure, there's .NET MAUI, but until Microsoft can code all their own apps using it, I'm not going to put any effort into learning it.",
+    content: "Electron is a relatively new addition to my toolkit, but I'm liking what I see so far. I especially enjoyed being able to code the front end in Vue. I know the executable is enormous and can be a bit of a memory hog. Still, I can't bring myself to learn Flutter since I don't trust that Google won't kill it 5 minutes after I finish my first app, and until Microsoft can code all their own apps using it, I'm not going to put any effort into learning .NET MAUI. Maybe I'll give React Native a try soon. For now, Electron will do.",
   },
   {
     label: "Photoshop",
