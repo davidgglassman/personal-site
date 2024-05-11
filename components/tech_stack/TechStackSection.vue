@@ -29,17 +29,17 @@ const languages = [
   {
     label: "Python",
     icon: "python",
-    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever little opportunities I can to write with it. It has such a nice blend of simplicity and power. There really is little it can't do. And that standard library? Chef's kiss. If given a choice (and if I don't need much or any user interface), I choose Python.",
+    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever opportunities I can to write in it. It has such a nice blend of simplicity and power. There really isn't muchit can't do. And that standard library? Chef's kiss. If given a choice (and if I don't need much or any user interface), I choose Python.",
   },
   {
     label: "C#",
     icon: "csharp",
-    content: "This is probably the language I code most with in my day-to-day professional life. I'm generally more partial to dynamically typed languages, but this is my favorite of the statically typed languages I've worked with. What can I say about C#? It's not flashy, but it gets the job done. A real blue-collar language.",
+    content: "This is one of the languages I code most with in my day-to-day professional life. I'm generally more partial to dynamically typed languages, but this is my favorite of the statically typed languages I've worked with. What can I say about C#? It's not flashy, but it gets the job done. A real blue-collar language.",
   },
   {
     label: "JavaScript",
     icon: "javascript",
-    content: "In this day and age, you just have to know some JavaScript. It's everywhere. JavaScript is fun and a breeze to write with, but I always feel like I must be doing something wrong, even when I'm not. Probably because of how relaxed the language is overall. But that's what we have TypeScript for!",
+    content: "Probably my other most frequently used language.In this day and age, you just have to know some JavaScript. It's everywhere. JavaScript is fun and a breeze to write with, but I always feel like I must be doing something wrong, even when I'm not. Probably because of how relaxed the language is overall. But that's what we have TypeScript for!",
   },
   {
     label: "Lua",
@@ -77,7 +77,7 @@ const tools = [
   {
     label: "Chrome",
     icon: "chrome",
-    content: "I keep Chrome installed only as a development browser. I'll admit, I struggle with Firefox's Dev Tools., so when I'm working on a project, Chrome takes the lead. Of course, when it's time to do any actual browsing, back to Firefox I go.",
+    content: "I keep Chrome installed only as a development browser. I struggle with Firefox's Dev Tools (something about them just seems off to me) so when I'm working on a project, Chrome takes the lead. Of course, when it's time to do any actual browsing, back to Firefox I go.",
   },
   {
     label: "VS Code",

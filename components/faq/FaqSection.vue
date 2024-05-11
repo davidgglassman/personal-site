@@ -71,7 +71,7 @@ const topFive = [
   },
   {
     title: "TV",
-    items: ["The Wire", "It's Always Sunny in Philadelphia", "Halt and Catch Fire", "Scrubs", "Silicon Valley"],
+    items: ["The Wire", "It's Always Sunny in Philadelphia", "Halt and Catch Fire", "The Bear", "Silicon Valley"],
   },
 ];
 
