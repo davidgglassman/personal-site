@@ -29,7 +29,7 @@ const languages = [
   {
     label: "Python",
     icon: "python",
-    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever opportunities I can to write in it. It has such a nice blend of simplicity and power. There really isn't muchit can't do. And that standard library? Chef's kiss. If given a choice (and if I don't need much or any user interface), I choose Python.",
+    content: "Hands down, my favorite language to code in. My job only requires a little Python programming, so I try to steal whatever opportunities I can to write in it. It has such a nice blend of simplicity and power. There really isn't much it can't do. And that standard library? Chef's kiss. If given a choice (and if I don't need much or any user interface), I choose Python.",
   },
   {
     label: "C#",

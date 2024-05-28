@@ -66,7 +66,7 @@ const data = [
         link: null,
       },
       {
-        content: "Sole developer of complete module suite (including dozens of components) to allow for linking together crestron home and Crestron Simpl Windows.",
+        content: "Sole developer of complete module suite (including dozens of components) to allow for linking together Crestron Home and Crestron Simpl Windows.",
         link: {
           title: "CCI Crestron Home Bridge",
           url: "https://controlconcepts.net/product/cci-crestron-home-bridge-module-lite-suite/",
