@@ -1,0 +1,7 @@
+{
+	"svelteComponent": {
+		"prefix": "sct",
+		"body": ["hello"],
+		"description": "Svelte Component Template",
+	},
+}

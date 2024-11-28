@@ -1,11 +1,29 @@
 {
-  "$schema": "https://json.schemastore.org/prettierrc",
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "arrowParens": "always",
-  "printWidth": 1000,
-  "singleQuote": false,
-  "jsxSingleQuote": false,
-  "semi": true,
-  "trailingComma": "all",
-  "tabWidth": 2
+	"semi": true,
+	"trailingComma": "all",
+	"singleQuote": false,
+	"jsxSingleQuote": false,
+	"printWidth": 100,
+	"useTabs": true,
+	"tabWidth": 2,
+	"arrowParens": "always",
+	"singleAttributePerLine": true,
+	"bracketSameLine": false,
+	"plugins": [
+		"@trivago/prettier-plugin-sort-imports",
+		"prettier-plugin-svelte",
+		"prettier-plugin-tailwindcss"
+	],
+	"importOrder": [],
+	"importOrderSeparation": false,
+	"importOrderSortSpecifiers": true,
+	"importOrderCaseInsensitive": true,
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	]
 }
