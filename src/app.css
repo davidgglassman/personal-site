@@ -1,3 +1,29 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@font-face {
+	font-family: "Inter";
+	font-style: normal;
+	font-display: swap;
+	font-weight: 100 900;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2)
+		format("woff2-variations");
+}
+
+@layer base {
+	html {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	body {
+		@apply m-0 flex h-screen w-screen justify-center overflow-hidden bg-gray-200 p-0 font-inter font-normal;
+	}
+}
+
+@layer utilities {
+	.debug {
+		@apply border-2 border-dashed border-red-500;
+	}
+}
