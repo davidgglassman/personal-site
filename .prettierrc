@@ -1,8 +1,8 @@
 {
 	"semi": true,
-	"trailingComma": "all",
-	"singleQuote": false,
-	"jsxSingleQuote": false,
+	"trailingComma": "none",
+	"singleQuote": true,
+	"jsxSingleQuote": true,
 	"printWidth": 100,
 	"useTabs": true,
 	"tabWidth": 2,
@@ -14,6 +14,7 @@
 		"prettier-plugin-svelte",
 		"prettier-plugin-tailwindcss"
 	],
+	"pluginSearchDirs": ["."],
 	"importOrder": [],
 	"importOrderSeparation": false,
 	"importOrderSortSpecifiers": true,
