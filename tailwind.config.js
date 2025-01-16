@@ -4,7 +4,7 @@ export default {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  content: [],
+  content: ["./src/**/*.{html,js,ts,vue}"],
   theme: {
     screens: {
       sm: "440px",

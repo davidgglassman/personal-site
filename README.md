@@ -6,19 +6,15 @@
 
 # Node Version
 
-20.11.0
+20.16.0
 
-# NPM Version
+# pnpm Commands
 
-10.2.4
-
-# NPM Commands
-
-**npm install**
+**pnpm install**
 Run this first after cloning the repo to install all the required dependencies for the project.
 
-**npm run dev**
+**pnpm dev**
 This will start a development server to test your code locally.
 
-**npm run build**
+**pnpm build**
 Build your code for use in production.

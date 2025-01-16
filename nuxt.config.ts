@@ -2,17 +2,9 @@ import svgLoader from "vite-svg-loader";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
+  devtools: { enabled: true },
 
-  typescript: {
-    shim: false,
-  },
-
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content", "@nuxtjs/supabase"],
-
-  supabase: {
-    redirect: false,
-  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content", "@nuxt/eslint"],
 
   content: {
     highlight: {
@@ -44,5 +36,5 @@ export default defineNuxtConfig({
     },
   ],
 
-  compatibilityDate: "2024-07-20",
+  compatibilityDate: "2024-11-01",
 });
