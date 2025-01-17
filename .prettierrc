@@ -9,6 +9,6 @@
   "trailingComma": "all",
   "tabWidth": 2,
   "singleAttributePerLine": true,
-  "bracketSameLine": false,
+  "bracketSameLine": true,
   "tailwindFunctions": ["clsx", "tv", "cn"]
 }
