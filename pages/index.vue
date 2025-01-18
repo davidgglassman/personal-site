@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-full bg-black">
+  <div class="h-screen w-full bg-gray-100 dark:bg-black">
     <div
       class="grid-background absolute inset-0 z-0 flex h-full w-full items-center justify-center p-6">
       <!-- Grid "flashlight" mask container -->
