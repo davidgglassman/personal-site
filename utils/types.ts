@@ -35,15 +35,15 @@ interface Course {
   type: CourseType;
 }
 
-interface CourseActive extends Course {
+export interface CourseActive extends Course {
   started: string;
 }
 
-interface CourseUpcoming extends Course {
+export interface CourseUpcoming extends Course {
   starting: string;
 }
 
-interface CourseCompleted extends Course {
+export interface CourseCompleted extends Course {
   completed: string;
   rating: number;
 }
