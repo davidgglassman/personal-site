@@ -7,7 +7,10 @@
       <ClientOnly>
         <template #default>
           <div v-if="!error">
+            <!-- Reading Now -->
+
             <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Reading Now</h3>
+
             <ul>
               <li
                 v-for="book in books?.reading"
@@ -17,7 +20,11 @@
                 </p>
               </li>
             </ul>
+
             <UDivider class="my-4" />
+
+            <!-- Completed -->
+
             <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Completed</h3>
             <ul>
               <li
@@ -31,7 +38,11 @@
                 </p>
               </li>
             </ul>
+
             <UDivider class="my-4" />
+
+            <!-- Did Not Finish -->
+
             <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">
               Did Not Finish
             </h3>
@@ -48,12 +59,14 @@
               </li>
             </ul>
           </div>
+
           <p
             v-else
             class="text-sm text-gray-500 dark:text-gray-300">
             Unable to retrieve books. Please try again later.
           </p>
         </template>
+
         <template #fallback>
           <p class="text-sm text-gray-500 dark:text-gray-300">Loading...</p>
         </template>
