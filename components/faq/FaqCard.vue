@@ -1,5 +1,5 @@
 <template>
-  <CardTemplate placement="col-span-3 row-span-2"></CardTemplate>
+  <CardTemplate>Faq</CardTemplate>
 </template>
 
 <script setup></script>

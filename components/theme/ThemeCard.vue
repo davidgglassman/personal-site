@@ -1,6 +1,8 @@
 <template>
   <ClientOnly>
-    <CardTemplate placement="col-span-2 row-span-1">
+    <CardTemplate
+      :fixed="true"
+      :span="'span 3'">
       <div class="flex h-full w-full items-center justify-center gap-3">
         <ThemeButton
           icon-name="fluent-mdl2:system"

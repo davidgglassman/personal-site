@@ -11,18 +11,21 @@
         <!-- Brighter grid that shows through mask -->
         <div class="grid-background-bright h-full w-full blur-sm"></div>
       </div>
-
       <!-- Grid Content -->
-      <div class="z-20 grid h-[800px] w-[1200px] grid-cols-9 grid-rows-6 gap-6">
-        <AboutCard />
-        <ExperienceCard />
-        <TechStackCard />
-        <ResumeCard />
-        <SocialCard />
-        <FaqCard />
-        <BlogCard />
-        <HappeningNowCard />
-        <ThemeCard />
+      <div class="z-20 max-h-[800px] w-[1200px] overflow-y-auto">
+        <div
+          class="grid auto-rows-min grid-cols-[repeat(auto-fit,minmax(50px,1fr))] gap-6 p-6"
+          style="grid-auto-rows: min-content">
+          <AboutCard />
+          <ExperienceCard />
+          <TechStackCard />
+          <ResumeCard />
+          <SocialCard />
+          <FaqCard />
+          <BlogCard />
+          <BooksCard />
+          <ThemeCard />
+        </div>
       </div>
     </div>
   </div>
@@ -30,7 +33,7 @@
 
 <script setup lang="ts">
 import { useMouse } from "@vueuse/core";
-import AboutCard from "~/components/about/AboutCard.vue";
+import BooksCard from "~/components/current/books/BooksCard.vue";
 
 const { x, y } = useMouse();
 </script>

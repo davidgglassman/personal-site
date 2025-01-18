@@ -3,7 +3,7 @@ export const getBooks = async () => {
     return { data: null, error: null };
   }
 
-  console.log("Fetching books from:", import.meta.client ? "client" : "server");
+  //console.log("Fetching books from:", import.meta.client ? "client" : "server");
 
   try {
     const response = await fetch(

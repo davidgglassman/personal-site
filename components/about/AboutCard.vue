@@ -1,5 +1,5 @@
 <template>
-  <CardTemplate placement="col-span-3 row-span-2">
+  <CardTemplate>
     <p>Picture/Avatar</p>
     <p>Name</p>
     <p>Brief Summary Text</p>
