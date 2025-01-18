@@ -9,91 +9,85 @@
           <div v-if="!error">
             <!-- Taking Now -->
 
-            <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Taking Now</h3>
+            <div v-if="courses?.active.length">
+              <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">
+                Taking Now
+              </h3>
 
-            <ul v-if="courses?.active.length">
-              <li
-                v-for="course in courses?.active"
-                :key="course.name">
-                <p class="text-sm text-gray-500 dark:text-gray-300">
-                  · {{ course.name }}
-                  <span class="text-xs text-gray-400">[{{ course.where }}]</span>
-                  <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
-                    <a
-                      :href="course.link"
-                      target="_blank"
-                      >Link</a
-                    >
-                  </span>
-                </p>
-              </li>
-            </ul>
+              <ul>
+                <li
+                  v-for="course in courses?.active"
+                  :key="course.name">
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    · {{ course.name }}
+                    <span class="text-xs text-gray-400">[{{ course.where }}]</span>
+                    <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
+                      <a
+                        :href="course.link"
+                        target="_blank"
+                        >Link</a
+                      >
+                    </span>
+                  </p>
+                </li>
+              </ul>
 
-            <p
-              v-else
-              class="text-sm text-gray-500 dark:text-gray-300">
-              Nothing here yet. Check back later.
-            </p>
-
-            <UDivider class="my-4" />
+              <UDivider
+                v-if="courses?.upcoming.length"
+                class="my-4" />
+            </div>
 
             <!-- Upcoming -->
 
-            <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Upcoming</h3>
+            <div v-if="courses?.upcoming.length">
+              <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Upcoming</h3>
 
-            <ul v-if="courses?.upcoming.length">
-              <li
-                v-for="course in courses?.upcoming"
-                :key="course.name">
-                <p class="text-sm text-gray-500 dark:text-gray-300">
-                  · {{ course.name }}
-                  <span class="text-xs text-gray-400">[{{ course.where }}]</span>
-                  <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
-                    <a
-                      :href="course.link"
-                      target="_blank"
-                      >Link</a
-                    >
-                  </span>
-                </p>
-              </li>
-            </ul>
+              <ul>
+                <li
+                  v-for="course in courses?.upcoming"
+                  :key="course.name">
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    · {{ course.name }}
+                    <span class="text-xs text-gray-400">[{{ course.where }}]</span>
+                    <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
+                      <a
+                        :href="course.link"
+                        target="_blank"
+                        >Link</a
+                      >
+                    </span>
+                  </p>
+                </li>
+              </ul>
 
-            <p
-              v-else
-              class="text-sm text-gray-500 dark:text-gray-300">
-              Nothing here yet. Check back later.
-            </p>
-
-            <UDivider class="my-4" />
+              <UDivider
+                v-if="courses?.completed.length"
+                class="my-4" />
+            </div>
 
             <!-- Completed -->
 
-            <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Completed</h3>
+            <div v-if="courses?.completed.length">
+              <h3 class="mb-2 text-sm font-semibold text-gray-400 dark:text-gray-300">Completed</h3>
 
-            <ul v-if="courses?.completed.length">
-              <li
-                v-for="course in courses?.completed"
-                :key="course.name">
-                <p class="text-sm text-gray-500 dark:text-gray-300">
-                  · {{ course.name }}
-                  <span class="text-xs text-gray-400">[{{ course.where }}]</span>
-                  <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
-                    <a
-                      :href="course.link"
-                      target="_blank"
-                      >Link</a
-                    >
-                  </span>
-                </p>
-              </li>
-            </ul>
-
-            <p
-              v-else
-              class="text-sm text-gray-500 dark:text-gray-300">
-              Nothing here yet. Check back later.
-            </p>
+              <ul>
+                <li
+                  v-for="course in courses?.completed"
+                  :key="course.name">
+                  <p class="text-sm text-gray-500 dark:text-gray-300">
+                    · {{ course.name }}
+                    <span class="text-xs text-gray-400">[{{ course.where }}]</span>
+                    <span class="ml-2 text-xs font-semibold text-sky-500 dark:text-sky-300">
+                      <a
+                        :href="course.link"
+                        target="_blank"
+                        >Link</a
+                      >
+                    </span>
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <p
