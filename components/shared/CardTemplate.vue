@@ -6,12 +6,6 @@
         [props.placement],
       )
     ">
-    <h2
-      v-if="props.title"
-      class="mb-6 text-xl font-semibold text-gray-500 dark:text-gray-300">
-      {{ props.title }}
-    </h2>
-
     <div class="h-full w-full">
       <slot></slot>
     </div>
@@ -19,10 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
-
 const props = defineProps<{
-  title?: string;
   placement: string;
 }>();
 </script>

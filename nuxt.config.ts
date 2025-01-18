@@ -4,7 +4,17 @@ import svgLoader from "vite-svg-loader";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/color-mode", "@nuxt/content", "@nuxt/eslint", "@nuxt/icon"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+    "@nuxtjs/color-mode",
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/icon",
+  ],
 
   content: {
     highlight: {
