@@ -21,9 +21,10 @@
           <TechStackCard />
           <ResumeCard />
           <SocialCard />
+          <BooksCard />
+          <CoursesCard />
           <FaqCard />
           <BlogCard />
-          <BooksCard />
           <ThemeCard />
         </div>
       </div>

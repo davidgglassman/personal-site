@@ -1,3 +1,5 @@
+// Books
+
 interface Book {
   title: string;
   author: string;
@@ -20,4 +22,34 @@ export interface BookData {
   reading: BookReading[];
   completed: BookCompleted[];
   dnf: BookDNF[];
+}
+
+// Courses
+
+type CourseType = "Online" | "In Person";
+
+interface Course {
+  name: string;
+  where: string;
+  link: string;
+  type: CourseType;
+}
+
+interface CourseActive extends Course {
+  started: string;
+}
+
+interface CourseUpcoming extends Course {
+  starting: string;
+}
+
+interface CourseCompleted extends Course {
+  completed: string;
+  rating: number;
+}
+
+export interface CourseData {
+  active: CourseActive[];
+  upcoming: CourseUpcoming[];
+  completed: CourseCompleted[];
 }
