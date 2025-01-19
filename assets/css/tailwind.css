@@ -18,8 +18,6 @@
   }
   body {
     @apply m-0 min-h-screen w-screen overflow-hidden bg-slate-950 p-0 font-inter font-normal;
-    background: url("../images/background.jpg") center;
-    background-size: cover;
   }
   p {
     @apply text-gray-600 dark:text-gray-400;
