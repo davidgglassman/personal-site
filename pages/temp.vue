@@ -12,7 +12,7 @@
         <div class="grid-background-bright h-full w-full blur-sm"></div>
       </div>
       <!-- Grid Content -->
-      <div class="z-20 max-h-[800px] w-[1200px] overflow-y-auto">
+      <div class="z-20 mt-16 h-screen w-[1200px] overflow-y-auto">
         <div
           class="grid auto-rows-min grid-cols-[repeat(auto-fit,minmax(50px,1fr))] gap-6 p-6"
           style="grid-auto-rows: min-content">
@@ -24,8 +24,8 @@
           <BooksCard />
           <CoursesCard />
           <FaqCard />
-          <BlogCard />
           <ThemeCard />
+          <!-- <BlogCard /> -->
         </div>
       </div>
     </div>
@@ -47,9 +47,9 @@ const { x, y } = useMouse();
 }
 
 .grid-background-bright {
-  background: linear-gradient(to right, #ffffff 1px, transparent 1px),
-    linear-gradient(to bottom, #ffffff 1px, transparent 1px);
-  background-size: 48px 48px;
+  background: linear-gradient(to right, #48c5ffd0 2px, transparent 1px),
+    linear-gradient(to bottom, #48c5ffd0 2px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 .grid-mask {
