@@ -1,27 +1,31 @@
 <template>
   <ClientOnly>
-    <CardTemplate
-      :fixed="true"
-      :span="'span 3'">
-      <div class="flex h-full w-full items-center justify-center gap-3">
-        <ThemeButton
-          icon-name="fluent-mdl2:system"
-          icon-size="size-7"
-          :is-active="theme === 'system'"
-          @set-theme="setTheme('system')" />
+    <CardTemplate>
+      <template #header>
+        <h3>Theme</h3>
+      </template>
 
-        <ThemeButton
-          icon-name="gravity-ui:sun"
-          icon-size="size-6"
-          :is-active="theme === 'light'"
-          @set-theme="setTheme('light')" />
+      <template #content>
+        <div class="flex h-full w-full items-center justify-center gap-3">
+          <ThemeButton
+            icon-name="fluent-mdl2:system"
+            icon-size="size-7"
+            :is-active="theme === 'system'"
+            @set-theme="setTheme('system')" />
 
-        <ThemeButton
-          icon-name="solar:moon-line-duotone"
-          icon-size="size-6"
-          :is-active="theme === 'dark'"
-          @set-theme="setTheme('dark')" />
-      </div>
+          <ThemeButton
+            icon-name="gravity-ui:sun"
+            icon-size="size-6"
+            :is-active="theme === 'light'"
+            @set-theme="setTheme('light')" />
+
+          <ThemeButton
+            icon-name="solar:moon-line-duotone"
+            icon-size="size-6"
+            :is-active="theme === 'dark'"
+            @set-theme="setTheme('dark')" />
+        </div>
+      </template>
     </CardTemplate>
   </ClientOnly>
 </template>

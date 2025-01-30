@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen w-full bg-gray-100 dark:bg-black">
     <div
-      class="grid-background absolute inset-0 z-0 flex h-full w-full items-center justify-center p-6">
+      class="grid-background absolute inset-0 z-0 flex h-screen w-full items-center justify-center">
       <!-- Grid "flashlight" mask container -->
       <div
         class="grid-mask absolute inset-0 z-10"
@@ -12,20 +12,17 @@
         <div class="grid-background-bright h-full w-full blur-sm"></div>
       </div>
       <!-- Grid Content -->
-      <div class="z-20 mt-16 h-screen w-[1200px] overflow-y-auto">
-        <div
-          class="grid auto-rows-min grid-cols-[repeat(auto-fit,minmax(50px,1fr))] gap-6 p-6"
-          style="grid-auto-rows: min-content">
-          <AboutCard />
-          <ExperienceCard />
-          <TechStackCard />
-          <ResumeCard />
-          <SocialCard />
-          <BooksCard />
-          <CoursesCard />
-          <FaqCard />
+      <div class="z-20 h-screen max-w-[600px] overflow-y-auto p-4 py-8">
+        <div class="flex h-auto w-full flex-col gap-2">
           <ThemeCard />
-          <!-- <BlogCard /> -->
+          <AboutCard />
+          <SocialCard />
+          <ExperienceCard expandable />
+          <ResumeCard />
+          <TechStackCard expandable />
+          <ThisYearCard expandable />
+          <FaqCard expandable />
+          <BlogCard expandable />
         </div>
       </div>
     </div>
@@ -34,7 +31,6 @@
 
 <script setup lang="ts">
 import { useMouse } from "@vueuse/core";
-import BooksCard from "~/components/current/books/BooksCard.vue";
 
 const { x, y } = useMouse();
 </script>

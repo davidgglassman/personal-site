@@ -29,3 +29,29 @@
     @apply border-2 border-dashed border-red-500;
   }
 }
+
+/**********************************************
+Scrollbars
+**********************************************/
+
+*::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: #fdfdfd;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #919191;
+  border-radius: 10px;
+}
+
+.dark *::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 10px;
+}

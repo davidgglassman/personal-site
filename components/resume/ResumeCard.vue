@@ -1,7 +1,10 @@
 <template>
   <CardTemplate>
-    <p>View</p>
-    <p>Download</p>
+    <template #header>
+      <h3>Resume</h3>
+    </template>
+
+    <template #content>TODO</template>
   </CardTemplate>
 </template>
 
