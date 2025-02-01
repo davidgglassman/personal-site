@@ -9,12 +9,12 @@
         <ClientOnly>
           <template #default>
             <div v-if="!error">
-              <div class="mt-3 flex h-full w-full flex-wrap items-start justify-start gap-6">
-                <ul>
-                  <li
-                    v-for="(job, i) in experience"
-                    :key="i">
-                    <div class="mb-8 lg:mb-12">
+              <ul class="mt-3 flex h-full w-full flex-col items-start justify-start gap-6">
+                <li
+                  v-for="(job, i) in experience"
+                  :key="i">
+                  <CardTemplate>
+                    <template #content>
                       <div class="mb-3 font-bold">{{ job.years }}</div>
 
                       <div
@@ -33,7 +33,9 @@
                         :key="j"
                         class="items-left mb-2 flex flex-col justify-between text-grey-800 dark:text-primary-1 sm:mb-0 sm:flex-row sm:items-center"
                         :style="{ opacity: `${100 - (i + 1) * 30}%` }">
-                        <div class="font-semibold tracking-wide lg:text-lg">{{ role.title }}</div>
+                        <div class="font-semibold tracking-wide lg:text-lg">
+                          {{ role.title }}
+                        </div>
                         <div
                           class="text-[.65rem] font-medium leading-4 opacity-65 sm:text-xs lg:text-sm">
                           {{ role.years }}
@@ -61,10 +63,10 @@
                           >
                         </li>
                       </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                    </template>
+                  </CardTemplate>
+                </li>
+              </ul>
             </div>
 
             <p
