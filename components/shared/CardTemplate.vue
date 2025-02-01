@@ -1,6 +1,6 @@
 <template>
   <div
-    class="'w-full delay-250 dark:hover:bg-gray-500/15' flex cursor-pointer flex-col items-start justify-start rounded-lg border-2 border-gray-400/10 bg-gray-300/10 p-2 p-4 backdrop-blur-2xl transition ease-in-out hover:scale-[1.025] hover:border-gray-400/15 hover:bg-gray-300/20 dark:border-white/10 dark:bg-gray-500/10 dark:hover:border-white/15"
+    class="'w-full delay-250 dark:hover:bg-gray-500/15' flex cursor-pointer flex-col items-start justify-start rounded-lg border-2 border-gray-400/10 bg-gray-300/10 p-2 p-4 backdrop-blur-2xl transition ease-in-out hover:border-gray-400/15 hover:bg-gray-300/20 dark:border-white/10 dark:bg-gray-500/10 dark:hover:border-white/15"
     @click="toggleExpanded">
     <div class="w-full">
       <div
@@ -49,7 +49,7 @@ const toggleExpanded = () => {
 }
 
 .content-expanded {
-  max-height: 1000px;
+  max-height: 3000px;
   opacity: 1;
 }
 </style>

@@ -53,3 +53,35 @@ export interface CourseData {
   upcoming: CourseUpcoming[];
   completed: CourseCompleted[];
 }
+
+// Experience
+
+interface ExperienceRole {
+  title: string;
+  years: string;
+}
+
+interface ExperienceRoles {
+  main: ExperienceRole;
+  other: ExperienceRole[];
+}
+
+interface ExperienceLink {
+  title: string;
+  url: string;
+}
+
+interface ExperienceItem {
+  content: string;
+  link: ExperienceLink | null;
+}
+
+export interface ExperienceJob {
+  years: string;
+  roles: ExperienceRoles;
+  company: string;
+  url: string;
+  items: ExperienceItem[];
+}
+
+export type ExperienceData = ExperienceJob[];
