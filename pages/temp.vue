@@ -16,14 +16,9 @@
         <div
           class="flex h-auto w-full flex-col gap-2"
           :class="{ 'my-auto': !isScrollable }">
-          <ThemeCard />
           <AboutCard />
-          <SocialCard />
-          <ExperienceCard expandable />
-          <ResumeCard />
-          <TechStackCard expandable />
-          <ThisYearCard expandable />
-          <FaqCard expandable />
+          <WorkCard expandable />
+          <PersonalCard expandable />
         </div>
       </div>
     </div>
@@ -32,6 +27,8 @@
 <script setup lang="ts">
 import { useMouse } from "@vueuse/core";
 import { ref, onMounted, onUnmounted } from "vue";
+import PersonalCard from "~/components/personal/PersonalCard.vue";
+import WorkCard from "~/components/work/WorkCard.vue";
 
 const { x, y } = useMouse();
 const isScrollable = ref(false);
