@@ -1,9 +1,13 @@
 <template>
-  <main class="size-full p-4">
-    <Card title="Card Title">
-      <p>Card Content</p>
-    </Card>
-  </main>
+  <section
+    class="flex h-52 w-72 flex-col items-start justify-start gap-2 rounded-lg border border-[#12CAEB] p-6 pt-4 text-[#12CAEB]"
+  >
+    <h2 class="text-lg font-medium">{{ props.title }}</h2>
+
+    <div class="size-full border border-dashed border-[#12CAEB] p-2 text-sm">
+      <slot />
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -11,7 +15,6 @@
 
 // -------- Components
 
-import Card from "@/components/Card.vue";
 // -------- Vue
 
 // -------- Internal
@@ -23,6 +26,12 @@ import Card from "@/components/Card.vue";
 // -------- Store
 
 // ------------------------ Props
+
+interface Props {
+  title: string;
+}
+
+const props = defineProps<Props>();
 
 // ------------------------ Variables
 
