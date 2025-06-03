@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "sans-serif";
+}
+
+@layer utilities {
+  .debug {
+    @apply border-2 border-dashed border-red-500;
+  }
+}
