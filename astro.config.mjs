@@ -8,7 +8,9 @@ export default defineConfig({
   redirects: {
     "/": "/under-construction",
   },
-
+  server: {
+    port: 3000,
+  },
   vite: {
     plugins: [tailwindcss()],
   },
