@@ -1,6 +1,7 @@
 ---
 import "@styles/global.css";
 import "@fontsource/inter";
+import { ClientRouter } from "astro:transitions";
 import NavBar from "@components/NavBar.astro";
 ---
 
@@ -11,6 +12,8 @@ import NavBar from "@components/NavBar.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>David Glassman</title>
+
+    <ClientRouter />
   </head>
 
   <body
