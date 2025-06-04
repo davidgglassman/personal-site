@@ -1,0 +1,41 @@
+---
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Blog">
+  <div class="flex h-auto w-full flex-col items-center justify-start gap-8">
+    <div class="section">
+      <h2 class="header">Fragments / Notes</h2>
+      <p class="content">short-form thoughts / musings / observations</p>
+      <p class="content">clicking any brings up dedicated page for it</p>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Posts</h2>
+      <p class="content">longer blog posts</p>
+      <p class="content">clicking any brings up dedicated page for it</p>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Tags / Filters</h2>
+      <p class="content">methods for quickly showing only content that matches certain params</p>
+      <p class="content">possibilities: date, category, style (long/short)</p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  @reference "tailwindcss";
+
+  .section {
+    @apply h-40 w-full border-1 border-dashed border-gray-400;
+  }
+
+  .header {
+    @apply text-lg font-bold;
+  }
+
+  .content {
+    @apply text-sm;
+  }
+</style>
