@@ -27,4 +27,8 @@ Global
   .debug {
     @apply border-2 border-dashed border-red-500;
   }
+
+  .debug-section {
+    @apply border-1 border-dashed border-gray-400;
+  }
 }
