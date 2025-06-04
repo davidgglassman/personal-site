@@ -2,6 +2,47 @@
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title="Gallery">
-  <h1>Gallery</h1>
+<Layout title="Art">
+  <div class="flex h-auto w-full flex-col items-center justify-start gap-8">
+    <div class="section">
+      <h2 class="header">View Options</h2>
+      <p class="content">
+        choice to view page as thumbnail gallery or scrolling larger images/text
+      </p>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Thumbnail Gallery</h2>
+      <p class="content">
+        gallery images will be either single image or a group of images together
+      </p>
+      <p class="content">
+        clicking image/group will bring up full screen lightbox (or dedicated page) view of
+        image/group along with text
+      </p>
+      <p class="content">maybe Bento style</p>
+    </div>
+
+    <div class="section">
+      <h2 class="header">Tags / Filters</h2>
+      <p class="content">methods for quickly showing only content that matches certain params</p>
+      <p class="content">possibilities: date, category</p>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  @reference "tailwindcss";
+
+  .section {
+    @apply h-40 w-full border-1 border-dashed border-gray-400;
+  }
+
+  .header {
+    @apply text-lg font-bold;
+  }
+
+  .content {
+    @apply text-sm;
+  }
+</style>
