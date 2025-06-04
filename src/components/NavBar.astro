@@ -1,0 +1,21 @@
+---
+const { pathname } = Astro.url;
+
+const links = [
+  { href: "/home", title: "Home" },
+  { href: "/blog", title: "Blog" },
+  { href: "/gallery", title: "Gallery" },
+  { href: "/work", title: "Work" },
+  { href: "/now", title: "Now" },
+];
+---
+
+<header class="flex h-auto w-full flex-row items-center justify-center gap-2">
+  {
+    links.map((link) => (
+      <a role="button" class={`btn ${pathname === link.href && "btn-active"}`} href={link.href}>
+        {link.title}
+      </a>
+    ))
+  }
+</header>

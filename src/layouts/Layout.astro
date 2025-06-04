@@ -1,7 +1,7 @@
 ---
 import "@styles/global.css";
 import "@fontsource/inter";
-import Header from "@components/Header.astro";
+import NavBar from "@components/NavBar.astro";
 ---
 
 <!doctype html>
@@ -16,7 +16,7 @@ import Header from "@components/Header.astro";
   <body
     class="m-0 h-dvh min-h-screen w-full min-w-[300px] cursor-default flex-col overflow-hidden bg-gray-50 p-0 text-left text-base leading-6 font-normal tracking-wide text-gray-900 selection:bg-gray-700 selection:text-gray-100 dark:bg-gray-900 dark:text-gray-100">
     <div class="mx-auto flex size-full min-h-screen max-w-[49rem] flex-col justify-start gap-4 p-4">
-      <Header />
+      <NavBar />
       <slot />
     </div>
   </body>
