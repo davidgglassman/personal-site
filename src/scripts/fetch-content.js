@@ -29,6 +29,12 @@ try {
   process.exit(1);
 }
 
+// Fallback: confirm that content was actually cloned
+if (!fs.existsSync(DEST_DIR) || fs.readdirSync(DEST_DIR).length === 0) {
+  console.error("❌ Content directory is missing or empty after clone. Check your repo and token.");
+  process.exit(1);
+}
+
 // Remove unnecessary files
 const filesToRemove = [".gitattributes", ".gitignore", "README.md"];
 
