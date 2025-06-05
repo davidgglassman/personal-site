@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node src/scripts/fetch-content.js",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -16,6 +17,7 @@
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
+    "dotenv": "^16.5.0",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.12"
