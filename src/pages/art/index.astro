@@ -1,5 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+const posts = await getCollection("art");
 ---
 
 <Layout title="Art">
@@ -21,6 +24,16 @@ import Layout from "@layouts/Layout.astro";
         image/group along with text
       </p>
       <p class="content">maybe Bento style</p>
+
+      <ul>
+        {
+          posts.map(({ id, data }: CollectionEntry<"art">) => (
+            <li>
+              <a href={`/art/${id}`}>{data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
 
     <div class="section">

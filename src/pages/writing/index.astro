@@ -1,8 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
+
+import { getCollection, type CollectionEntry } from "astro:content";
+const posts = await getCollection("writing");
 ---
 
-<Layout title="Blog">
+<Layout title="Writing">
   <div class="flex h-auto w-full flex-col items-center justify-start gap-8">
     <div class="section">
       <h2 class="header">Fragments / Notes</h2>
@@ -14,6 +17,16 @@ import Layout from "@layouts/Layout.astro";
       <h2 class="header">Posts</h2>
       <p class="content">longer blog posts</p>
       <p class="content">clicking any brings up dedicated page for it</p>
+
+      <ul>
+        {
+          posts.map(({ id, data }: CollectionEntry<"writing">) => (
+            <li>
+              <a href={`/writing/${id}`}>{data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
 
     <div class="section">
