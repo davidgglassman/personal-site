@@ -3,29 +3,5 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Now">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8">
-    <div class="section">
-      <h2 class="header">What Am I Up to Now</h2>
-      <p class="content">
-        a running list of the things i'm doing right now (reading, listening to, coding, making,
-        learning, watching, playing, doing, etc)
-      </p>
-    </div>
-  </div>
+  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
 </Layout>
-
-<style>
-  @reference "tailwindcss";
-
-  .section {
-    @apply h-40 w-full border-1 border-dashed border-gray-400;
-  }
-
-  .header {
-    @apply text-lg font-bold;
-  }
-
-  .content {
-    @apply text-sm;
-  }
-</style>

@@ -3,47 +3,5 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8">
-    <div class="section">
-      <h2 class="header">Avatar / Bio / Summary</h2>
-      <p class="content">Short bio or mission sentence</p>
-    </div>
-
-    <div class="section">
-      <h2 class="header">Recent Writing</h2>
-      <p class="content">maybe 3–5 titles or a preview</p>
-      <p class="content">or just title and date</p>
-      <p class="content">View All or More button that navigates to Writing Page</p>
-      <p class="content">clicking any brings up dedicated page for it</p>
-    </div>
-
-    <div class="section">
-      <h2 class="header">Recent Art</h2>
-      <p class="content">maybe a single line of thumbnails</p>
-      <p class="content">View All or More button that navigates to Art Page</p>
-    </div>
-
-    <div class="section">
-      <h2 class="header">What's Happening Now?</h2>
-      <p class="content">what i'm currently reading / watching / into</p>
-      <p class="content">could be the most current item from a number of lists</p>
-      <p class="content">View All or More button that navigates to Now Page</p>
-    </div>
-  </div>
+  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
 </Layout>
-
-<style>
-  @reference "tailwindcss";
-
-  .section {
-    @apply h-40 w-full border-1 border-dashed border-gray-400;
-  }
-
-  .header {
-    @apply text-lg font-bold;
-  }
-
-  .content {
-    @apply text-sm;
-  }
-</style>
