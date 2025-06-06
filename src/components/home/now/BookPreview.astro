@@ -1,0 +1,14 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+interface Props {
+  book: CollectionEntry<"books">;
+}
+
+const { book } = Astro.props;
+---
+
+<div class="flex h-6 w-full flex-col items-start justify-between" }>
+  <p>{book.data.title}</p>
+  <p class="text-sm text-gray-500">{book.data.author}</p>
+</div>

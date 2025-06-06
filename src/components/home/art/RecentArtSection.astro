@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import ArtPostPreview from "@components/home/art/ArtPostPreview.astro";
+
+const artPosts = await getCollection("art");
+
+const latestArtPosts = artPosts
+  .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+  .slice(0, 5);
+---
+
+<div class="flex w-full flex-col items-start justify-start">
+  <h2 class="mb-4 text-xl font-semibold">Recent Art</h2>
+
+  {latestArtPosts.map((post) => <ArtPostPreview post={post} />)}
+</div>

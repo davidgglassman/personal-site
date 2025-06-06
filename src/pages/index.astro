@@ -1,7 +1,15 @@
 ---
 import Layout from "@layouts/Layout.astro";
+
+import RecentArtSection from "@components/home/art/RecentArtSection.astro";
+import RecentWritingSection from "@components/home/writing/RecentWritingSection.astro";
+import HappeningNowSection from "@components/home/now/HappeningNowSection.astro";
 ---
 
 <Layout title="Home">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
+  <div class="flex h-auto w-full flex-col items-start justify-start gap-16">
+    <RecentWritingSection />
+    <RecentArtSection />
+    <HappeningNowSection />
+  </div>
 </Layout>
