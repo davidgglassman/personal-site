@@ -1,7 +1,14 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import WritingSection from "@components/writing/WritingSection.astro";
+
+const posts = await getCollection("writing");
 ---
 
 <Layout title="Writing">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
+  <div class="flex h-auto w-full flex-col items-start justify-start gap-16">
+    <WritingSection title="Fragments / Notes" form="short" posts={posts} />
+    <WritingSection title="Posts" form="long" posts={posts} />
+  </div>
 </Layout>
