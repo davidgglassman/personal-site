@@ -8,6 +8,8 @@ dotenv.config();
 
 const REPO_URL = process.env.CONTENT_REPO_URL;
 const DEST_DIR = path.resolve("content");
+const IMAGE_SOURCE = path.join(DEST_DIR, "images");
+const IMAGE_TARGET = path.resolve("public/images");
 
 // fail if we can't get the environment variable
 if (!REPO_URL) {
@@ -45,3 +47,14 @@ filesToRemove.forEach((file) => {
     console.log(`🧹 Removed: ${file}`);
   }
 });
+
+// Copy images to public/images
+if (fs.existsSync(IMAGE_SOURCE)) {
+  if (fs.existsSync(IMAGE_TARGET)) {
+    fs.rmSync(IMAGE_TARGET, { recursive: true, force: true });
+  }
+
+  fs.mkdirSync(IMAGE_TARGET, { recursive: true });
+  fs.cpSync(IMAGE_SOURCE, IMAGE_TARGET, { recursive: true });
+  console.log("🖼️  Copied structured images to public/images/");
+}
