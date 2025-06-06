@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const REPO_URL = process.env.CONTENT_REPO_URL;
-const DEST_DIR = path.resolve("src/content");
+const DEST_DIR = path.resolve("content");
 
 // fail if we can't get the environment variable
 if (!REPO_URL) {
@@ -23,7 +23,7 @@ if (fs.existsSync(DEST_DIR)) {
 // Clone the content repo
 try {
   execSync(`git clone ${REPO_URL} ${DEST_DIR}`, { stdio: "inherit" });
-  console.log("✅ Content cloned into src/content.");
+  console.log("✅ Content cloned into /content.");
 } catch (error) {
   console.error("❌ Failed to clone content repo:", error);
   process.exit(1);

@@ -25,4 +25,4 @@ pnpm-debug.log*
 /.vscode
 
 .vercel
-/src/content
+/content

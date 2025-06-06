@@ -14,7 +14,7 @@ const { Content } = await render(post);
 ---
 
 <h1>{post.data.title}</h1>
-<img src={`/src/content/${post.collection}/${post.data.image}`} alt={post.data.title} />
+<img src={`/content/${post.collection}/${post.data.image}`} alt={post.data.title} />
 <p>Date: {post.data.date}</p>
 <p>Mediums: {post.data.mediums.map((medium) => <li>{medium}</li>)}</p>
 
