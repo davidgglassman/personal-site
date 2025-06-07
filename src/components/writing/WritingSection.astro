@@ -18,5 +18,5 @@ const p = posts
 <div class="flex w-full flex-col items-start justify-start">
   <h2 class="mb-4 text-xl font-semibold">{title}</h2>
 
-  {p.map((post) => <WritingPostPreview post={post} />)}
+  {p.map((post) => <WritingPostPreview {post} />)}
 </div>

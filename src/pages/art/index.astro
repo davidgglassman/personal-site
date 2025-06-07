@@ -1,7 +1,13 @@
 ---
+import PortfolioView from "@components/art/PortfolioView.astro";
 import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const items = await getCollection("art");
+
+items.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 ---
 
 <Layout title="Art">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
+  <PortfolioView {items} />
 </Layout>

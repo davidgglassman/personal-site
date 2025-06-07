@@ -12,5 +12,5 @@ const latestArtPosts = artPosts
 <div class="flex w-full flex-col items-start justify-start">
   <h2 class="mb-4 text-xl font-semibold">Recent Art</h2>
 
-  {latestArtPosts.map((post) => <ArtPostPreview post={post} />)}
+  {latestArtPosts.map((post) => <ArtPostPreview {post} />)}
 </div>

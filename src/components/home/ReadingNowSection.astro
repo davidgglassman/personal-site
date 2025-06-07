@@ -9,5 +9,5 @@ const readingBooks = books.filter((book) => book.data.status === "reading");
 
 <div class="flex w-full flex-col items-start justify-start">
   <h3 class="mb-2 font-semibold">Reading</h3>
-  {readingBooks.map((book) => <BookPreview book={book} />)}
+  {readingBooks.map((book) => <BookPreview {book} />)}
 </div>
