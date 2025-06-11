@@ -4,6 +4,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { randomUUID } from "node:crypto";
 
+// -------------------- Writing
+
 const writing = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./content/writing" }),
   schema: z.object({
@@ -15,6 +17,8 @@ const writing = defineCollection({
   }),
 });
 
+// -------------------- Art
+
 const art = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./content/art" }),
   schema: z.object({
@@ -24,6 +28,8 @@ const art = defineCollection({
     mediums: z.array(z.string()),
   }),
 });
+
+// -------------------- Books
 
 const loadBooks = async () => {
   const base = "./content/books";
@@ -75,4 +81,39 @@ const books = defineCollection({
   schema: BookSchema,
 });
 
-export const collections = { writing, art, books };
+// -------------------- Work
+
+const loadWork = async () => {
+  const experience = await fs.readFile("./content/work/experience.json", "utf-8").then(JSON.parse);
+
+  return [
+    ...experience.map((b: any) => ({ id: randomUUID(), ...b })),
+  ];
+};
+
+const WorkRole = z.object({
+  title: z.string(),
+	years: z.string()
+});
+
+const work = defineCollection({
+  loader: loadWork,
+  schema: z.object({
+    years: z.string(),
+    roles: z.object({
+			main: WorkRole,
+			other: z.array(WorkRole)
+		}),
+		company: z.string(),
+		url: z.string(),
+		items: z.array(z.object({
+			content: z.string(),
+			link: z.object({
+				title: z.string(),
+    		url: z.string().url(),
+			}).nullable()
+		}))
+  }),
+});
+
+export const collections = { writing, art, books, work };
