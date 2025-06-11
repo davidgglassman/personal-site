@@ -1,7 +1,14 @@
 ---
+import Top5Section from "@components/lists/Top5Section.astro";
+import YearInReviewSection from "@components/lists/YearInReviewSection.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout title="Lists">
-  <div class="flex h-auto w-full flex-col items-center justify-start gap-8"></div>
+  <div class="h-auto w-[45rem] pr-8">
+    <div class="flex w-full flex-col items-center justify-start gap-2">
+      <YearInReviewSection />
+      <Top5Section />
+    </div>
+  </div>
 </Layout>

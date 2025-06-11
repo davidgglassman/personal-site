@@ -54,22 +54,19 @@ const BookBase = z.object({
   status: z.enum(["reading", "completed", "dnf"]),
 });
 
-const ReadingBook = BookBase.extend({
+export const ReadingBook = BookBase.extend({
   status: z.literal("reading"),
   started: z.string(),
-  completed: z.nullable(z.string()).optional(),
-  rating: z.nullable(z.number()).optional(),
-  percent: z.nullable(z.number()).optional(),
 });
 
-const CompletedBook = BookBase.extend({
+export const CompletedBook = BookBase.extend({
   status: z.literal("completed"),
   started: z.string(),
   completed: z.string(),
   rating: z.number(),
 });
 
-const DnfBook = BookBase.extend({
+export const DnfBook = BookBase.extend({
   status: z.literal("dnf"),
   percent: z.number(),
 });
@@ -86,14 +83,12 @@ const books = defineCollection({
 const loadWork = async () => {
   const experience = await fs.readFile("./content/work/experience.json", "utf-8").then(JSON.parse);
 
-  return [
-    ...experience.map((b: any) => ({ id: randomUUID(), ...b })),
-  ];
+  return [...experience.map((b: any) => ({ id: randomUUID(), ...b }))];
 };
 
 const WorkRole = z.object({
   title: z.string(),
-	years: z.string()
+  years: z.string(),
 });
 
 const work = defineCollection({
@@ -101,19 +96,39 @@ const work = defineCollection({
   schema: z.object({
     years: z.string(),
     roles: z.object({
-			main: WorkRole,
-			other: z.array(WorkRole)
-		}),
-		company: z.string(),
-		url: z.string(),
-		items: z.array(z.object({
-			content: z.string(),
-			link: z.object({
-				title: z.string(),
-    		url: z.string().url(),
-			}).nullable()
-		}))
+      main: WorkRole,
+      other: z.array(WorkRole),
+    }),
+    company: z.string(),
+    url: z.string(),
+    items: z.array(
+      z.object({
+        content: z.string(),
+        link: z
+          .object({
+            title: z.string(),
+            url: z.string().url(),
+          })
+          .nullable(),
+      }),
+    ),
   }),
 });
 
-export const collections = { writing, art, books, work };
+// -------------------- Lists
+
+const loadTop5 = async () => {
+  const top5 = await fs.readFile("./content/lists/top5.json", "utf-8").then(JSON.parse);
+
+  return [...top5.map((b: any) => ({ id: randomUUID(), ...b }))];
+};
+
+const top5 = defineCollection({
+  loader: loadTop5,
+  schema: z.object({
+    category: z.string(),
+    items: z.array(z.string()).length(5),
+  }),
+});
+
+export const collections = { writing, art, books, work, top5 };
