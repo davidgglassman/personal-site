@@ -8,30 +8,35 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<div class="flex h-auto w-full flex-col flex-wrap items-start justify-start gap-2">
-  <p class="text-lg font-bold">{item.data.years}</p>
-  <a class="text-lg font-bold" href={item.data.url}>{item.data.company}</a>
+<div class="collapse-arrow border-base-300 collapse border bg-gray-100">
+  <input type="checkbox" />
 
-  <div class="flex flex-row items-center justify-between gap-4">
-    <p class="text-base font-semibold">{item.data.roles.main.title}</p>
-    <p class="text-base font-semibold">{item.data.roles.main.years}</p>
+  <div class="collapse-title flex flex-col items-start justify-start">
+    <p class="text-base font-bold">{item.data.company}</p>
+    <p class="text-xs font-bold">{item.data.years}</p>
   </div>
 
-  {
-    item.data.roles.other.map((role) => (
-      <div class="flex flex-row items-center justify-between gap-4">
-        <p class="text-base font-semibold">{role.title}</p>
-        <p class="text-base font-semibold">{role.years} </p>
-      </div>
-    ))
-  }
+  <div class="collapse-content text-sm">
+    <a class="text-sm font-medium text-gray-500" href={item.data.url}>
+      {item.data.url}
+    </a>
 
-  {
-    item.data.items.map((item) => (
-      <div class="flex flex-col items-start justify-start text-base font-medium">
-        <li>{item.content}</li>
-        {item.link && <a href={item.link.url}>{item.link.title}</a>}
-      </div>
-    ))
-  }
+    {
+      item.data.roles.other.map((role) => (
+        <div class="flex flex-row items-center justify-between gap-4 font-semibold">
+          <p>{role.title}</p>
+          <p>{role.years} </p>
+        </div>
+      ))
+    }
+
+    {
+      item.data.items.map((item) => (
+        <div class="flex flex-col items-start justify-start text-sm font-medium">
+          <li>{item.content}</li>
+          {item.link && <a href={item.link.url}>{item.link.title}</a>}
+        </div>
+      ))
+    }
+  </div>
 </div>
