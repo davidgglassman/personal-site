@@ -3,6 +3,7 @@ import "@styles/global.css";
 import "@fontsource/inter";
 import { ClientRouter } from "astro:transitions";
 import NavBar from "@components/shared/NavBar.astro";
+import ThemeSelector from "@components/shared/ThemeSelector.js";
 
 interface Props {
   title: string;
@@ -12,8 +13,24 @@ const { title = "David Glassman" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
+    <script>
+      (() => {
+        try {
+          const theme = localStorage.theme;
+          if (
+            theme === "dark" ||
+            (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -26,7 +43,10 @@ const { title = "David Glassman" } = Astro.props;
   <body
     class="m-0 h-dvh min-h-screen w-full min-w-[300px] cursor-default flex-col overflow-hidden bg-gray-50 p-0 text-left text-base leading-6 font-normal tracking-wide text-gray-900 selection:bg-gray-700 selection:text-gray-100 dark:bg-gray-900 dark:text-gray-100">
     <div class="mx-auto flex size-full min-h-screen max-w-[49rem] flex-col justify-start gap-4 p-4">
-      <NavBar />
+      <div class="mb-8 flex flex-row items-center justify-between px-8">
+        <ThemeSelector client:load />
+        <NavBar />
+      </div>
 
       <div class="min-h-screen overflow-y-auto px-8">
         <slot />
