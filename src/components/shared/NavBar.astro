@@ -13,19 +13,21 @@ const links = [
 ];
 ---
 
-<header class="mx-auto mb-24">
-  <div class="flex w-auto flex-row gap-4 rounded-xl bg-[#232530] p-2 pr-4 text-sm text-[#F8F8F3]">
-    {
-      links.map((link) => (
-        <a
-          role="button"
-          class={`rounded-lg p-1 px-2 hover:bg-[#414558] ${pathname === link.href && "text-[#a5a5a5]"}`}
-          href={link.href}>
-          {link.title}
-        </a>
-      ))
-    }
-
+<header class="w-full">
+  <div class="flex flex-row justify-between text-sm">
     <ThemeSelector client:load />
+
+    <div>
+      {
+        links.map((link) => (
+          <a
+            role="button"
+            class={`ml-3 rounded-lg hover:text-[#a5a5a5] ${pathname === link.href && "text-[#a5a5a5]"}`}
+            href={link.href}>
+            {link.title}
+          </a>
+        ))
+      }
+    </div>
   </div>
 </header>
