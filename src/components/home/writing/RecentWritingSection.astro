@@ -13,10 +13,15 @@ const latestWritingPosts = writingPosts
   <div class="mb-4 flex h-auto w-full flex-row items-center justify-between">
     <h2 class="text-xl font-semibold dark:text-[#F8F8F3]">Recent Writing</h2>
 
-    <a role="button" class="rounded-lg border border-[#CECECD] p-1 px-2 text-xs" href="/writing">
+    <a
+      role="button"
+      class="rounded-lg border border-gray-300 p-1 px-2 text-xs text-gray-400 hover:bg-gray-100 dark:border-gray-700 hover:dark:bg-[#282a35]"
+      href="/writing">
       See All
     </a>
   </div>
 
-  {latestWritingPosts.map((post) => <WritingPostPreview {post} />)}
+  <div class="flex w-full flex-col gap-2">
+    {latestWritingPosts.map((post) => <WritingPostPreview {post} />)}
+  </div>
 </div>
