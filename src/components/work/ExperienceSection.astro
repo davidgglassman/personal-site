@@ -8,33 +8,37 @@ interface Props {
 const { item } = Astro.props;
 ---
 
-<div class="collapse-arrow border-base-300 collapse border bg-gray-100">
-  <input type="checkbox" />
-
-  <div class="collapse-title flex flex-col items-start justify-start">
-    <p class="text-base font-bold">{item.data.company}</p>
-    <p class="text-xs font-bold">{item.data.years}</p>
+<div class="w-full">
+  <div class="mb-4 flex flex-col items-start justify-start">
+    <p class="text-2xl font-bold">{item.data.company}</p>
+    <p class="text-lg font-bold">{item.data.years}</p>
   </div>
 
-  <div class="collapse-content text-sm">
-    <a class="text-sm font-medium text-gray-500" href={item.data.url}>
+  <div class="text-sm">
+    <a class="mb-4 block font-medium text-gray-500" href={item.data.url}>
       {item.data.url}
     </a>
 
-    {
-      item.data.roles.other.map((role) => (
-        <div class="flex flex-row items-center justify-between gap-4 font-semibold">
-          <p>{role.title}</p>
-          <p>{role.years} </p>
-        </div>
-      ))
-    }
+    <div class="mb-4">
+      {
+        item.data.roles.other.map((role) => (
+          <div class="flex flex-row items-center justify-between gap-4 font-semibold">
+            <p>{role.title}</p>
+            <p>{role.years} </p>
+          </div>
+        ))
+      }
+    </div>
 
     {
       item.data.items.map((item) => (
-        <div class="flex flex-col items-start justify-start text-sm font-medium">
+        <div class="mb-2 flex flex-col items-start justify-start font-medium">
           <li>{item.content}</li>
-          {item.link && <a href={item.link.url}>{item.link.title}</a>}
+          {item.link && (
+            <a href={item.link.url} class="font-semibold">
+              {item.link.title}
+            </a>
+          )}
         </div>
       ))
     }

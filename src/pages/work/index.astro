@@ -7,9 +7,5 @@ const items = await getCollection("work");
 ---
 
 <Layout title="Work">
-  <div class="h-auto w-[45rem] pr-8">
-    <div class="flex w-full flex-col items-center justify-start gap-2">
-      {items.map((item) => <ExperienceSection {item} />)}
-    </div>
-  </div>
+  {items.map((item) => <ExperienceSection {item} />)}
 </Layout>

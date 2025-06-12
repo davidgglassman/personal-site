@@ -7,8 +7,6 @@ const posts = await getCollection("writing");
 ---
 
 <Layout title="Writing">
-  <div class="flex h-auto w-full flex-col items-start justify-start gap-16">
-    <WritingSection title="Fragments / Notes" form="short" {posts} />
-    <WritingSection title="Posts" form="long" {posts} />
-  </div>
+  <WritingSection title="Fragments / Notes" form="short" {posts} />
+  <WritingSection title="Posts" form="long" {posts} />
 </Layout>
