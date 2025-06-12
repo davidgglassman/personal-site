@@ -3,7 +3,6 @@ Imports / Plugins
 ********************************************/
 
 @import "tailwindcss";
-@plugin "daisyui";
 
 /********************************************
 Dark Mode
@@ -16,7 +15,7 @@ Configuration
 ********************************************/
 
 @theme {
-  --font-sans: "Inter", "sans-serif";
+  --font-sans: "JetBrains Mono", "sans-serif";
 }
 
 /********************************************

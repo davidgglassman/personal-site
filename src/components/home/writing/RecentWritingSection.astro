@@ -10,7 +10,13 @@ const latestWritingPosts = writingPosts
 ---
 
 <div class="flex w-full flex-col items-start justify-start">
-  <h2 class="mb-4 text-xl font-semibold">Recent Writing</h2>
+  <div class="mb-4 flex h-auto w-full flex-row items-center justify-between">
+    <h2 class="text-xl font-semibold text-[#F8F8F3]">Recent Writing</h2>
+
+    <a role="button" class="rounded-lg border border-[#CECECD] p-1 px-2 text-xs" href="/writing">
+      See All
+    </a>
+  </div>
 
   {latestWritingPosts.map((post) => <WritingPostPreview {post} />)}
 </div>
