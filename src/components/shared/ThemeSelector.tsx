@@ -34,12 +34,7 @@ const ThemeSelector = () => {
   };
 
   return (
-    <button
-      type="button"
-      id="theme-selector"
-      onClick={toggleTheme}
-      aria-label="Toggle theme"
-      className="ml-2">
+    <button type="button" id="theme-selector" onClick={toggleTheme} aria-label="Toggle theme">
       <FaMoon className="hidden size-4 dark:inline" />
       <FaSun className="inline size-4 dark:hidden" />
     </button>
