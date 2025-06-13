@@ -1,28 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 import PostPreview from "@components/shared/PostPreview.astro";
+import { Button } from "@components/ui/button";
 
 const writingPosts = await getCollection("writing");
 
 const latestWritingPosts = writingPosts
   .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime())
-  .slice(0, 5);
+  .slice(0, 3);
 ---
 
 <div class="flex w-full flex-col items-start justify-start">
   <div class="mb-4 flex h-auto w-full flex-row items-center justify-between">
     <h2 class="text-xl font-semibold dark:text-[#F8F8F3]">Recent Writing</h2>
 
-    <a
-      role="button"
-      class="rounded-lg border border-gray-300 p-1 px-2 text-xs text-gray-400 hover:bg-gray-100 dark:border-gray-700 hover:dark:bg-[#282a35]"
-      href="/writing"
+    <Button
+      variant="link"
+      className="p-0"
     >
-      See All
-    </a>
+      <a href="/writing"> See All </a>
+    </Button>
   </div>
 
-  <div class="flex w-full flex-col gap-2">
+  <div class="flex w-full flex-col">
     {
       latestWritingPosts.map((post) => (
         <PostPreview
