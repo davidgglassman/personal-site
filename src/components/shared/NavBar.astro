@@ -1,5 +1,6 @@
 ---
 import ThemeSelector from "@components/shared/ThemeSelector.js";
+import { Button } from "@/components/ui/button";
 
 const { pathname } = Astro.url;
 
@@ -20,13 +21,14 @@ const links = [
     <div>
       {
         links.map((link) => (
-          <a
-            role="button"
-            class={`ml-3 rounded-lg hover:text-[#a5a5a5] ${pathname === link.href && "text-[#a5a5a5]"}`}
-            href={link.href}
-          >
-            {link.title}
-          </a>
+          <Button variant="link">
+            <a
+              class={` ${pathname === link.href && "text-[#a5a5a5] underline underline-offset-4"}`}
+              href={link.href}
+            >
+              {link.title}
+            </a>
+          </Button>
         ))
       }
     </div>

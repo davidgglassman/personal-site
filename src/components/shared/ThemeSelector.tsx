@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 
 const ThemeSelector = () => {
   useEffect(() => {
@@ -35,15 +36,15 @@ const ThemeSelector = () => {
   };
 
   return (
-    <button
-      type="button"
+    <Button
+      variant="icon"
       id="theme-selector"
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
-      <FaMoon className="hidden size-4 hover:text-[#a5a5a5] dark:inline" />
-      <FaSun className="inline size-4 hover:text-[#a5a5a5] dark:hidden" />
-    </button>
+      <FaMoon className="hidden size-4 dark:inline" />
+      <FaSun className="inline size-4 dark:hidden" />
+    </Button>
   );
 };
 
