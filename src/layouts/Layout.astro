@@ -21,7 +21,8 @@ const { title = "David Glassman" } = Astro.props;
           const theme = localStorage.theme;
           if (
             theme === "dark" ||
-            (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+            (!theme &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
           ) {
             document.documentElement.classList.add("dark");
           } else {
@@ -32,8 +33,14 @@ const { title = "David Glassman" } = Astro.props;
     </script>
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
 
     <title>{title}</title>
 
@@ -41,12 +48,17 @@ const { title = "David Glassman" } = Astro.props;
   </head>
 
   <body
-    class="scrollbar m-0 min-h-lvh w-full min-w-[300px] cursor-default flex-col overflow-y-auto bg-[#fafafa] p-0 text-left text-base leading-7 font-medium tracking-wide text-[#242730] antialiased selection:bg-gray-700 selection:text-[#CECECD] dark:bg-[#242730] dark:text-[#CECECD]">
-    <div class="mx-auto flex min-h-lvh max-w-[50rem] flex-col justify-between gap-4 p-4 py-8">
+    class="scrollbar m-0 min-h-lvh w-full min-w-[300px] cursor-default flex-col overflow-y-auto bg-[#fafafa] p-0 text-left text-base leading-7 font-medium tracking-wide text-[#242730] antialiased selection:bg-gray-700 selection:text-[#CECECD] dark:bg-[#242730] dark:text-[#CECECD]"
+  >
+    <div
+      class="mx-auto flex min-h-lvh max-w-[50rem] flex-col justify-between gap-4 p-4 py-8"
+    >
       <div class="mb-24 flex flex-col items-center justify-center gap-24">
         <NavBar />
 
-        <div class="flex h-auto w-full flex-col items-start justify-start gap-12">
+        <div
+          class="flex h-auto w-full flex-col items-start justify-start gap-12"
+        >
           <slot />
         </div>
       </div>

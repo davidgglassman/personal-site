@@ -37,12 +37,18 @@ const loadBooks = async () => {
   const [reading, completed, unfinished] = await Promise.all([
     fs.readFile(path.resolve(base, "reading.json"), "utf-8").then(JSON.parse),
     fs.readFile(path.resolve(base, "completed.json"), "utf-8").then(JSON.parse),
-    fs.readFile(path.resolve(base, "unfinished.json"), "utf-8").then(JSON.parse),
+    fs
+      .readFile(path.resolve(base, "unfinished.json"), "utf-8")
+      .then(JSON.parse),
   ]);
 
   return [
     ...reading.map((b: any) => ({ id: randomUUID(), ...b, status: "reading" })),
-    ...completed.map((b: any) => ({ id: randomUUID(), ...b, status: "completed" })),
+    ...completed.map((b: any) => ({
+      id: randomUUID(),
+      ...b,
+      status: "completed",
+    })),
     ...unfinished.map((b: any) => ({ id: randomUUID(), ...b, status: "dnf" })),
   ];
 };
@@ -71,7 +77,11 @@ export const DnfBook = BookBase.extend({
   percent: z.number(),
 });
 
-const BookSchema = z.discriminatedUnion("status", [ReadingBook, CompletedBook, DnfBook]);
+const BookSchema = z.discriminatedUnion("status", [
+  ReadingBook,
+  CompletedBook,
+  DnfBook,
+]);
 
 const books = defineCollection({
   loader: loadBooks,
@@ -81,7 +91,9 @@ const books = defineCollection({
 // -------------------- Work
 
 const loadWork = async () => {
-  const experience = await fs.readFile("./content/work/experience.json", "utf-8").then(JSON.parse);
+  const experience = await fs
+    .readFile("./content/work/experience.json", "utf-8")
+    .then(JSON.parse);
 
   return [...experience.map((b: any) => ({ id: randomUUID(), ...b }))];
 };
@@ -118,7 +130,9 @@ const work = defineCollection({
 // -------------------- Lists
 
 const loadTop5 = async () => {
-  const top5 = await fs.readFile("./content/lists/top5.json", "utf-8").then(JSON.parse);
+  const top5 = await fs
+    .readFile("./content/lists/top5.json", "utf-8")
+    .then(JSON.parse);
 
   return [...top5.map((b: any) => ({ id: randomUUID(), ...b }))];
 };

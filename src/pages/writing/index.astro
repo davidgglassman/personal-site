@@ -7,6 +7,15 @@ const posts = await getCollection("writing");
 ---
 
 <Layout title="Writing">
-  <WritingSection title="Fragments / Notes" form="short" {posts} />
-  <WritingSection title="Posts" form="long" {posts} />
+  <WritingSection
+    title="Fragments / Notes"
+    form="short"
+    {posts}
+  />
+
+  <WritingSection
+    title="Posts"
+    form="long"
+    {posts}
+  />
 </Layout>

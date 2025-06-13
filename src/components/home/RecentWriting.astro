@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import WritingPostPreview from "@components/shared/WritingPostPreview.astro";
+import PostPreview from "@components/shared/PostPreview.astro";
 
 const writingPosts = await getCollection("writing");
 
@@ -16,12 +16,22 @@ const latestWritingPosts = writingPosts
     <a
       role="button"
       class="rounded-lg border border-gray-300 p-1 px-2 text-xs text-gray-400 hover:bg-gray-100 dark:border-gray-700 hover:dark:bg-[#282a35]"
-      href="/writing">
+      href="/writing"
+    >
       See All
     </a>
   </div>
 
   <div class="flex w-full flex-col gap-2">
-    {latestWritingPosts.map((post) => <WritingPostPreview {post} />)}
+    {
+      latestWritingPosts.map((post) => (
+        <PostPreview
+          id={post.id}
+          title={post.data.title}
+          date={post.data.pubDate}
+          category="writing"
+        />
+      ))
+    }
   </div>
 </div>

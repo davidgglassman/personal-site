@@ -12,9 +12,9 @@
   "trailingComma": "all",
   "singleQuote": false,
   "jsxSingleQuote": false,
-  "printWidth": 100,
+  "printWidth": 80,
   "tabWidth": 2,
   "arrowParens": "always",
-  "singleAttributePerLine": false,
-  "bracketSameLine": true
+  "singleAttributePerLine": true,
+  "bracketSameLine": false
 }

@@ -12,7 +12,11 @@ const { items } = Astro.props;
   {
     items.map((item) => (
       <a href={`/art/${item.id}`}>
-        <img class="h-48" src={item.data.image} alt={item.data.title} />
+        <img
+          class="h-48"
+          src={item.data.image}
+          alt={item.data.title}
+        />
       </a>
     ))
   }

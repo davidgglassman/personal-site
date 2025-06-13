@@ -6,7 +6,8 @@ const ThemeSelector = () => {
     const updateTheme = () => {
       if (
         localStorage.theme === "dark" ||
-        (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         document.documentElement.classList.add("dark");
       } else {
@@ -34,7 +35,12 @@ const ThemeSelector = () => {
   };
 
   return (
-    <button type="button" id="theme-selector" onClick={toggleTheme} aria-label="Toggle theme">
+    <button
+      type="button"
+      id="theme-selector"
+      onClick={toggleTheme}
+      aria-label="Toggle theme"
+    >
       <FaMoon className="hidden size-4 hover:text-[#a5a5a5] dark:inline" />
       <FaSun className="inline size-4 hover:text-[#a5a5a5] dark:hidden" />
     </button>

@@ -4,7 +4,9 @@ import type { CompletedBook, DnfBook, ReadingBook } from "src/content.config";
 
 const books = await getCollection("books");
 
-function isReadingBook(book: (typeof books)[number]["data"]): book is z.infer<typeof ReadingBook> {
+function isReadingBook(
+  book: (typeof books)[number]["data"],
+): book is z.infer<typeof ReadingBook> {
   return book.status === "reading";
 }
 
@@ -14,7 +16,9 @@ function isFinishedBook(
   return book.status === "completed";
 }
 
-function isUnfinishedBook(book: (typeof books)[number]["data"]): book is z.infer<typeof DnfBook> {
+function isUnfinishedBook(
+  book: (typeof books)[number]["data"],
+): book is z.infer<typeof DnfBook> {
   return book.status === "dnf";
 }
 

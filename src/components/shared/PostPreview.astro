@@ -1,0 +1,22 @@
+---
+import { formatDateWithOrdinal } from "src/lib/helpers";
+
+interface Props {
+  id: string;
+  title: string;
+  date: Date;
+  category: "art" | "writing";
+}
+
+const { id, title, date, category } = Astro.props;
+---
+
+<a
+  class="flex w-full flex-row items-center justify-between rounded-xl border border-gray-300 p-2 px-4 hover:bg-gray-100 dark:border-gray-700 hover:dark:bg-[#282a35]"
+  href={`/${category}/${id}`}
+>
+  <p class="font-bold">{title}</p>
+  <p class="text-sm text-gray-500 dark:text-gray-400">
+    {formatDateWithOrdinal(date)}
+  </p>
+</a>

@@ -15,7 +15,10 @@ const { item } = Astro.props;
   </div>
 
   <div class="text-sm">
-    <a class="mb-4 block font-medium text-gray-500" href={item.data.url}>
+    <a
+      class="mb-4 block font-medium text-gray-500"
+      href={item.data.url}
+    >
       {item.data.url}
     </a>
 
@@ -35,7 +38,10 @@ const { item } = Astro.props;
         <div class="mb-2 flex flex-col items-start justify-start font-medium">
           <li>{item.content}</li>
           {item.link && (
-            <a href={item.link.url} class="font-semibold">
+            <a
+              href={item.link.url}
+              class="font-semibold"
+            >
               {item.link.title}
             </a>
           )}

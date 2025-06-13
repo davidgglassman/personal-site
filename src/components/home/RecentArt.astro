@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import ArtPostPreview from "@components/home/art/ArtPostPreview.astro";
+import PostPreview from "@components/shared/PostPreview.astro";
 
 const artPosts = await getCollection("art");
 
@@ -16,12 +16,22 @@ const latestArtPosts = artPosts
     <a
       role="button"
       class="rounded-lg border border-gray-300 p-1 px-2 text-xs text-gray-400 hover:bg-gray-100 dark:border-gray-700 hover:dark:bg-[#282a35]"
-      href="/art">
+      href="/art"
+    >
       See All
     </a>
   </div>
 
   <div class="flex w-full flex-col gap-2">
-    {latestArtPosts.map((post) => <ArtPostPreview {post} />)}
+    {
+      latestArtPosts.map((post) => (
+        <PostPreview
+          id={post.id}
+          title={post.data.title}
+          date={post.data.date}
+          category="art"
+        />
+      ))
+    }
   </div>
 </div>
