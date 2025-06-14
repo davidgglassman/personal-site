@@ -2,6 +2,9 @@
 import { type CollectionEntry } from "astro:content";
 import PostPreview from "@components/shared/PostPreview.astro";
 
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
 interface Props {
   title: string;
   form: "long" | "short";
@@ -15,19 +18,24 @@ const p = posts
   .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime());
 ---
 
-<div class="flex-col-standard">
+<div class="flex-col-standard gap-2">
   <h3>{title}</h3>
 
-  <div class="flex-col-standard">
-    {
-      p.map((post) => (
-        <PostPreview
-          id={post.id}
-          title={post.data.title}
-          date={post.data.pubDate}
-          category="writing"
-        />
-      ))
-    }
-  </div>
+
+	<Card className="w-full">
+    <CardContent className="flex-col-standard gap-3 -mt-2 -mb-2">
+      {
+        p.map((post, idx) => (
+          <PostPreview
+            id={post.id}
+            title={post.data.title}
+            date={post.data.pubDate}
+            category="art"
+          />
+
+					<Separator className={idx === p.length - 1 ? "hidden" : ""} />
+        ))
+      }
+    </CardContent>
+  </Card>
 </div>

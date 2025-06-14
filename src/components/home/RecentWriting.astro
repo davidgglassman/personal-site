@@ -3,6 +3,9 @@ import { getCollection } from "astro:content";
 import PostPreview from "@components/shared/PostPreview.astro";
 import { Button } from "@components/ui/button";
 
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
 const writingPosts = await getCollection("writing");
 
 const latestWritingPosts = writingPosts
@@ -10,7 +13,7 @@ const latestWritingPosts = writingPosts
   .slice(0, 3);
 ---
 
-<div class="flex-col-standard">
+<div class="flex-col-standard gap-2">
   <div class="flex-row-standard">
     <h3>Recent Writing</h3>
 
@@ -22,16 +25,20 @@ const latestWritingPosts = writingPosts
     </Button>
   </div>
 
-  <div class="flex-col-standard">
-    {
-      latestWritingPosts.map((post) => (
-        <PostPreview
-          id={post.id}
-          title={post.data.title}
-          date={post.data.pubDate}
-          category="writing"
-        />
-      ))
-    }
-  </div>
+  <Card className="w-full">
+    <CardContent className="flex-col-standard gap-3 -mt-2 -mb-2">
+      {
+        latestWritingPosts.map((post, idx) => (
+          <PostPreview
+            id={post.id}
+            title={post.data.title}
+            date={post.data.pubDate}
+            category="writing"
+          />
+
+					<Separator className={idx === latestWritingPosts.length - 1 ? "hidden" : ""} />
+        ))
+      }
+    </CardContent>
+  </Card>
 </div>

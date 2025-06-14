@@ -3,7 +3,7 @@ import { getCollection, z } from "astro:content";
 import type { CompletedBook, DnfBook, ReadingBook } from "src/content.config";
 
 import { BookAccordion } from "@/components/lists/BookAccordion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 const books = await getCollection("books");
 
