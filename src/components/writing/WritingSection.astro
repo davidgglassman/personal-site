@@ -15,10 +15,10 @@ const p = posts
   .sort((a, b) => a.data.pubDate.getTime() - b.data.pubDate.getTime());
 ---
 
-<div class="flex w-full flex-col items-start justify-start gap-2">
-  <h2 class="text-xl font-semibold dark:text-[#F8F8F3]">{title}</h2>
+<div class="flex-col-standard">
+  <h3>{title}</h3>
 
-  <div class="flex w-full flex-col">
+  <div class="flex-col-standard">
     {
       p.map((post) => (
         <PostPreview

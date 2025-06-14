@@ -12,7 +12,7 @@ const { id, title, date, category } = Astro.props;
 ---
 
 <a
-  class="group relative"
+  class="group flex-row-standard relative"
   href={`/${category}/${id}`}
 >
   <div
@@ -20,9 +20,7 @@ const { id, title, date, category } = Astro.props;
   >
   </div>
 
-  <div
-    class="group-hover:text-accent mt-[2px] flex w-full flex-row items-center justify-between"
-  >
+  <div class="group-hover:text-accent flex-row-standard mt-[2px]">
     <p class="z-10 font-bold">{title}</p>
     <p
       class="group-hover:text-accent z-10 text-sm text-gray-500 dark:text-gray-400"

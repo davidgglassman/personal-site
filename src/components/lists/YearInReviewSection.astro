@@ -29,55 +29,52 @@ const finishedBooks = books.map((book) => book.data).filter(isFinishedBook);
 const unfinishedBooks = books.map((book) => book.data).filter(isUnfinishedBook);
 ---
 
-<div>
-  <h2 class="mb-8 text-xl font-semibold">Year in Review</h2>
+<div class="flex-col-standard">
+  <h3>Year in Review</h3>
 
-  <div>
-    <h2 class="mb-4 text-lg font-semibold">Books</h2>
+  <div class="flex-col-standard">
+    <h4>Books</h4>
 
-    <div class="flex flex-col gap-8">
-      <div>
-        <h3 class="mb-2 font-semibold text-gray-500">Reading Now</h3>
-        <div class="flex flex-col items-start justify-start gap-6">
+    <div class="flex-col-standard">
+      <div class="flex-col-standard">
+        <h5>Reading Now</h5>
+
+        <div class="flex-col-standard">
           {
             readingBooks.map((book) => (
-              <div class="flex w-full flex-col items-start justify-between">
-                <p>{book.title}</p>
-                <p class="text-sm text-gray-500">Author: {book.author}</p>
-                <p class="text-sm text-gray-500">Started: {book.started}</p>
-              </div>
+							<p>{book.title}</p>
+							<p class="text-sm text-gray-500">Author: {book.author}</p>
+							<p class="text-sm text-gray-500">Started: {book.started}</p>
             ))
           }
         </div>
       </div>
 
-      <div>
-        <h3 class="mb-2 font-semibold text-gray-500">Completed</h3>
-        <div class="flex flex-col items-start justify-start gap-6">
+      <div class="flex-col-standard">
+        <h5>Completed</h5>
+
+        <div class="flex-col-standard">
           {
             finishedBooks.map((book) => (
-              <div class="flex w-full flex-col items-start justify-between">
-                <p>{book.title}</p>
-                <p class="text-sm text-gray-500">Author: {book.author}</p>
-                <p class="text-sm text-gray-500">Started: {book.started}</p>
-                <p class="text-sm text-gray-500">Completed: {book.completed}</p>
-                <p class="text-sm text-gray-500">Rating: {book.rating}</p>
-              </div>
+							<p>{book.title}</p>
+							<p class="text-sm text-gray-500">Author: {book.author}</p>
+							<p class="text-sm text-gray-500">Started: {book.started}</p>
+							<p class="text-sm text-gray-500">Completed: {book.completed}</p>
+							<p class="text-sm text-gray-500">Rating: {book.rating}</p>
             ))
           }
         </div>
       </div>
 
-      <div>
-        <h3 class="mb-2 font-semibold text-gray-500">Did Not Finish</h3>
-        <div class="flex flex-col items-start justify-start gap-6">
+      <div class="flex-col-standard">
+        <h5>Did Not Finish</h5>
+
+        <div class="flex-col-standard">
           {
             unfinishedBooks.map((book) => (
-              <div class="flex w-full flex-col items-start justify-between">
-                <p>{book.title}</p>
-                <p class="text-sm text-gray-500">Author: {book.author}</p>
-                <p class="text-sm text-gray-500">Completed: {book.percent}%</p>
-              </div>
+							<p>{book.title}</p>
+							<p class="text-sm text-gray-500">Author: {book.author}</p>
+							<p class="text-sm text-gray-500">Completed: {book.percent}%</p>
             ))
           }
         </div>

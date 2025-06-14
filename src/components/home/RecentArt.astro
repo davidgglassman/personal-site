@@ -10,9 +10,9 @@ const latestArtPosts = artPosts
   .slice(0, 3);
 ---
 
-<div class="flex w-full flex-col items-start justify-start">
-  <div class="mb-4 flex h-auto w-full flex-row items-center justify-between">
-    <h2 class="text-xl font-semibold dark:text-[#F8F8F3]">Recent Art</h2>
+<div class="flex-col-standard">
+  <div class="flex-row-standard">
+    <h3>Recent Art</h3>
 
     <Button
       variant="link"
@@ -22,7 +22,7 @@ const latestArtPosts = artPosts
     </Button>
   </div>
 
-  <div class="flex w-full flex-col">
+  <div class="flex-col-standard">
     {
       latestArtPosts.map((post) => (
         <PostPreview

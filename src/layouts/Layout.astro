@@ -47,18 +47,14 @@ const { title = "David Glassman" } = Astro.props;
     <ClientRouter />
   </head>
 
-  <body
-    class="scrollbar selection:bg-accent-foreground selection:text-accent m-0 min-h-lvh w-full min-w-[300px] cursor-default flex-col overflow-y-auto bg-[#fafafa] p-0 text-left text-base leading-7 font-medium tracking-wide text-[#242730] antialiased dark:bg-[#242730] dark:text-[#CECECD]"
-  >
+  <body class="scrollbar">
     <div
-      class="mx-auto flex min-h-lvh max-w-[50rem] flex-col justify-between gap-4 p-4 py-8"
+      class="mx-auto flex min-h-lvh max-w-[50rem] flex-col items-start justify-between gap-4 p-4 py-8"
     >
-      <div class="flex flex-col items-center justify-center gap-24">
+      <div class="flex-col-standard gap-24">
         <NavBar />
 
-        <div
-          class="flex h-auto w-full flex-col items-start justify-start gap-12"
-        >
+        <div class="flex-col-standard gap-12">
           <slot />
         </div>
       </div>

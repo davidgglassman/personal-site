@@ -9,44 +9,31 @@ const { item } = Astro.props;
 ---
 
 <div class="w-full">
-  <div class="mb-4 flex flex-col items-start justify-start">
-    <p class="text-2xl font-bold">{item.data.company}</p>
-    <p class="text-lg font-bold">{item.data.years}</p>
-  </div>
+  <h3>{item.data.company}</h3>
+  <p>{item.data.years}</p>
 
-  <div class="text-sm">
-    <a
-      class="mb-4 block font-medium text-gray-500"
-      href={item.data.url}
-    >
-      {item.data.url}
-    </a>
+  <a
+    class="block"
+    href={item.data.url}
+  >
+    {item.data.url}
+  </a>
 
-    <div class="mb-4">
-      {
-        item.data.roles.other.map((role) => (
-          <div class="flex flex-row items-center justify-between gap-4 font-semibold">
-            <p>{role.title}</p>
-            <p>{role.years} </p>
-          </div>
-        ))
-      }
-    </div>
+  {
+    item.data.roles.other.map((role) => (
+      <div class="flex-row-standard">
+        <p>{role.title}</p>
+        <p>{role.years} </p>
+      </div>
+    ))
+  }
 
-    {
-      item.data.items.map((item) => (
-        <div class="mb-2 flex flex-col items-start justify-start font-medium">
-          <li>{item.content}</li>
-          {item.link && (
-            <a
-              href={item.link.url}
-              class="font-semibold"
-            >
-              {item.link.title}
-            </a>
-          )}
-        </div>
-      ))
-    }
-  </div>
+  {
+    item.data.items.map((item) => (
+      <div class="flex-col-standard">
+        <li>{item.content}</li>
+        {item.link && <a href={item.link.url}>{item.link.title}</a>}
+      </div>
+    ))
+  }
 </div>

@@ -15,17 +15,17 @@ const books = top5
   .map((item) => item.data.items)[0];
 ---
 
-<div>
-  <h2 class="mb-8 text-xl font-semibold">All-Time Top 5</h2>
+<div class="flex-col-standard">
+  <h3>All-Time Top 5</h3>
 
-  <div>
-    <h2 class="mb-4 text-lg font-semibold">Movies</h2>
+  <div class="flex-col-standard">
+    <div class="flex-col-standard">
+      <h4>Movies</h4>
 
-    <div class="mb-8 flex flex-col gap-8">
-      <div class="flex flex-col items-start justify-start">
+      <div class="flex-col-standard">
         {
           movies.map((movie, idx) => (
-            <div class="flex w-full flex-row items-start justify-start gap-3">
+            <div class="flex-row-standard-start gap-3">
               <p class="w-3">{idx + 1}.</p>
               <p>{movie}</p>
             </div>
@@ -34,13 +34,13 @@ const books = top5
       </div>
     </div>
 
-    <h2 class="mb-4 text-lg font-semibold">TV Shows</h2>
+    <div class="flex-col-standard">
+      <h4>TV Shows</h4>
 
-    <div class="flex flex-col gap-8">
-      <div class="mb-8 flex flex-col items-start justify-start">
+      <div class="flex-col-standard">
         {
           tvShows.map((show, idx) => (
-            <div class="flex w-full flex-row items-start justify-start gap-3">
+            <div class="flex-row-standard-start gap-3">
               <p class="w-3">{idx + 1}.</p>
               <p>{show}</p>
             </div>
@@ -49,13 +49,13 @@ const books = top5
       </div>
     </div>
 
-    <h2 class="mb-4 text-lg font-semibold">Books</h2>
+    <div class="flex-col-standard">
+      <h4>Books</h4>
 
-    <div class="flex flex-col gap-8">
-      <div class="flex flex-col items-start justify-start">
+      <div class="flex-col-standard">
         {
           books.map((book, idx) => (
-            <div class="flex w-full flex-row items-start justify-start gap-3">
+            <div class="flex-row-standard-start gap-3">
               <p class="w-3">{idx + 1}.</p>
               <p>{book}</p>
             </div>
