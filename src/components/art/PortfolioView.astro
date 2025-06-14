@@ -1,4 +1,5 @@
 ---
+import ArtItem from "@components/art/ArtItem.astro";
 import { type CollectionEntry } from "astro:content";
 
 interface Props {
@@ -8,16 +9,6 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<div class="flex-row-standard-start flex-wrap gap-2">
-  {
-    items.map((item) => (
-      <a href={`/art/${item.id}`}>
-        <img
-          class="h-48"
-          src={item.data.image}
-          alt={item.data.title}
-        />
-      </a>
-    ))
-  }
+<div class="flex-row-standard-start gap-2">
+  {items.map((item) => <ArtItem {item} />)}
 </div>

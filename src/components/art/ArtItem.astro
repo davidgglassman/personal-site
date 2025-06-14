@@ -1,0 +1,28 @@
+---
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  item: CollectionEntry<"art">;
+}
+
+const { item } = Astro.props;
+---
+
+<a href={`/art/${item.id}`}>
+  <Card className="group w-60 gap-0">
+    <CardHeader className="mb-3">
+      <CardTitle className="group-hover:text-accent-foreground text-sm"
+        >{item.data.title}</CardTitle
+      >
+    </CardHeader>
+
+    <CardContent>
+      <img
+        class="aspect-video h-32 rounded-lg object-cover object-top"
+        src={item.data.image}
+        alt={item.data.title}
+      />
+    </CardContent>
+  </Card>
+</a>

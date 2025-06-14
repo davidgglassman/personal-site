@@ -2,6 +2,9 @@
 import { getCollection, z } from "astro:content";
 import type { CompletedBook, DnfBook, ReadingBook } from "src/content.config";
 
+import { BookAccordion } from "@/components/lists/BookAccordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 const books = await getCollection("books");
 
 function isReadingBook(
@@ -29,56 +32,49 @@ const finishedBooks = books.map((book) => book.data).filter(isFinishedBook);
 const unfinishedBooks = books.map((book) => book.data).filter(isUnfinishedBook);
 ---
 
-<div class="flex-col-standard">
+<div class="flex-col-standard gap-8">
   <h3>Year in Review</h3>
 
-  <div class="flex-col-standard">
-    <h4>Books</h4>
+  <div class="flex-col-standard gap-8">
+    <h3>Books</h3>
 
-    <div class="flex-col-standard">
-      <div class="flex-col-standard">
-        <h5>Reading Now</h5>
+    <div class="flex-col-standard gap-2">
+      <h4>{`Reading Now (${readingBooks.length})`}</h4>
 
-        <div class="flex-col-standard">
-          {
-            readingBooks.map((book) => (
-							<p>{book.title}</p>
-							<p class="text-sm text-gray-500">Author: {book.author}</p>
-							<p class="text-sm text-gray-500">Started: {book.started}</p>
-            ))
-          }
-        </div>
-      </div>
+      <Card className="w-full">
+        <CardContent className="-mt-4 -mb-5">
+          <BookAccordion
+            client:load
+            books={readingBooks}
+          />
+        </CardContent>
+      </Card>
+    </div>
 
-      <div class="flex-col-standard">
-        <h5>Completed</h5>
+    <div class="flex-col-standard gap-2">
+      <h5>{`Completed (${finishedBooks.length})`}</h5>
 
-        <div class="flex-col-standard">
-          {
-            finishedBooks.map((book) => (
-							<p>{book.title}</p>
-							<p class="text-sm text-gray-500">Author: {book.author}</p>
-							<p class="text-sm text-gray-500">Started: {book.started}</p>
-							<p class="text-sm text-gray-500">Completed: {book.completed}</p>
-							<p class="text-sm text-gray-500">Rating: {book.rating}</p>
-            ))
-          }
-        </div>
-      </div>
+      <Card className="w-full">
+        <CardContent className="-mt-4 -mb-5">
+          <BookAccordion
+            client:load
+            books={finishedBooks}
+          />
+        </CardContent>
+      </Card>
+    </div>
 
-      <div class="flex-col-standard">
-        <h5>Did Not Finish</h5>
+    <div class="flex-col-standard gap-2">
+      <h5>{`Did Not Finish (${unfinishedBooks.length})`}</h5>
 
-        <div class="flex-col-standard">
-          {
-            unfinishedBooks.map((book) => (
-							<p>{book.title}</p>
-							<p class="text-sm text-gray-500">Author: {book.author}</p>
-							<p class="text-sm text-gray-500">Completed: {book.percent}%</p>
-            ))
-          }
-        </div>
-      </div>
+      <Card className="w-full">
+        <CardContent className="-mt-4 -mb-5">
+          <BookAccordion
+            client:load
+            books={unfinishedBooks}
+          />
+        </CardContent>
+      </Card>
     </div>
   </div>
 </div>
