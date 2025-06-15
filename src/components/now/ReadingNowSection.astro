@@ -1,14 +1,35 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, z } from "astro:content";
+import type { ReadingBook } from "src/content.config";
+
 import BookPreview from "@components/now/BookPreview.astro";
+
+import { BookAccordion } from "@/components/lists/BookAccordion";
+import { Card, CardContent } from "@/components/ui/card";
 
 const books = await getCollection("books");
 
-const readingBooks = books.filter((book) => book.data.status === "reading");
+function isReadingBook(
+  book: (typeof books)[number]["data"],
+): book is z.infer<typeof ReadingBook> {
+  return book.status === "reading";
+}
+
+const readingBooks = books
+  .map((book) => book.data)
+  .filter((book) => book.status === "reading")
+  .filter(isReadingBook);
 ---
 
-<div class="flex-col-standard">
-  <h4>Reading</h4>
+<div class="flex-col-standard gap-2">
+  <h4>Reading Now</h4>
 
-  {readingBooks.map((book) => <BookPreview {book} />)}
+  <Card className="w-full">
+    <CardContent className="-mt-4 -mb-5">
+      <BookAccordion
+        client:load
+        books={readingBooks}
+      />
+    </CardContent>
+  </Card>
 </div>

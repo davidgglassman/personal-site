@@ -41,6 +41,7 @@ const ThemeSelector = () => {
       id="theme-selector"
       onClick={toggleTheme}
       aria-label="Toggle theme"
+      className="-ml-3"
     >
       <FaMoon className="hidden size-4 dark:inline" />
       <FaSun className="inline size-4 dark:hidden" />

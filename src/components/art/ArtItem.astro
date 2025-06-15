@@ -12,7 +12,8 @@ const { item } = Astro.props;
 <a href={`/art/${item.id}`}>
   <Card className="group w-60 gap-0">
     <CardHeader className="mb-3">
-      <CardTitle className="group-hover:text-accent-foreground text-sm"
+      <CardTitle
+        className="text-sm font-normal transition-all group-hover:underline"
         >{item.data.title}</CardTitle
       >
     </CardHeader>

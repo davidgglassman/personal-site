@@ -1,11 +1,25 @@
 ---
-import ExperienceSection from "@components/work/ExperienceSection.astro";
+import { ExperienceSection } from "@/components/work/ExperienceSection.tsx";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const items = await getCollection("work");
+
+const serializableItems = items.map((item) => ({
+  id: item.id,
+  data: item.data,
+}));
 ---
 
 <Layout title="Work">
-  {items.map((item) => <ExperienceSection {item} />)}
+  <div class="flex-col-standard gap-2">
+    {
+      serializableItems.map((item) => (
+        <ExperienceSection
+          client:load
+          item={item}
+        />
+      ))
+    }
+  </div>
 </Layout>
