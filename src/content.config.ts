@@ -25,6 +25,7 @@ const art = defineCollection({
     title: z.string(),
     image: z.string(),
     date: z.coerce.date(),
+    description: z.string(),
     mediums: z.array(z.string()),
   }),
 });

@@ -1,0 +1,32 @@
+---
+import { formatDateWithOrdinal } from "@/lib/helpers";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"art">;
+}
+
+const { post } = Astro.props;
+---
+
+<h1 class="-mb-6 text-3xl no-underline">{post.data.title}</h1>
+
+<p class="-mb-10 text-sm">{post.data.description}</p>
+
+<p class="text-primary/50 -mb-4 text-xs">
+  {formatDateWithOrdinal(post.data.date)}
+</p>
+
+<div class="flex-row-standard-start gap-2">
+  {post.data.mediums.map((medium) => <Badge variant="outline">{medium}</Badge>)}
+</div>
+
+<Separator className="my-3 w-full" />
+
+<img
+  src={post.data.image}
+  alt={post.data.title}
+  class="h-[22rem] rounded-lg"
+/>
