@@ -12,11 +12,15 @@ const { id, title, date, category } = Astro.props;
 ---
 
 <a
-  class="flex-row-standard group"
+  class="group flex w-full flex-col items-start justify-start gap-1 sm:flex-row sm:items-center sm:justify-between"
   href={`/${category}/${id}`}
 >
-  <p class="transition-all group-hover:underline">{title}</p>
-  <p class="text-primary/50 text-sm">
+  <p
+    class="xs:text-sm text-xs transition-all group-hover:underline sm:text-base"
+  >
+    {title}
+  </p>
+  <p class="text-primary/50 text-xs">
     {formatDateWithOrdinal(date)}
   </p>
 </a>

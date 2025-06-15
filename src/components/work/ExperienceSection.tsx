@@ -39,9 +39,11 @@ export function ExperienceSection({ item }: Props) {
             value={item.id}
           >
             <AccordionTrigger className="mt-1">
-              <div className="flex-row-standard -mt-1 mr-3">
-                <h4>{item.data.company}</h4>
-                <p className="text-primary/50">{item.data.years}</p>
+              <div className="-mt-1 flex w-full flex-col items-start justify-start sm:mr-3 sm:flex-row sm:items-center sm:justify-between">
+                <h4 className="xs:text-sm text-xs sm:text-base">
+                  {item.data.company}
+                </h4>
+                <p className="text-primary/50 text-xs">{item.data.years}</p>
               </div>
             </AccordionTrigger>
 

@@ -27,7 +27,9 @@ export function BookAccordion({ books }: { books: Book[] }) {
           key={book.id}
           value={book.id}
         >
-          <AccordionTrigger>{book.title}</AccordionTrigger>
+          <AccordionTrigger className="xs:text-sm text-xs sm:text-base">
+            {book.title}
+          </AccordionTrigger>
 
           <AccordionContent className="text-primary/50 text-xs">
             <p>Author: {book.author}</p>

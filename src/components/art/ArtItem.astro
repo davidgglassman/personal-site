@@ -10,17 +10,22 @@ const { item } = Astro.props;
 ---
 
 <a href={`/art/${item.id}`}>
-  <Card className="group w-60 gap-0">
-    <CardHeader className="mb-3">
+  <Card
+    className="group flex h-16 w-full flex-row-reverse items-center justify-end sm:block sm:h-auto sm:w-60 sm:gap-0 sm:p-6"
+  >
+    <CardHeader
+      className="-mx-5 mt-2 w-full p-0 text-left sm:mx-0 sm:mt-0 sm:mb-3 sm:p-0 sm:text-left"
+    >
       <CardTitle
         className="text-sm font-normal transition-all group-hover:underline"
-        >{item.data.title}</CardTitle
       >
+        {item.data.title}
+      </CardTitle>
     </CardHeader>
 
-    <CardContent>
+    <CardContent className="m-3 p-0 sm:m-0 sm:p-0">
       <img
-        class="aspect-video h-32 rounded-lg object-cover object-top"
+        class="aspect-video h-10 w-auto rounded-lg object-cover object-top sm:h-32 sm:w-full"
         src={item.data.image}
         alt={item.data.title}
       />

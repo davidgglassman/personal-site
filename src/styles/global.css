@@ -20,6 +20,8 @@ Tailwind Configuration
 @theme {
   --font-sans: "Inter", "sans-serif";
   --font-console: "Fira Code";
+
+  --breakpoint-xs: 30rem;
 }
 
 /********************************************
@@ -151,23 +153,23 @@ html {
   }
 
   body {
-    @apply selection:bg-accent-foreground selection:text-accent text-primary bg-background m-0 min-h-lvh w-full min-w-[300px] cursor-default overflow-y-auto p-0 text-left text-base leading-relaxed font-medium font-normal tracking-widest antialiased;
+    @apply selection:bg-accent-foreground selection:text-accent text-primary bg-background xs:text-sm m-0 min-h-lvh w-full min-w-[300px] cursor-default overflow-y-auto p-0 text-left text-xs leading-relaxed font-medium font-normal tracking-widest antialiased sm:text-base;
   }
 
   h2 {
-    @apply text-4xl font-bold;
+    @apply xs:text-3xl text-2xl font-bold sm:text-4xl;
   }
 
   h3 {
-    @apply text-2xl font-semibold;
+    @apply xs:text-xl text-lg font-semibold sm:text-2xl;
   }
 
   h4 {
-    @apply text-lg font-semibold;
+    @apply xs:text-lg text-base font-semibold sm:text-xl;
   }
 
   h5 {
-    @apply text-base font-semibold;
+    @apply xs:text-base text-sm font-semibold sm:text-lg;
   }
 }
 
