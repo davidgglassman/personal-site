@@ -20,9 +20,6 @@ importers:
       '@fontsource/inter':
         specifier: ^5.2.6
         version: 5.2.6
-      '@fontsource/sora':
-        specifier: ^5.2.6
-        version: 5.2.6
       '@iconify-json/mdi':
         specifier: ^1.2.3
         version: 1.2.3
@@ -388,9 +385,6 @@ packages:
 
   '@fontsource/inter@5.2.6':
     resolution: {integrity: sha512-CZs9S1CrjD0jPwsNy9W6j0BhsmRSQrgwlTNkgQXTsAeDRM42LBRLo3eo9gCzfH4GvV7zpyf78Ozfl773826csw==}
-
-  '@fontsource/sora@5.2.6':
-    resolution: {integrity: sha512-OPknOmn82HIJg32UGg9iEjEVFdC+xOZBqrmQNUgsem6hFwBBrqXnTwIpro7leq/uFRdupkN42hc0JJKH20j22w==}
 
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
@@ -2864,8 +2858,6 @@ snapshots:
   '@fontsource/geist@5.2.6': {}
 
   '@fontsource/inter@5.2.6': {}
-
-  '@fontsource/sora@5.2.6': {}
 
   '@iconify-json/mdi@1.2.3':
     dependencies:

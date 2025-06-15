@@ -18,7 +18,7 @@ Tailwind Configuration
 ********************************************/
 
 @theme {
-  --font-sans: "Sora", "sans-serif";
+  --font-sans: "Inter", "sans-serif";
   --font-console: "Fira Code";
 }
 
