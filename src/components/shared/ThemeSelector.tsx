@@ -17,12 +17,6 @@ const ThemeSelector = () => {
     };
 
     updateTheme();
-
-    window.addEventListener("astro:after-swap", updateTheme);
-
-    return () => {
-      window.removeEventListener("astro:after-swap", updateTheme);
-    };
   }, []);
 
   const toggleTheme = () => {
