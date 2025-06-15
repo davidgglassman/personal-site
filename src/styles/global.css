@@ -17,7 +17,7 @@ Tailwind Configuration
 ********************************************/
 
 @theme {
-  --font-sans: "Fira Code", "sans-serif";
+  --font-sans: "Sora", "sans-serif";
 }
 
 /********************************************
@@ -149,7 +149,7 @@ html {
   }
 
   body {
-    @apply selection:bg-accent-foreground selection:text-accent text-primary bg-background m-0 min-h-lvh w-full min-w-[300px] cursor-default overflow-y-auto p-0 text-left text-base leading-7 font-medium font-normal tracking-wide antialiased;
+    @apply selection:bg-accent-foreground selection:text-accent text-primary bg-background m-0 min-h-lvh w-full min-w-[300px] cursor-default overflow-y-auto p-0 text-left text-base leading-relaxed font-medium font-normal tracking-widest antialiased;
   }
 
   h2 {

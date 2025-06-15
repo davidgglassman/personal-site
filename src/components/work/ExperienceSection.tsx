@@ -41,7 +41,7 @@ export function ExperienceSection({ item }: Props) {
             <AccordionTrigger className="mt-1">
               <div className="flex-row-standard -mt-1 mr-3">
                 <h4>{item.data.company}</h4>
-                <p>{item.data.years}</p>
+                <p className="text-primary/50">{item.data.years}</p>
               </div>
             </AccordionTrigger>
 

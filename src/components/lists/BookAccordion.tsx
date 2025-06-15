@@ -29,7 +29,7 @@ export function BookAccordion({ books }: { books: Book[] }) {
         >
           <AccordionTrigger>{book.title}</AccordionTrigger>
 
-          <AccordionContent className="text-xs text-gray-500">
+          <AccordionContent className="text-primary/50 text-xs">
             <p>Author: {book.author}</p>
 
             {book.started && <p>Started: {book.started}</p>}

@@ -16,7 +16,7 @@ const { id, title, date, category } = Astro.props;
   href={`/${category}/${id}`}
 >
   <p class="transition-all group-hover:underline">{title}</p>
-  <p class="text-sm text-gray-500 dark:text-gray-400">
+  <p class="text-primary/50 text-sm">
     {formatDateWithOrdinal(date)}
   </p>
 </a>

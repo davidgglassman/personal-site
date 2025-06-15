@@ -25,7 +25,7 @@ export function ListAccordion({ data }: Props) {
           value={title}
         >
           <AccordionTrigger>{title}</AccordionTrigger>
-          <AccordionContent className="text-xs text-gray-500">
+          <AccordionContent className="text-primary/50 text-xs">
             {list.map((item, idx) => (
               <div
                 key={idx}
