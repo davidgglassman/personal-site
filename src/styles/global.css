@@ -3,8 +3,9 @@ Imports / Plugins
 ********************************************/
 
 @import "tailwindcss";
-
 @import "tw-animate-css";
+
+@plugin '@tailwindcss/typography';
 
 /********************************************
 Dark Mode
@@ -18,6 +19,7 @@ Tailwind Configuration
 
 @theme {
   --font-sans: "Sora", "sans-serif";
+  --font-console: "Fira Code";
 }
 
 /********************************************

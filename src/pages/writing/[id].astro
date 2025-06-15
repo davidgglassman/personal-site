@@ -1,8 +1,14 @@
 ---
+import Prose from "@/components/shared/Prose.astro";
+import Layout from "@layouts/Layout.astro";
+
 import { getCollection, render } from "astro:content";
+
+import BlogPostHeader from "@/components/writing/BlogPostHeader.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("writing");
+
   return posts.map((post) => ({
     params: { id: post.id },
     props: { post },
@@ -13,14 +19,10 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<h1>{post.data.title}</h1>
+<Layout title={post.id}>
+  <BlogPostHeader {post} />
 
-<p>Description: {post.data.description}</p>
-
-<p>Date: {post.data.pubDate}</p>
-
-<p>Tags: {post.data.tags.map((tag) => <li>{tag}</li>)}</p>
-
-<p>Form: {post.data.form}</p>
-
-<Content />
+  <Prose>
+    <Content />
+  </Prose>
+</Layout>
