@@ -13,17 +13,17 @@ interface Props {
     href: string;
     title: string;
   }[];
-  pathname: string;
 }
 
-const NavDropdown = ({ links, pathname }: Props) => {
+const NavDropdown = ({ links }: Props) => {
   const [selected, setSelected] = useState<string>("");
 
   useEffect(() => {
-    const current = links.find((link) => link.href === pathname);
+    const currentPath = window.location.pathname;
+    const current = links.find((link) => link.href === currentPath);
 
     setSelected(current?.title ?? "");
-  }, [pathname, links]);
+  }, [links]);
 
   const handleChange = (value: string) => {
     const targetLink = links.find((link) => link.title === value);
