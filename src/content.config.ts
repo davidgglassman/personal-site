@@ -142,7 +142,12 @@ const top5 = defineCollection({
   loader: loadTop5,
   schema: z.object({
     category: z.string(),
-    items: z.array(z.string()).length(5),
+    subcategories: z.array(
+      z.object({
+        name: z.string(),
+        items: z.array(z.string()),
+      }),
+    ),
   }),
 });
 

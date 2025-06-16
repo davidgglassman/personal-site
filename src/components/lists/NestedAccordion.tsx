@@ -7,26 +7,26 @@ import {
 
 interface Props {
   data: {
-    title: string;
-    list: string[];
+    name: string;
+    items: string[];
   }[];
 }
 
-export function ListAccordion({ data }: Props) {
+export function NestedAccordion({ data }: Props) {
   return (
     <Accordion
       type="single"
       collapsible
       className="w-full"
     >
-      {data.map(({ title, list }) => (
+      {data.map(({ name, items }) => (
         <AccordionItem
-          key={title}
-          value={title}
+          key={name}
+          value={name}
         >
-          <AccordionTrigger>{title}</AccordionTrigger>
+          <AccordionTrigger className="capitalize">{name}</AccordionTrigger>
           <AccordionContent className="text-primary/50 text-xs">
-            {list.map((item, idx) => (
+            {items.map((item, idx) => (
               <div
                 key={idx}
                 className="flex-row-standard-start gap-3"
